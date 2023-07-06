@@ -1,0 +1,63 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+
+<Configuration>
+    <!-- ConsoleAppender -->
+    <appender name="ConsoleAppender" class="ch.qos.logback.core.ConsoleAppender">
+
+        <encoder>
+
+            <pattern>
+
+                %d{MM:dd HH:mm:ss.SSS} [%t] [%level] [%logger{36}] -%msg%n
+
+            </pattern>
+
+        </encoder>
+
+    </appender>
+    <!-- RollingFileAppender -->
+    <appender name="RollingAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+
+        <file>app.log</file>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+
+            <pattern>
+
+                %d{MM:dd HH:mm:ss.SSS} [%t] [%level] [%logger{36}] -%msg%n
+
+            </pattern>
+
+        </encoder>
+        <!-- Rolling Policy -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+
+            <fileNamePattern>app_%d{MM:dd-mm-yyyy}.log</fileNamePattern>
+
+            <maxHistory>10</maxHistory>
+            <totalSizeCap>50KB</totalSizeCap>
+
+        </rollingPolicy>
+
+    </appender>
+    <!-- Logging level -->
+
+    <logger name="electronic_store" level="info" additivity="false">
+
+        <appender-ref ref="ConsoleAppender" ></appender-ref>
+        <appender-ref ref="RollingAppender" ></appender-ref>
+
+    </logger>
+    <!-- Predined and customized package -->
+    <logger name="org.springframework.boot" level="info" additivity="false">
+        <appender-ref ref="ConsoleAppender" ></appender-ref>
+        <appender-ref ref="RollingAppender" ></appender-ref>
+    </logger>
+
+
+    <root level="info">
+        <appender-ref ref="ConsoleAppender" ></appender-ref>
+        <appender-ref ref="RollingAppender" ></appender-ref>
+    </root>
+
+</Configuration>
