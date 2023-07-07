@@ -11,6 +11,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -30,7 +31,7 @@ public class UserController {
      * @return userDto
      */
     @PostMapping("/")
-    public ResponseEntity<UserDto> createUser(@RequestBody UserDto userDto){
+    public ResponseEntity<UserDto> createUser(@Valid @RequestBody UserDto userDto){
         log.info("Initiating request to create user");
        UserDto createdUser= userServiceI.createUser(userDto);
         log.info("Completing request to create user");
@@ -47,7 +48,7 @@ public class UserController {
      * @return userDto
      */
     @PutMapping("/{userId}")
-    public ResponseEntity<UserDto> upadteUser(@RequestBody UserDto userDto,
+    public ResponseEntity<UserDto> upadteUser(@Valid @RequestBody UserDto userDto,
                                               @PathVariable("userId") String userId){
         log.info("Initiating request to update user:{}"+userId);
       UserDto updatedUser=  userServiceI.updateUser(userDto,userId);

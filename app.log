@@ -1494,3 +1494,190 @@ Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No q
 07:07 15:07:19.015 [main] [INFO] [c.b.e.s.impl.UserServiceImplTest] -No active profile set, falling back to 1 default profile: "default"
 07:07 15:07:19.410 [main] [INFO] [c.b.e.s.impl.UserServiceImplTest] -Started UserServiceImplTest in 1.39 seconds (JVM running for 7.96)
 07:07 15:07:21.797 [main] [INFO] [c.b.e.service.impl.UserServiceImpl] -Initiating dao call to create user
+07:07 23:27:21.968 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.bikkadit.electronic_store.service.impl.UserServiceImplTest], using SpringBootContextLoader
+07:07 23:27:22.266 [main] [INFO] [o.s.t.c.s.AbstractContextLoader] -Could not detect default resource locations for test class [com.bikkadit.electronic_store.service.impl.UserServiceImplTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+07:07 23:27:23.644 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+07:07 23:27:23.729 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1a760689, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7241a47d, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@70f59913, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@77258e59, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@5dcd8c7a, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2250b9f2, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7e3181aa, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@253d9f73, org.springframework.test.context.event.EventPublishingTestExecutionListener@142269f2, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@331acdad, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@41d426b5, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@8dbfffb, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@f316aeb, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6aa3a905, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@a22cb6a]
+07:07 23:27:25.671 [main] [INFO] [c.b.e.s.impl.UserServiceImplTest] -Starting UserServiceImplTest using Java 17.0.6 on DESKTOP-2OI3U43 with PID 1784 (started by KSAV in E:\newproject07\electronic_store)
+07:07 23:27:25.688 [main] [INFO] [c.b.e.s.impl.UserServiceImplTest] -No active profile set, falling back to 1 default profile: "default"
+07:07 23:27:25.754 [background-preinit] [INFO] [o.h.validator.internal.util.Version] -HV000001: Hibernate Validator 6.2.5.Final
+07:07 23:27:26.493 [main] [INFO] [c.b.e.s.impl.UserServiceImplTest] -Started UserServiceImplTest in 2.419 seconds (JVM running for 9.829)
+07:07 23:27:29.354 [main] [INFO] [c.b.e.service.impl.UserServiceImpl] -Initiating dao call to create user
+07:07 23:28:35.519 [restartedMain] [INFO] [c.b.e.ElectronicStoreApplication] -Starting ElectronicStoreApplication using Java 17.0.6 on DESKTOP-2OI3U43 with PID 13856 (E:\newproject07\electronic_store\target\classes started by KSAV in E:\newproject07\electronic_store)
+07:07 23:28:35.521 [background-preinit] [INFO] [o.h.validator.internal.util.Version] -HV000001: Hibernate Validator 6.2.5.Final
+07:07 23:28:35.533 [restartedMain] [INFO] [c.b.e.ElectronicStoreApplication] -No active profile set, falling back to 1 default profile: "default"
+07:07 23:28:35.703 [restartedMain] [INFO] [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] -Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+07:07 23:28:35.707 [restartedMain] [INFO] [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] -For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+07:07 23:28:39.476 [restartedMain] [INFO] [o.s.d.r.c.RepositoryConfigurationDelegate] -Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+07:07 23:28:39.743 [restartedMain] [INFO] [o.s.d.r.c.RepositoryConfigurationDelegate] -Finished Spring Data repository scanning in 208 ms. Found 1 JPA repository interfaces.
+07:07 23:28:42.644 [restartedMain] [INFO] [o.s.b.w.e.tomcat.TomcatWebServer] -Tomcat initialized with port(s): 7997 (http)
+07:07 23:28:42.689 [restartedMain] [INFO] [o.a.coyote.http11.Http11NioProtocol] -Initializing ProtocolHandler ["http-nio-7997"]
+07:07 23:28:42.697 [restartedMain] [INFO] [o.a.catalina.core.StandardService] -Starting service [Tomcat]
+07:07 23:28:42.697 [restartedMain] [INFO] [o.a.catalina.core.StandardEngine] -Starting Servlet engine: [Apache Tomcat/9.0.76]
+07:07 23:28:43.039 [restartedMain] [INFO] [o.a.c.c.C.[Tomcat].[localhost].[/]] -Initializing Spring embedded WebApplicationContext
+07:07 23:28:43.040 [restartedMain] [INFO] [o.s.b.w.s.c.ServletWebServerApplicationContext] -Root WebApplicationContext: initialization completed in 7331 ms
+07:07 23:28:43.872 [restartedMain] [INFO] [o.h.jpa.internal.util.LogHelper] -HHH000204: Processing PersistenceUnitInfo [name: default]
+07:07 23:28:44.071 [restartedMain] [INFO] [org.hibernate.Version] -HHH000412: Hibernate ORM core version 5.6.15.Final
+07:07 23:28:44.476 [restartedMain] [INFO] [o.h.annotations.common.Version] -HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+07:07 23:28:44.930 [restartedMain] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Starting...
+07:07 23:28:51.180 [restartedMain] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Start completed.
+07:07 23:28:51.290 [restartedMain] [INFO] [org.hibernate.dialect.Dialect] -HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+07:07 23:28:54.666 [restartedMain] [INFO] [o.h.e.t.j.p.i.JtaPlatformInitiator] -HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+07:07 23:28:54.688 [restartedMain] [INFO] [o.s.o.j.LocalContainerEntityManagerFactoryBean] -Initialized JPA EntityManagerFactory for persistence unit 'default'
+07:07 23:28:56.359 [restartedMain] [WARN] [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration] -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+07:07 23:28:57.303 [restartedMain] [INFO] [o.s.b.d.a.OptionalLiveReloadServer] -LiveReload server is running on port 35729
+07:07 23:28:57.334 [restartedMain] [INFO] [o.a.coyote.http11.Http11NioProtocol] -Starting ProtocolHandler ["http-nio-7997"]
+07:07 23:28:57.408 [restartedMain] [INFO] [o.s.b.w.e.tomcat.TomcatWebServer] -Tomcat started on port(s): 7997 (http) with context path ''
+07:07 23:28:57.466 [restartedMain] [INFO] [c.b.e.ElectronicStoreApplication] -Started ElectronicStoreApplication in 22.849 seconds (JVM running for 24.573)
+07:07 23:31:11.966 [http-nio-7997-exec-2] [INFO] [o.a.c.c.C.[Tomcat].[localhost].[/]] -Initializing Spring DispatcherServlet 'dispatcherServlet'
+07:07 23:31:11.969 [http-nio-7997-exec-2] [INFO] [o.s.web.servlet.DispatcherServlet] -Initializing Servlet 'dispatcherServlet'
+07:07 23:31:11.972 [http-nio-7997-exec-2] [INFO] [o.s.web.servlet.DispatcherServlet] -Completed initialization in 2 ms
+07:07 23:31:12.316 [http-nio-7997-exec-2] [INFO] [c.b.e.controller.UserController] -Initiating request to create user
+07:07 23:31:12.317 [http-nio-7997-exec-2] [INFO] [c.b.e.service.impl.UserServiceImpl] -Initiating dao call to create user
+07:07 23:31:14.479 [http-nio-7997-exec-2] [WARN] [o.h.e.jdbc.spi.SqlExceptionHelper] -SQL Error: 1062, SQLState: 23000
+07:07 23:31:14.480 [http-nio-7997-exec-2] [ERROR] [o.h.e.jdbc.spi.SqlExceptionHelper] -Duplicate entry 'manish@gmail.com' for key 'users.UK_6dotkott2kjsp8vw4d0m25fb7'
+07:07 23:31:14.524 [http-nio-7997-exec-2] [INFO] [o.h.e.j.b.internal.AbstractBatchImpl] -HHH000010: On release of batch it still contained JDBC statements
+07:07 23:31:14.627 [http-nio-7997-exec-2] [ERROR] [o.a.c.c.C.[.[.[.[dispatcherServlet]] -Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [users.UK_6dotkott2kjsp8vw4d0m25fb7]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement] with root cause
+java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'manish@gmail.com' for key 'users.UK_6dotkott2kjsp8vw4d0m25fb7'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:118)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1061)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1009)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1320)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:994)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+	at org.hibernate.engine.jdbc.batch.internal.NonBatchingBatch.addToBatch(NonBatchingBatch.java:46)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3375)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3937)
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:107)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:604)
+	at org.hibernate.engine.spi.ActionQueue.lambda$executeActions$1(ActionQueue.java:478)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:475)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:344)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:40)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:107)
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1407)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:489)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3303)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2438)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:449)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:183)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:40)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:281)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:562)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:743)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:711)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:654)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:407)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:241)
+	at jdk.proxy3/jdk.proxy3.$Proxy107.save(Unknown Source)
+	at com.bikkadit.electronic_store.service.impl.UserServiceImpl.createUser(UserServiceImpl.java:35)
+	at com.bikkadit.electronic_store.controller.UserController.createUser(UserController.java:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+07:07 23:34:04.744 [SpringApplicationShutdownHook] [INFO] [o.s.o.j.LocalContainerEntityManagerFactoryBean] -Closing JPA EntityManagerFactory for persistence unit 'default'
+07:07 23:34:04.835 [SpringApplicationShutdownHook] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Shutdown initiated...
+07:07 23:34:04.962 [SpringApplicationShutdownHook] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Shutdown completed.
+07:07 23:34:52.543 [background-preinit] [INFO] [o.h.validator.internal.util.Version] -HV000001: Hibernate Validator 6.2.5.Final
+07:07 23:34:52.543 [restartedMain] [INFO] [c.b.e.ElectronicStoreApplication] -Starting ElectronicStoreApplication using Java 17.0.6 on DESKTOP-2OI3U43 with PID 9728 (E:\newproject07\electronic_store\target\classes started by KSAV in E:\newproject07\electronic_store)
+07:07 23:34:52.560 [restartedMain] [INFO] [c.b.e.ElectronicStoreApplication] -No active profile set, falling back to 1 default profile: "default"
+07:07 23:34:52.888 [restartedMain] [INFO] [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] -Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+07:07 23:34:52.888 [restartedMain] [INFO] [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] -For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+07:07 23:34:58.368 [restartedMain] [INFO] [o.s.d.r.c.RepositoryConfigurationDelegate] -Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+07:07 23:34:58.768 [restartedMain] [INFO] [o.s.d.r.c.RepositoryConfigurationDelegate] -Finished Spring Data repository scanning in 331 ms. Found 1 JPA repository interfaces.
+07:07 23:35:03.915 [restartedMain] [INFO] [o.s.b.w.e.tomcat.TomcatWebServer] -Tomcat initialized with port(s): 7997 (http)
+07:07 23:35:04.352 [restartedMain] [INFO] [o.a.coyote.http11.Http11NioProtocol] -Initializing ProtocolHandler ["http-nio-7997"]
+07:07 23:35:04.379 [restartedMain] [INFO] [o.a.catalina.core.StandardService] -Starting service [Tomcat]
+07:07 23:35:04.379 [restartedMain] [INFO] [o.a.catalina.core.StandardEngine] -Starting Servlet engine: [Apache Tomcat/9.0.76]
+07:07 23:35:05.200 [restartedMain] [INFO] [o.a.c.c.C.[Tomcat].[localhost].[/]] -Initializing Spring embedded WebApplicationContext
+07:07 23:35:05.200 [restartedMain] [INFO] [o.s.b.w.s.c.ServletWebServerApplicationContext] -Root WebApplicationContext: initialization completed in 12309 ms
+07:07 23:35:06.797 [restartedMain] [INFO] [o.h.jpa.internal.util.LogHelper] -HHH000204: Processing PersistenceUnitInfo [name: default]
+07:07 23:35:07.798 [restartedMain] [INFO] [org.hibernate.Version] -HHH000412: Hibernate ORM core version 5.6.15.Final
+07:07 23:35:09.959 [restartedMain] [INFO] [o.h.annotations.common.Version] -HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+07:07 23:35:11.372 [restartedMain] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Starting...
+07:07 23:35:18.089 [restartedMain] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Start completed.
+07:07 23:35:18.275 [restartedMain] [INFO] [org.hibernate.dialect.Dialect] -HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+07:07 23:35:23.458 [restartedMain] [INFO] [o.h.e.t.j.p.i.JtaPlatformInitiator] -HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+07:07 23:35:23.526 [restartedMain] [INFO] [o.s.o.j.LocalContainerEntityManagerFactoryBean] -Initialized JPA EntityManagerFactory for persistence unit 'default'
+07:07 23:35:25.418 [restartedMain] [WARN] [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration] -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+07:07 23:35:26.718 [restartedMain] [INFO] [o.s.b.d.a.OptionalLiveReloadServer] -LiveReload server is running on port 35729
+07:07 23:35:26.752 [restartedMain] [INFO] [o.a.coyote.http11.Http11NioProtocol] -Starting ProtocolHandler ["http-nio-7997"]
+07:07 23:35:27.458 [restartedMain] [INFO] [o.s.b.w.e.tomcat.TomcatWebServer] -Tomcat started on port(s): 7997 (http) with context path ''
+07:07 23:35:27.478 [restartedMain] [INFO] [c.b.e.ElectronicStoreApplication] -Started ElectronicStoreApplication in 37.626 seconds (JVM running for 45.143)
+07:07 23:37:21.591 [http-nio-7997-exec-3] [INFO] [o.a.c.c.C.[Tomcat].[localhost].[/]] -Initializing Spring DispatcherServlet 'dispatcherServlet'
+07:07 23:37:22.121 [http-nio-7997-exec-3] [INFO] [o.s.web.servlet.DispatcherServlet] -Initializing Servlet 'dispatcherServlet'
+07:07 23:37:22.122 [http-nio-7997-exec-3] [INFO] [o.s.web.servlet.DispatcherServlet] -Completed initialization in 1 ms
+07:07 23:37:26.004 [http-nio-7997-exec-3] [WARN] [o.s.w.s.m.s.DefaultHandlerExceptionResolver] -Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.bikkadit.electronic_store.dto.UserDto> com.bikkadit.electronic_store.controller.UserController.createUser(com.bikkadit.electronic_store.dto.UserDto): [Field error in object 'userDto' on field 'name': rejected value []; codes [Size.userDto.name,Size.name,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userDto.name,name]; arguments []; default message [name],20,3]; default message [Invalid name !!]] ]
+07:07 23:39:11.926 [http-nio-7997-exec-2] [WARN] [o.s.w.s.m.s.DefaultHandlerExceptionResolver] -Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.bikkadit.electronic_store.dto.UserDto> com.bikkadit.electronic_store.controller.UserController.createUser(com.bikkadit.electronic_store.dto.UserDto): [Field error in object 'userDto' on field 'name': rejected value []; codes [Size.userDto.name,Size.name,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userDto.name,name]; arguments []; default message [name],20,3]; default message [Invalid name !!]] ]
+07:07 23:41:12.792 [http-nio-7997-exec-6] [INFO] [c.b.e.controller.UserController] -Initiating request to create user
+07:07 23:41:12.857 [http-nio-7997-exec-6] [INFO] [c.b.e.service.impl.UserServiceImpl] -Initiating dao call to create user
+07:07 23:41:16.686 [http-nio-7997-exec-6] [INFO] [c.b.e.service.impl.UserServiceImpl] -Completing dao call to create user
+07:07 23:41:16.686 [http-nio-7997-exec-6] [INFO] [c.b.e.controller.UserController] -Completing request to create user
+07:07 23:43:07.615 [http-nio-7997-exec-9] [INFO] [c.b.e.controller.UserController] -Initiating request to create user
+07:07 23:43:07.632 [http-nio-7997-exec-9] [INFO] [c.b.e.service.impl.UserServiceImpl] -Initiating dao call to create user
+07:07 23:43:07.782 [http-nio-7997-exec-9] [INFO] [c.b.e.service.impl.UserServiceImpl] -Completing dao call to create user
+07:07 23:43:07.782 [http-nio-7997-exec-9] [INFO] [c.b.e.controller.UserController] -Completing request to create user
+07:07 23:45:32.535 [http-nio-7997-exec-3] [WARN] [o.s.w.s.m.s.DefaultHandlerExceptionResolver] -Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.bikkadit.electronic_store.dto.UserDto> com.bikkadit.electronic_store.controller.UserController.createUser(com.bikkadit.electronic_store.dto.UserDto): [Field error in object 'userDto' on field 'email': rejected value [manish@]; codes [Email.userDto.email,Email.email,Email.java.lang.String,Email]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userDto.email,email]; arguments []; default message [email],[Ljavax.validation.constraints.Pattern$Flag;@7c31e707,.*]; default message [Invalid emailid !!]] ]
+07:07 23:49:30.460 [http-nio-7997-exec-4] [WARN] [o.s.w.s.m.s.DefaultHandlerExceptionResolver] -Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.bikkadit.electronic_store.dto.UserDto> com.bikkadit.electronic_store.controller.UserController.createUser(com.bikkadit.electronic_store.dto.UserDto) with 2 errors: [Field error in object 'userDto' on field 'email': rejected value [manish@]; codes [Email.userDto.email,Email.email,Email.java.lang.String,Email]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userDto.email,email]; arguments []; default message [email],[Ljavax.validation.constraints.Pattern$Flag;@7c31e707,.*]; default message [Invalid emailid !!]] [Field error in object 'userDto' on field 'password': rejected value []; codes [NotBlank.userDto.password,NotBlank.password,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userDto.password,password]; arguments []; default message [password]]; default message [Password is required !!]] ]
+07:07 23:52:03.160 [http-nio-7997-exec-5] [WARN] [o.s.w.s.m.s.DefaultHandlerExceptionResolver] -Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.bikkadit.electronic_store.dto.UserDto> com.bikkadit.electronic_store.controller.UserController.createUser(com.bikkadit.electronic_store.dto.UserDto) with 3 errors: [Field error in object 'userDto' on field 'gender': rejected value [malefsdfd]; codes [Size.userDto.gender,Size.gender,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userDto.gender,gender]; arguments []; default message [gender],6,4]; default message [Invalid gender !!]] [Field error in object 'userDto' on field 'email': rejected value [manish@]; codes [Email.userDto.email,Email.email,Email.java.lang.String,Email]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userDto.email,email]; arguments []; default message [email],[Ljavax.validation.constraints.Pattern$Flag;@7c31e707,.*]; default message [Invalid emailid !!]] [Field error in object 'userDto' on field 'password': rejected value []; codes [NotBlank.userDto.password,NotBlank.password,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userDto.password,password]; arguments []; default message [password]]; default message [Password is required !!]] ]
