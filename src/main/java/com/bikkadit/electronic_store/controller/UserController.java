@@ -52,7 +52,7 @@ public class UserController {
         log.info("Initiating request to update user:{}"+userId);
       UserDto updatedUser=  userServiceI.updateUser(userDto,userId);
         log.info("Completing request  to update user:{}"+userId);
-      return new ResponseEntity<>(updatedUser,HttpStatus.OK);
+      return new ResponseEntity<>(updatedUser,HttpStatus.CREATED);
 
     }
 
