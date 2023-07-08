@@ -22,22 +22,17 @@ import java.util.UUID;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
-@SpringBootTest(classes=UserServiceImplTest.class)
+@SpringBootTest
  class UserServiceImplTest {
 
-    @Mock
+    @MockBean
     private UserRepositoryI userRepositoryI;
-
-    @Mock
+    @Autowired
     private ModelMapper modelMapper;
-
-    @InjectMocks
+    @Autowired
     private UserServiceImpl userServiceImpl;
-
     User user;
-
     User user1;
-
     UserDto userDto;
 
     List<User> list;
@@ -75,23 +70,9 @@ import static org.mockito.Mockito.*;
 
     @Test
     void createUser() {
-//       String id = UUID.randomUUID().toString();
-//       userDto = UserDto.builder()
-//               .userId(id)
-//               .name("Sahil")
-//               .password("ss11")
-//               .gender("male")
-//               .email("sahil@gmail.com")
-//               .about("I am Developer")
-//               .imageName("abc.png")
-//               .build();
+       Mockito.when(userRepositoryI.save(Mockito.any())).thenReturn(user);
 
-
-        Mockito.when(userRepositoryI.save(Mockito.any())).thenReturn(user);
-
-        Mockito.when(modelMapper.map(user, UserDto.class)).thenReturn(userDto);
-
-        UserDto userDto1 = userServiceImpl.createUser(userDto);
+        UserDto userDto1 = userServiceImpl.createUser(modelMapper.map(user, UserDto.class));
 
         assertEquals("ss11",userDto1.getPassword());
     }
@@ -100,12 +81,11 @@ import static org.mockito.Mockito.*;
     void updateUser() {
        String id = UUID.randomUUID().toString();
 
-
        Mockito.when(userRepositoryI.findById(id)).thenReturn(Optional.of(user));
 
        Mockito.when(userRepositoryI.save(Mockito.any())).thenReturn(user);
 
-       UserDto userDto1 = userServiceImpl.updateUser(userDto, id);
+       UserDto userDto1 = userServiceImpl.updateUser(modelMapper.map(user, UserDto.class), id);
 
        assertEquals("Sahil",userDto1.getName());
 
@@ -139,8 +119,6 @@ import static org.mockito.Mockito.*;
        String userId = UUID.randomUUID().toString();
 
        Mockito.when(userRepositoryI.findById(userId)).thenReturn(Optional.of(user));
-
-       verify(userRepositoryI,times(1)).delete(user);
 
        userServiceImpl.deleteUser(userId);
 
