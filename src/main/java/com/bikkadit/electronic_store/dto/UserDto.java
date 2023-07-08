@@ -5,6 +5,7 @@ import lombok.*;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 @Getter
@@ -19,7 +20,8 @@ public class UserDto {
     @Size(min=3,max=20,message="Invalid name !!")
     private String name;
 
-    @Email(message = "Invalid emailid !!")
+    //@Email(message = "Invalid emailid !!")
+    @Pattern(regexp = "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$",message = "Invalid emailId !!")
     private String email;
 
     @NotBlank(message = "Password is required !!")
