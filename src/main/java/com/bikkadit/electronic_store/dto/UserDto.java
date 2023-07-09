@@ -1,6 +1,7 @@
 package com.bikkadit.electronic_store.dto;
 
 import com.bikkadit.electronic_store.entity.User;
+import com.bikkadit.electronic_store.validate.ImageNameValid;
 import lombok.*;
 
 import javax.validation.constraints.Email;
@@ -33,6 +34,7 @@ public class UserDto {
     @Size(min=4, max = 6,message = "Invalid gender !!")
     private String gender;
 
+    @ImageNameValid
     private String imageName;
 
 
