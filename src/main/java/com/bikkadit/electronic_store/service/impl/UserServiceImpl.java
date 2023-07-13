@@ -2,6 +2,7 @@ package com.bikkadit.electronic_store.service.impl;
 
 import com.bikkadit.electronic_store.dto.UserDto;
 import com.bikkadit.electronic_store.entity.User;
+import com.bikkadit.electronic_store.exception.ResourceNotFoundException;
 import com.bikkadit.electronic_store.payload.AppConstants;
 import com.bikkadit.electronic_store.repository.UserRepositoryI;
 import com.bikkadit.electronic_store.service.UserServiceI;
@@ -42,13 +43,13 @@ public class UserServiceImpl implements UserServiceI {
     @Override
     public UserDto updateUser(UserDto userDto, String userId) {
         log.info("Initiating dao call to update user:{}"+userId);
-      User user=  userRepositoryI.findById(userId).orElseThrow(() -> new RuntimeException(AppConstants.NOT_FOUND));
+      User user=  userRepositoryI.findById(userId).orElseThrow(() ->
+              new ResourceNotFoundException(AppConstants.USER_NOT_FOUND));
         user.setName(userDto.getName());
         user.setEmail(userDto.getEmail());
         user.setPassword(userDto.getPassword());
         user.setGender(userDto.getGender());
         user.setImageName(userDto.getImageName());
-
 
        User updatedUser= userRepositoryI.save(user);
       // UserDto userDto1=entityToDto(updatedUser);
@@ -60,7 +61,8 @@ public class UserServiceImpl implements UserServiceI {
     @Override
     public UserDto getUserById(String userId) {
         log.info("Initiating dao call to get single user:{}"+userId);
-       User user= userRepositoryI.findById(userId).orElseThrow(() -> new RuntimeException(AppConstants.NOT_FOUND));
+       User user= userRepositoryI.findById(userId).orElseThrow(() ->
+               new ResourceNotFoundException(AppConstants.USER_NOT_FOUND));
        // UserDto userDto1=  entityToDto(user);
         UserDto userDto1=modelMapper.map(user, UserDto.class);
         log.info("Initiating dao call to get single user:{}"+userId);
@@ -70,7 +72,8 @@ public class UserServiceImpl implements UserServiceI {
     @Override
     public UserDto getUserByEmail(String email) {
         log.info("Initiating dao call to get user record:{}"+email);
-      User user=  userRepositoryI.findUserByEmail(email).orElseThrow(() -> new RuntimeException(AppConstants.USER_NOT_FOUND));
+      User user=  userRepositoryI.findUserByEmail(email).orElseThrow(() ->
+              new ResourceNotFoundException(AppConstants.USER_NOT_FOUND));
       //UserDto userDto2= entityToDto(user);
         UserDto  userDto2=modelMapper.map(user, UserDto.class);
         log.info("Completing dao call to get user record:{}"+email);
@@ -80,7 +83,8 @@ public class UserServiceImpl implements UserServiceI {
     @Override
     public void deleteUser(String userId) {
         log.info("Initiating dao call to delete user record:{}"+userId);
-      User user=  userRepositoryI.findById(userId).orElseThrow(()->new RuntimeException(AppConstants.NOT_FOUND));
+      User user=  userRepositoryI.findById(userId).orElseThrow(()->
+              new ResourceNotFoundException(AppConstants.USER_NOT_FOUND));
         log.info("Completing dao call to delete user record:{}"+userId);
       userRepositoryI.delete(user);
     }
