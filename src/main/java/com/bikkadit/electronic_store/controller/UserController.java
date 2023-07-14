@@ -3,6 +3,7 @@ package com.bikkadit.electronic_store.controller;
 import com.bikkadit.electronic_store.dto.UserDto;
 import com.bikkadit.electronic_store.entity.User;
 import com.bikkadit.electronic_store.payload.AppConstants;
+import com.bikkadit.electronic_store.payload.PageableResponse;
 import com.bikkadit.electronic_store.service.UserServiceI;
 
 import lombok.extern.slf4j.Slf4j;
@@ -128,9 +129,14 @@ public class UserController {
      * @return List of users
      */
     @GetMapping("/")
-    public ResponseEntity<List<UserDto>> getAllUSers(){
+    public ResponseEntity<PageableResponse<UserDto>> getAllUsers(
+            @RequestParam(value = "pageNumber",defaultValue = "0",required = false)int pageNumber,
+            @RequestParam(value="pageSize",defaultValue ="10",required = false) int pageSize,
+            @RequestParam(value="sortBy",defaultValue = "name",required = false) String sortBy,
+            @RequestParam(value="sortDir",defaultValue = "asc",required = false) String sortDir
+    ){
         log.info("Initiating request to get All users");
-      List<UserDto> allUsers= userServiceI.getAllUser();
+      PageableResponse<UserDto> allUsers= userServiceI.getAllUser(pageNumber, pageSize,sortBy,sortDir);
         log.info("completing  request to get All users");
       return new ResponseEntity<>(allUsers,HttpStatus.OK);
     }

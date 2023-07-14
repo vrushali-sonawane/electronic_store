@@ -17,15 +17,14 @@ import java.util.List;
 import java.util.Map;
 
 
-
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
 
-    private static Logger logger= LoggerFactory.getLogger(GlobalExceptionHandler.class);
+    private static Logger logger = LoggerFactory.getLogger(GlobalExceptionHandler.class);
 
     @ExceptionHandler(ResourceNotFoundException.class)
-    public ResponseEntity<AppConstants> resourceNotFoundExceptionHandler(ResourceNotFoundException ex){
+    public ResponseEntity<AppConstants> resourceNotFoundExceptionHandler(ResourceNotFoundException ex) {
 
         logger.info("Exception Handler invoked !!");
 
@@ -37,26 +36,20 @@ public class GlobalExceptionHandler {
     //handleMethodArgumentNotValidException
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
-    public ResponseEntity<Map<String, Object>>methodArgumentNotValidExeception(MethodArgumentNotValidException ex){
+    public ResponseEntity<Map<String, Object>> methodArgumentNotValidExeception(MethodArgumentNotValidException ex) {
         List<ObjectError> allErrors = ex.getBindingResult().getAllErrors();
 
-        Map<String , Object> response=new HashMap<>();
+        Map<String, Object> response = new HashMap<>();
 
         allErrors.stream().forEach(objectError -> {
             String message = objectError.getDefaultMessage();
-           String field= ((FieldError) objectError).getField();
-           response.put(field,message);
+            String field = ((FieldError) objectError).getField();
+            response.put(field, message);
 
         });
-         return new ResponseEntity<>(response ,HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
 
     }
-
-
-
-
-
-
 
 
 }

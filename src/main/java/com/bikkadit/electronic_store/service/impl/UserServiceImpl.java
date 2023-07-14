@@ -4,11 +4,18 @@ import com.bikkadit.electronic_store.dto.UserDto;
 import com.bikkadit.electronic_store.entity.User;
 import com.bikkadit.electronic_store.exception.ResourceNotFoundException;
 import com.bikkadit.electronic_store.payload.AppConstants;
+
+import com.bikkadit.electronic_store.payload.Helper;
+import com.bikkadit.electronic_store.payload.PageableResponse;
 import com.bikkadit.electronic_store.repository.UserRepositoryI;
 import com.bikkadit.electronic_store.service.UserServiceI;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -101,14 +108,19 @@ public class UserServiceImpl implements UserServiceI {
     }
 
     @Override
-    public List<UserDto> getAllUser() {
+    public PageableResponse<UserDto> getAllUser(int pageNumber, int pageSize , String sortBy, String sortDir) {
         log.info("Initiating dao call to get all users record");
-        List<User> users= userRepositoryI.findAll();
-        List<UserDto> userDtos=  users.stream()
-              .map((user) -> modelMapper.map(user, UserDto.class))
-              .collect(Collectors.toList());
+
+        Sort sort=(sortBy.equalsIgnoreCase("desc"))?(Sort.by(sortBy).descending()):(Sort.by(sortBy).ascending());
+
+
+        Pageable pageable= PageRequest.of(pageNumber, pageSize,sort);
+        Page<User> page = userRepositoryI.findAll(pageable);
+
+
+        PageableResponse<UserDto> response = Helper.getpageableResponse(page, UserDto.class);
         log.info("Completed dao call to get all users record");
-          return userDtos;
+         return response;
     }
 
 //    public User dtoToEntity(UserDto userDto) {
