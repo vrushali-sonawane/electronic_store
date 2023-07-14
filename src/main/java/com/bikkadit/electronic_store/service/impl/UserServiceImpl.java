@@ -12,12 +12,19 @@ import com.bikkadit.electronic_store.service.UserServiceI;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
+import java.io.IOException;
+
+import java.nio.file.Files;
+import java.nio.file.NoSuchFileException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 import java.util.UUID;
 import java.util.stream.Collectors;
@@ -31,6 +38,10 @@ public class UserServiceImpl implements UserServiceI {
 
    @Autowired
     private ModelMapper modelMapper;
+
+    @Value("${user.profile.image.path}")
+    private String imageUploadPath;
+
 
     @Override
     public UserDto createUser(UserDto userDto) {
@@ -92,6 +103,18 @@ public class UserServiceImpl implements UserServiceI {
         log.info("Initiating dao call to delete user record:{}"+userId);
       User user=  userRepositoryI.findById(userId).orElseThrow(()->
               new ResourceNotFoundException(AppConstants.USER_NOT_FOUND));
+        //delete user profile image
+        //path- image/users/abc.png
+      String fullPath= imageUploadPath+ user.getImageName();
+      try{
+          Path path = Paths.get(fullPath);
+          Files.delete(path);
+      }catch (NoSuchFileException e){
+          log.info("User image is not found in folder");
+          e.printStackTrace();
+      }catch (IOException e){
+          e.printStackTrace();
+      }
         log.info("Completing dao call to delete user record:{}"+userId);
       userRepositoryI.delete(user);
     }
@@ -103,6 +126,7 @@ public class UserServiceImpl implements UserServiceI {
         List<UserDto> userDtos = users.stream()
                 .map((user) -> modelMapper.map(user, UserDto.class))
                 .collect(Collectors.toList());
+
         log.info("Initiating dao call to get users record:{}"+keyword);
         return userDtos;
     }
