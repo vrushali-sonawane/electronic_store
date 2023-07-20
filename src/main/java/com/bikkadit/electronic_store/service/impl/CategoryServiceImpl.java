@@ -11,12 +11,18 @@ import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.NoSuchFileException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 import java.util.UUID;
 
@@ -29,6 +35,10 @@ public class CategoryServiceImpl implements CategoryServiceI {
 
     @Autowired
     private ModelMapper modelMapper;
+
+    @Value("${category.image.path}")
+    private String imagepath;
+
     @Override
     public CategoryDto createCategory(CategoryDto categoryDto) {
         logger.info("Initiating dao call to save category");
@@ -62,9 +72,19 @@ public class CategoryServiceImpl implements CategoryServiceI {
         logger.info("Initiating dao call to delete category:{}" ,categoryId);
         Category category = categoryRepositoryI.findById(categoryId)
                 .orElseThrow(() -> new ResourceNotFoundException("category is not found with this :" + categoryId));
-
-        categoryRepositoryI.delete(category);
+        String fullPath= imagepath+ category.getCoverImage();
+        try{
+            Path path = Paths.get(fullPath);
+            Files.delete(path);
+        }catch (NoSuchFileException e){
+            logger.info("category image is not found in folder");
+            e.printStackTrace();
+        }catch (IOException e){
+            e.printStackTrace();
+        }
         logger.info("completed dao call to delete category:{}" ,categoryId);
+        categoryRepositoryI.delete(category);
+
     }
 
     @Override

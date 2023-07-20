@@ -2,16 +2,26 @@ package com.bikkadit.electronic_store.controller;
 
 import com.bikkadit.electronic_store.dto.CategoryDto;
 import com.bikkadit.electronic_store.payload.ApiResponseMessage;
+import com.bikkadit.electronic_store.payload.ImageResponse;
 import com.bikkadit.electronic_store.payload.PageableResponse;
 import com.bikkadit.electronic_store.service.CategoryServiceI;
+import com.bikkadit.electronic_store.service.FileServiceI;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.util.StreamUtils;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
 
 @RestController
 @RequestMapping("/categories")
@@ -20,6 +30,11 @@ public class CategoryController {
     private static Logger logger= LoggerFactory.getLogger(CategoryController.class);
     @Autowired
     private CategoryServiceI categoryServiceI;
+
+    @Autowired
+    private FileServiceI fileServiceI;
+    @Value("${category.image.path}")
+    private String imagepath;
 
     /**
      * @author Vrushali Sonawane
@@ -129,5 +144,59 @@ public class CategoryController {
         PageableResponse<CategoryDto> categories = categoryServiceI.searchCategories(pageNumber, pageSize, sortBy, sortDir,keyword);
         logger.info("completed  request to search  categories");
         return new ResponseEntity<>(categories,HttpStatus.OK);
+    }
+
+    //uploading cover-image
+
+    /**
+     * @author Vrushali Sonawane
+     * @apiNote upload category image
+     * @param image
+     * @param categoryId
+     * @return
+     * @throws IOException
+     */
+    @PostMapping("/image/{categoryId}")
+    public ResponseEntity<ImageResponse> uploadCategoryImage(@RequestParam("coverImage")MultipartFile image,
+                                                             @PathVariable String categoryId ) throws IOException {
+       logger.info("Initiating request to upload category image: {}",categoryId);
+        String categoryImage = fileServiceI.uploadFile(image, imagepath);
+        //get category
+        CategoryDto categoryDto = categoryServiceI.getCategoryById(categoryId);
+        categoryDto.setCoverImage(categoryImage);
+        CategoryDto updatedCategory = categoryServiceI.updateCategory(categoryDto, categoryId);
+
+        ImageResponse response=ImageResponse.builder()
+                .imageName(categoryImage).message("Image is uploaded successfully").success(true).status(HttpStatus.CREATED).build();
+        logger.info("completed request to upload category image: {}",categoryId);
+        return new ResponseEntity<>(response,HttpStatus.OK);
+    }
+
+
+    //downloading cover-image
+
+    /**
+     * @author Vrushali Sonawane
+     * @apiNote download category image
+     * @param categoryId
+     * @param response
+     * @throws IOException
+     */
+    @GetMapping("image/{categoryId}")
+    public void downloadCategoryImage(@PathVariable String categoryId, HttpServletResponse response) throws IOException {
+        logger.info("Initiating request to download user image: {}",categoryId);
+        CategoryDto categoryDto = categoryServiceI.getCategoryById(categoryId);
+        logger.info("category Image name: {}", categoryDto.getTitle());
+
+        InputStream resource = fileServiceI.getResource(imagepath, categoryDto.getCoverImage());
+
+        response.setContentType(MediaType.IMAGE_JPEG_VALUE);
+
+        StreamUtils.copy(resource,response.getOutputStream());
+        logger.info("completed request to download category image: {}",categoryId);
+
+
+
+
     }
 }

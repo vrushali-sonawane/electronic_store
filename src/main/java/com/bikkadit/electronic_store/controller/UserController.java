@@ -158,10 +158,19 @@ public class UserController {
     }
 
     //upload user Image
+
+    /**
+     * @author Vrushali Sonawane
+     * @apiNote upload user profile
+     * @param image
+     * @param userId
+     * @return
+     * @throws IOException
+     */
     @PostMapping("/image/{userId}")
     public ResponseEntity<ImageResponse> uploadUserImage(
             @RequestParam("userImage") MultipartFile image, @PathVariable String userId) throws IOException {
-
+        log.info("Initiating request to upload user image: {}",userId);
         String imageName = fileServiceI.uploadFile(image, imageUploadPath);
 
         //save the image of particular user
@@ -171,14 +180,22 @@ public class UserController {
 
         ImageResponse response=ImageResponse.builder()
                 .imageName(imageName).message("Image is uploaded successfully").success(true).status(HttpStatus.CREATED).build();
-
+        log.info("Initiating request to upload category image: {}",userId);
         return  new ResponseEntity<>(response,HttpStatus.CREATED);
     }
 
     //serve user Image
+
+    /**
+     * @author Vrushali Sonawane
+     * @apiNote  download user image
+     * @param userId
+     * @param response
+     * @throws IOException
+     */
     @GetMapping("image/{userId}")
     public void  serveUserImage(@PathVariable String userId, HttpServletResponse response) throws IOException {
-
+        log.info("Initiating request to download user image: {}",userId);
         UserDto user = userServiceI.getUserById(userId);
         log.info("User image name :{} " ,user.getImageName());
 
@@ -187,6 +204,7 @@ public class UserController {
         response.setContentType(MediaType.IMAGE_JPEG_VALUE);
 
         StreamUtils.copy(resource,response.getOutputStream());
+        log.info("completed request to download user image: {}",userId);
 
     }
 
