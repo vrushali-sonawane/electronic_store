@@ -2,6 +2,7 @@ package com.bikkadit.electronic_store.controller;
 
 import com.bikkadit.electronic_store.dto.CategoryDto;
 import com.bikkadit.electronic_store.payload.ApiResponseMessage;
+import com.bikkadit.electronic_store.payload.AppConstants;
 import com.bikkadit.electronic_store.payload.ImageResponse;
 import com.bikkadit.electronic_store.payload.PageableResponse;
 import com.bikkadit.electronic_store.service.CategoryServiceI;
@@ -89,13 +90,12 @@ public class CategoryController {
      * @return
      */
     @DeleteMapping("/{categoryId}")
-    public ResponseEntity<ApiResponseMessage> deleteCategory(@PathVariable String categoryId){
+    public ResponseEntity<String> deleteCategory(@PathVariable String categoryId){
         logger.info("Initiating request to delete category :{}",categoryId);
         categoryServiceI.deleteCategory(categoryId);
-        ApiResponseMessage response=ApiResponseMessage.builder().
-                message("category successfully deleted ").success(true).status(HttpStatus.OK).build();
+
         logger.info("completed request to delete category :{}",categoryId);
-        return new ResponseEntity<>(response,HttpStatus.OK);
+        return new ResponseEntity<>(AppConstants.DELETE_CATEGORY,HttpStatus.OK);
     }
 
     /**

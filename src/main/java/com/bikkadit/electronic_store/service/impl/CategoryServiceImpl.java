@@ -3,6 +3,7 @@ package com.bikkadit.electronic_store.service.impl;
 import com.bikkadit.electronic_store.dto.CategoryDto;
 import com.bikkadit.electronic_store.entity.Category;
 import com.bikkadit.electronic_store.exception.ResourceNotFoundException;
+import com.bikkadit.electronic_store.payload.AppConstants;
 import com.bikkadit.electronic_store.payload.Helper;
 import com.bikkadit.electronic_store.payload.PageableResponse;
 import com.bikkadit.electronic_store.repository.CategoryRepositoryI;
@@ -56,7 +57,7 @@ public class CategoryServiceImpl implements CategoryServiceI {
     public CategoryDto updateCategory(CategoryDto categoryDto, String categoryId) {
         logger.info("Initiating dao call to update category:{}" ,categoryId);
         Category category = categoryRepositoryI.findById(categoryId)
-                .orElseThrow(() -> new ResourceNotFoundException("category is not found with this :" + categoryId));
+                .orElseThrow(() -> new ResourceNotFoundException(AppConstants.CATEGORY_NOT_FOUND + categoryId));
 
         category.setTitle(categoryDto.getTitle());
         category.setCategoryDescription(categoryDto.getCategoryDescription());
@@ -71,7 +72,7 @@ public class CategoryServiceImpl implements CategoryServiceI {
     public void deleteCategory(String categoryId) {
         logger.info("Initiating dao call to delete category:{}" ,categoryId);
         Category category = categoryRepositoryI.findById(categoryId)
-                .orElseThrow(() -> new ResourceNotFoundException("category is not found with this :" + categoryId));
+                .orElseThrow(() -> new ResourceNotFoundException(AppConstants.CATEGORY_NOT_FOUND + categoryId));
         String fullPath= imagepath+ category.getCoverImage();
         try{
             Path path = Paths.get(fullPath);
@@ -91,7 +92,7 @@ public class CategoryServiceImpl implements CategoryServiceI {
     public CategoryDto getCategoryById(String categoryId) {
         logger.info("Initiating dao call to get single category:{}" ,categoryId);
         Category category = categoryRepositoryI.findById(categoryId)
-                .orElseThrow(() -> new ResourceNotFoundException("category is not found with this :" + categoryId));
+                .orElseThrow(() -> new ResourceNotFoundException(AppConstants.CATEGORY_NOT_FOUND + categoryId));
 
         logger.info("completed dao call to get single category:{}" ,categoryId);
         return modelMapper.map(category,CategoryDto.class);

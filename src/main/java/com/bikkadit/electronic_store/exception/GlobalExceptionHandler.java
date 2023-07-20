@@ -24,19 +24,21 @@ public class GlobalExceptionHandler {
     private static Logger logger = LoggerFactory.getLogger(GlobalExceptionHandler.class);
 
     @ExceptionHandler(ResourceNotFoundException.class)
-    public ResponseEntity<AppConstants> resourceNotFoundExceptionHandler(ResourceNotFoundException ex) {
+    public ResponseEntity<ApiResponseMessage> resourceNotFoundExceptionHandler(ResourceNotFoundException ex) {
 
         logger.info("Exception Handler invoked !!");
 
-//        ApiResponseMessage response= ApiResponseMessage.builder()
-//                .message(ex.getMessage()).status(HttpStatus.NOT_FOUND).success(true).build();
-        return new ResponseEntity(AppConstants.USER_NOT_FOUND, HttpStatus.NOT_FOUND);
+       ApiResponseMessage response= ApiResponseMessage.builder()
+                .message(ex.getMessage()).status(HttpStatus.NOT_FOUND).success(true).build();
+        return new ResponseEntity(response, HttpStatus.NOT_FOUND);
     }
 
     //handleMethodArgumentNotValidException
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<Map<String, Object>> methodArgumentNotValidExeception(MethodArgumentNotValidException ex) {
+       logger.info("Exception invoked in method Argument not valid exception");
+
         List<ObjectError> allErrors = ex.getBindingResult().getAllErrors();
 
         Map<String, Object> response = new HashMap<>();

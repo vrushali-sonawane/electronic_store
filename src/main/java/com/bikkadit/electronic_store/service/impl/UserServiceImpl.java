@@ -62,7 +62,7 @@ public class UserServiceImpl implements UserServiceI {
     public UserDto updateUser(UserDto userDto, String userId) {
         log.info("Initiating dao call to update user:{}"+userId);
       User user=  userRepositoryI.findById(userId).orElseThrow(() ->
-              new ResourceNotFoundException(AppConstants.USER_NOT_FOUND));
+              new ResourceNotFoundException(AppConstants.USER_NOT_FOUND + userId));
         user.setName(userDto.getName());
         user.setEmail(userDto.getEmail());
         user.setPassword(userDto.getPassword());
@@ -80,7 +80,7 @@ public class UserServiceImpl implements UserServiceI {
     public UserDto getUserById(String userId) {
         log.info("Initiating dao call to get single user:{}"+userId);
        User user= userRepositoryI.findById(userId).orElseThrow(() ->
-               new ResourceNotFoundException(AppConstants.USER_NOT_FOUND));
+               new ResourceNotFoundException(AppConstants.USER_NOT_FOUND + userId));
        // UserDto userDto1=  entityToDto(user);
         UserDto userDto1=modelMapper.map(user, UserDto.class);
         log.info("Initiating dao call to get single user:{}"+userId);
@@ -91,7 +91,7 @@ public class UserServiceImpl implements UserServiceI {
     public UserDto getUserByEmail(String email) {
         log.info("Initiating dao call to get user record:{}"+email);
       User user=  userRepositoryI.findUserByEmail(email).orElseThrow(() ->
-              new ResourceNotFoundException(AppConstants.USER_NOT_FOUND));
+              new ResourceNotFoundException(AppConstants.NOT_FOUND + email));
       //UserDto userDto2= entityToDto(user);
         UserDto  userDto2=modelMapper.map(user, UserDto.class);
         log.info("Completing dao call to get user record:{}"+email);
@@ -102,7 +102,7 @@ public class UserServiceImpl implements UserServiceI {
     public void deleteUser(String userId) {
         log.info("Initiating dao call to delete user record:{}"+userId);
       User user=  userRepositoryI.findById(userId).orElseThrow(()->
-              new ResourceNotFoundException(AppConstants.USER_NOT_FOUND));
+              new ResourceNotFoundException(AppConstants.USER_NOT_FOUND + userId));
         //delete user profile image
         //path- image/users/abc.png
       String fullPath= imageUploadPath+ user.getImageName();
