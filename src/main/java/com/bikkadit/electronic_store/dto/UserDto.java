@@ -26,6 +26,7 @@ public class UserDto {
     private String email;
 
     @NotBlank(message = "Password is required !!")
+    @Pattern(regexp = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{8,}$",message="Minimum 8 characters required and must contain one uppercase, one lowercase and one number")
     private String password;
 
     @NotBlank(message="write something about yourself !!")
