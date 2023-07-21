@@ -146,10 +146,10 @@ public class UserController {
      */
     @GetMapping("/")
     public ResponseEntity<PageableResponse<UserDto>> getAllUsers(
-            @RequestParam(value = "pageNumber",defaultValue = "0",required = false)int pageNumber,
-            @RequestParam(value="pageSize",defaultValue ="10",required = false) int pageSize,
-            @RequestParam(value="sortBy",defaultValue = "name",required = false) String sortBy,
-            @RequestParam(value="sortDir",defaultValue = "asc",required = false) String sortDir
+            @RequestParam(value = "pageNumber",defaultValue = AppConstants.PAGE_NUMBER,required = false)int pageNumber,
+            @RequestParam(value="pageSize",defaultValue =AppConstants.PAGE_SIZE,required = false) int pageSize,
+            @RequestParam(value="sortBy",defaultValue = AppConstants.SORT_BY,required = false) String sortBy,
+            @RequestParam(value="sortDir",defaultValue = AppConstants.SORT_DIR,required = false) String sortDir
     ){
         log.info("Initiating request to get All users");
       PageableResponse<UserDto> allUsers= userServiceI.getAllUser(pageNumber, pageSize,sortBy,sortDir);

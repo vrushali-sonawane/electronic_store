@@ -53,11 +53,11 @@ public class FileServiceImpl implements FileServiceI {
 
     @Override
     public InputStream getResource(String path, String name) throws FileNotFoundException {
-
+       logger.info("Initiating call to download image:{}",name);
         String fullPath = path + File.separator + name;
 
         InputStream inputStream=new FileInputStream(fullPath);
-
+        logger.info("completed call to download image:{}",name);
         return inputStream;
     }
 }

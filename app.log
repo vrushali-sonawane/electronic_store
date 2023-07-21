@@ -10782,3 +10782,9 @@ Caused by: java.io.IOException: Cannot delete C:\Users\KSAV\AppData\Local\Temp\t
 07:21 00:18:26.128 [http-nio-7997-exec-3] [INFO] [c.b.e.service.impl.UserServiceImpl] -Initiating dao call to delete user record:{}8d7e66c8-621d-4f88-a251-4ce7413a6b7e
 07:21 00:18:26.140 [http-nio-7997-exec-3] [INFO] [c.b.e.e.GlobalExceptionHandler] -Exception Handler invoked !!
 07:21 00:18:26.143 [http-nio-7997-exec-3] [WARN] [o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver] -Resolved [com.bikkadit.electronic_store.exception.ResourceNotFoundException: User Not Found with this 8d7e66c8-621d-4f88-a251-4ce7413a6b7e]
+07:21 00:38:43.006 [HikariPool-1 housekeeper] [WARN] [com.zaxxer.hikari.pool.HikariPool] -HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=54s261ms762µs300ns).
+07:21 00:39:18.913 [HikariPool-1 housekeeper] [WARN] [com.zaxxer.hikari.pool.HikariPool] -HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=54s971ms919µs800ns).
+07:21 00:46:44.685 [HikariPool-1 housekeeper] [WARN] [com.zaxxer.hikari.pool.HikariPool] -HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=55s193ms330µs500ns).
+07:21 01:00:24.674 [SpringApplicationShutdownHook] [INFO] [o.s.o.j.LocalContainerEntityManagerFactoryBean] -Closing JPA EntityManagerFactory for persistence unit 'default'
+07:21 01:00:40.811 [SpringApplicationShutdownHook] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Shutdown initiated...
+07:21 01:00:45.228 [SpringApplicationShutdownHook] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Shutdown completed.

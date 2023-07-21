@@ -109,10 +109,10 @@ public class CategoryController {
      */
     @GetMapping("/")
     public ResponseEntity<PageableResponse<CategoryDto>> getAllCategories(
-            @RequestParam(value = "pageNumber",defaultValue = "0",required = false)int pageNumber,
-            @RequestParam(value="pageSize",defaultValue = "10",required = false)int pageSize,
-            @RequestParam(value="sortBy" ,defaultValue = "title",required = false)String sortBy,
-            @RequestParam(value="sortDir",defaultValue = "asc",required = false)String sortDir
+            @RequestParam(value = "pageNumber",defaultValue = AppConstants.PAGE_NUMBER,required = false)int pageNumber,
+            @RequestParam(value="pageSize",defaultValue = AppConstants.PAGE_SIZE,required = false)int pageSize,
+            @RequestParam(value="sortBy" ,defaultValue = AppConstants.SORT_BY_TITLE,required = false)String sortBy,
+            @RequestParam(value="sortDir",defaultValue = AppConstants.SORT_DIR,required = false)String sortDir
     ){
         logger.info("Initiating request to get All categories");
         PageableResponse<CategoryDto> allCategories = categoryServiceI.getAllCategories(pageNumber, pageSize, sortBy, sortDir);
@@ -135,10 +135,10 @@ public class CategoryController {
 
     @GetMapping("/search/{keyword}")
     public ResponseEntity<PageableResponse<CategoryDto>> searchCategories(
-            @RequestParam(value ="pageNumber",defaultValue = "0",required = false)int pageNumber,
-            @RequestParam(value="pageSize",defaultValue = "10",required = false)int pageSize,
-            @RequestParam(value="sortBy" ,defaultValue = "title",required = false)String sortBy,
-            @RequestParam(value="sortDir",defaultValue = "asc",required = false)String sortDir,@PathVariable String keyword){
+            @RequestParam(value ="pageNumber",defaultValue = AppConstants.PAGE_NUMBER,required = false)int pageNumber,
+            @RequestParam(value="pageSize",defaultValue = AppConstants.PAGE_SIZE,required = false)int pageSize,
+            @RequestParam(value="sortBy" ,defaultValue = AppConstants.SORT_BY,required = false)String sortBy,
+            @RequestParam(value="sortDir",defaultValue = AppConstants.SORT_DIR,required = false)String sortDir,@PathVariable String keyword){
 
         logger.info("Initiating request to search  categories");
         PageableResponse<CategoryDto> categories = categoryServiceI.searchCategories(pageNumber, pageSize, sortBy, sortDir,keyword);
