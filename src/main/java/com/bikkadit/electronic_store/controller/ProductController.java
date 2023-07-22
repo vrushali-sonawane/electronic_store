@@ -35,26 +35,26 @@ public class ProductController {
     //update
     @PutMapping("/{productId}")
     public ResponseEntity<ProductDto> updateProduct(@Valid @RequestBody ProductDto productDto, @PathVariable String productId){
-        logger.info("Initiating request to update product details");
+        logger.info("Initiating request to update product details:{}",productId);
         ProductDto updatedProduct = productServiceI.updateProduct(productDto,productId);
-        logger.info("Completed request to update product details");
+        logger.info("Completed request to update product details:{}",productId);
         return  new ResponseEntity<>(updatedProduct, HttpStatus.CREATED);
     }
     //delete
     @DeleteMapping("/{productId}")
     public ResponseEntity<String> deleteProduct(@PathVariable String productId){
-        logger.info("Initiating request to delete single product details");
+        logger.info("Initiating request to delete single product details:{}",productId);
         productServiceI.deteteSingleProduct(productId);
-        logger.info("completed request to delete  single product details");
+        logger.info("completed request to delete  single product details:{}",productId);
         return new ResponseEntity<>(AppConstants.DELETE_PRODUCT,HttpStatus.OK);
     }
 
     //getSingleProduct
     @GetMapping("/{productId}")
     public ResponseEntity<ProductDto> getSingleProduct(@PathVariable String productId){
-        logger.info("Initiating request to get single product details");
+        logger.info("Initiating request to get single product details:{}",productId);
         ProductDto product = productServiceI.getSingleProduct(productId);
-        logger.info("completed  request to get single product details");
+        logger.info("completed  request to get single product details:{}",productId);
         return new ResponseEntity<>(product,HttpStatus.OK);
 
     }
@@ -67,7 +67,9 @@ public class ProductController {
             @RequestParam(value = "sortBy", defaultValue = AppConstants.SORT_BY_TITLE,required = false) String sortBy,
             @RequestParam(value = "sortDir",defaultValue = AppConstants.SORT_DIR,required = false)String sortDir
     ){
+        logger.info("Initiating request to get All product details");
         PageableResponse<ProductDto> allProducts = productServiceI.getAllProducts(pageNumber, pageSize, sortBy, sortDir);
+        logger.info("completed request to get All product details");
         return  new ResponseEntity<>(allProducts,HttpStatus.OK);
     }
     //getAllLive
@@ -79,7 +81,9 @@ public class ProductController {
             @RequestParam(value = "sortBy", defaultValue = AppConstants.SORT_BY_TITLE,required = false) String sortBy,
             @RequestParam(value = "sortDir",defaultValue = AppConstants.SORT_DIR,required = false)String sortDir
     ){
+        logger.info("Initiating request to get live product details");
         PageableResponse<ProductDto> allProducts = productServiceI.getAllLive(pageNumber, pageSize, sortBy, sortDir);
+        logger.info("completed request to get Live product details");
         return  new ResponseEntity<>(allProducts,HttpStatus.OK);
     }
     //searchProduct
@@ -91,7 +95,9 @@ public class ProductController {
             @RequestParam(value = "sortDir",defaultValue = AppConstants.SORT_DIR,required = false)String sortDir,
             @PathVariable String subTitle
     ){
+        logger.info("Initiating request to search product details:{}",subTitle);
         PageableResponse<ProductDto> allProducts = productServiceI.searchProducts(subTitle,pageNumber, pageSize, sortBy, sortDir);
+        logger.info("Initiating request to search product details:{}",subTitle);
         return  new ResponseEntity<>(allProducts,HttpStatus.OK);
     }
 
