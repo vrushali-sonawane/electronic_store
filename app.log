@@ -11199,3 +11199,219 @@ java.lang.NullPointerException: Cannot invoke "String.isBlank()" because "value"
 07:22 16:30:28.285 [SpringApplicationShutdownHook] [INFO] [o.s.o.j.LocalContainerEntityManagerFactoryBean] -Closing JPA EntityManagerFactory for persistence unit 'default'
 07:22 16:30:28.303 [SpringApplicationShutdownHook] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Shutdown initiated...
 07:22 16:30:28.392 [SpringApplicationShutdownHook] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Shutdown completed.
+07:22 16:37:15.304 [restartedMain] [INFO] [c.b.e.ElectronicStoreApplication] -Starting ElectronicStoreApplication using Java 17.0.6 on DESKTOP-2OI3U43 with PID 45508 (E:\newproject07\electronic_store\target\classes started by KSAV in E:\newproject07\electronic_store)
+07:22 16:37:15.683 [restartedMain] [INFO] [c.b.e.ElectronicStoreApplication] -No active profile set, falling back to 1 default profile: "default"
+07:22 16:37:15.807 [background-preinit] [INFO] [o.h.validator.internal.util.Version] -HV000001: Hibernate Validator 6.2.5.Final
+07:22 16:37:16.440 [restartedMain] [INFO] [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] -Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+07:22 16:37:16.441 [restartedMain] [INFO] [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] -For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+07:22 16:37:27.082 [restartedMain] [INFO] [o.s.d.r.c.RepositoryConfigurationDelegate] -Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+07:22 16:37:27.533 [restartedMain] [INFO] [o.s.d.r.c.RepositoryConfigurationDelegate] -Finished Spring Data repository scanning in 397 ms. Found 3 JPA repository interfaces.
+07:22 16:37:32.195 [restartedMain] [INFO] [o.s.b.w.e.tomcat.TomcatWebServer] -Tomcat initialized with port(s): 7997 (http)
+07:22 16:37:32.253 [restartedMain] [INFO] [o.a.coyote.http11.Http11NioProtocol] -Initializing ProtocolHandler ["http-nio-7997"]
+07:22 16:37:32.303 [restartedMain] [INFO] [o.a.catalina.core.StandardService] -Starting service [Tomcat]
+07:22 16:37:32.305 [restartedMain] [INFO] [o.a.catalina.core.StandardEngine] -Starting Servlet engine: [Apache Tomcat/9.0.76]
+07:22 16:37:32.828 [restartedMain] [INFO] [o.a.c.c.C.[Tomcat].[localhost].[/]] -Initializing Spring embedded WebApplicationContext
+07:22 16:37:32.831 [restartedMain] [INFO] [o.s.b.w.s.c.ServletWebServerApplicationContext] -Root WebApplicationContext: initialization completed in 16388 ms
+07:22 16:37:33.509 [restartedMain] [INFO] [o.h.jpa.internal.util.LogHelper] -HHH000204: Processing PersistenceUnitInfo [name: default]
+07:22 16:37:33.743 [restartedMain] [INFO] [org.hibernate.Version] -HHH000412: Hibernate ORM core version 5.6.15.Final
+07:22 16:37:34.348 [restartedMain] [INFO] [o.h.annotations.common.Version] -HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+07:22 16:37:34.822 [restartedMain] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Starting...
+07:22 16:37:41.333 [restartedMain] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Start completed.
+07:22 16:37:41.527 [restartedMain] [INFO] [org.hibernate.dialect.Dialect] -HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+07:22 16:37:47.830 [restartedMain] [INFO] [o.h.e.t.j.p.i.JtaPlatformInitiator] -HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+07:22 16:37:47.941 [restartedMain] [INFO] [o.s.o.j.LocalContainerEntityManagerFactoryBean] -Initialized JPA EntityManagerFactory for persistence unit 'default'
+07:22 16:37:50.559 [restartedMain] [WARN] [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration] -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+07:22 16:37:52.720 [restartedMain] [INFO] [o.s.b.d.a.OptionalLiveReloadServer] -LiveReload server is running on port 35729
+07:22 16:37:52.854 [restartedMain] [INFO] [o.a.coyote.http11.Http11NioProtocol] -Starting ProtocolHandler ["http-nio-7997"]
+07:22 16:37:53.875 [restartedMain] [INFO] [o.s.b.w.e.tomcat.TomcatWebServer] -Tomcat started on port(s): 7997 (http) with context path ''
+07:22 16:37:53.896 [restartedMain] [INFO] [c.b.e.ElectronicStoreApplication] -Started ElectronicStoreApplication in 43.538 seconds (JVM running for 56.309)
+07:22 16:41:02.013 [http-nio-7997-exec-1] [INFO] [o.a.c.c.C.[Tomcat].[localhost].[/]] -Initializing Spring DispatcherServlet 'dispatcherServlet'
+07:22 16:41:02.098 [http-nio-7997-exec-1] [INFO] [o.s.web.servlet.DispatcherServlet] -Initializing Servlet 'dispatcherServlet'
+07:22 16:41:02.104 [http-nio-7997-exec-1] [INFO] [o.s.web.servlet.DispatcherServlet] -Completed initialization in 6 ms
+07:22 16:41:03.414 [http-nio-7997-exec-1] [WARN] [o.s.w.s.m.s.DefaultHandlerExceptionResolver] -Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.util.Date` from String "22/07/2023": expected format "dd-MM-yyyy"; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.util.Date` from String "22/07/2023": expected format "dd-MM-yyyy"<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 6, column: 17] (through reference chain: com.bikkadit.electronic_store.dto.ProductDto["addedDate"])]
+07:22 16:42:04.257 [http-nio-7997-exec-4] [INFO] [c.b.e.validate.ImageNameValidator] -Message from isValid : abc.png
+07:22 16:42:04.263 [http-nio-7997-exec-4] [INFO] [c.b.e.controller.ProductController] -Initiating request to create product
+07:22 16:42:04.263 [http-nio-7997-exec-4] [INFO] [c.b.e.s.impl.ProductServiceImpl] -Initiating dao call to create product details
+07:22 16:42:06.284 [http-nio-7997-exec-4] [INFO] [c.b.e.s.impl.ProductServiceImpl] -completed dao call to create product details
+07:22 16:42:06.289 [http-nio-7997-exec-4] [INFO] [c.b.e.controller.ProductController] -completed request to create product
+07:22 16:45:53.869 [http-nio-7997-exec-6] [INFO] [c.b.e.validate.ImageNameValidator] -Message from isValid : xyz.png
+07:22 16:45:53.871 [http-nio-7997-exec-6] [INFO] [c.b.e.controller.ProductController] -Initiating request to create product
+07:22 16:45:53.872 [http-nio-7997-exec-6] [INFO] [c.b.e.s.impl.ProductServiceImpl] -Initiating dao call to create product details
+07:22 16:45:54.040 [http-nio-7997-exec-6] [INFO] [c.b.e.s.impl.ProductServiceImpl] -completed dao call to create product details
+07:22 16:45:54.041 [http-nio-7997-exec-6] [INFO] [c.b.e.controller.ProductController] -completed request to create product
+07:22 16:52:42.109 [http-nio-7997-exec-10] [INFO] [c.b.e.validate.ImageNameValidator] -Message from isValid : xyz.png
+07:22 16:52:42.214 [http-nio-7997-exec-10] [INFO] [c.b.e.controller.ProductController] -Initiating request to update product details:2c3674ee-0840-4aec-98e8-655f68589e59
+07:22 16:52:42.214 [http-nio-7997-exec-10] [INFO] [c.b.e.s.impl.ProductServiceImpl] -Initiating dao call to update product details:2c3674ee-0840-4aec-98e8-655f68589e59
+07:22 16:52:42.563 [http-nio-7997-exec-10] [INFO] [c.b.e.s.impl.ProductServiceImpl] -completed dao call to update product details:2c3674ee-0840-4aec-98e8-655f68589e59
+07:22 16:52:42.564 [http-nio-7997-exec-10] [INFO] [c.b.e.controller.ProductController] -Completed request to update product details:2c3674ee-0840-4aec-98e8-655f68589e59
+07:22 16:56:16.096 [http-nio-7997-exec-1] [INFO] [c.b.e.validate.ImageNameValidator] -Message from isValid : bvc.png
+07:22 16:56:16.098 [http-nio-7997-exec-1] [INFO] [c.b.e.controller.ProductController] -Initiating request to create product
+07:22 16:56:16.098 [http-nio-7997-exec-1] [INFO] [c.b.e.s.impl.ProductServiceImpl] -Initiating dao call to create product details
+07:22 16:56:16.219 [http-nio-7997-exec-1] [INFO] [c.b.e.s.impl.ProductServiceImpl] -completed dao call to create product details
+07:22 16:56:16.220 [http-nio-7997-exec-1] [INFO] [c.b.e.controller.ProductController] -completed request to create product
+07:22 16:57:45.638 [http-nio-7997-exec-7] [INFO] [c.b.e.validate.ImageNameValidator] -Message from isValid : abc.png
+07:22 16:57:45.640 [http-nio-7997-exec-7] [INFO] [c.b.e.controller.ProductController] -Initiating request to create product
+07:22 16:57:45.640 [http-nio-7997-exec-7] [INFO] [c.b.e.s.impl.ProductServiceImpl] -Initiating dao call to create product details
+07:22 16:57:45.731 [http-nio-7997-exec-7] [INFO] [c.b.e.s.impl.ProductServiceImpl] -completed dao call to create product details
+07:22 16:57:45.732 [http-nio-7997-exec-7] [INFO] [c.b.e.controller.ProductController] -completed request to create product
+07:22 16:57:55.394 [http-nio-7997-exec-6] [INFO] [c.b.e.controller.ProductController] -Initiating request to get single product details:2c3674ee-0840-4aec-98e8-655f68589e59
+07:22 16:57:55.394 [http-nio-7997-exec-6] [INFO] [c.b.e.s.impl.ProductServiceImpl] -Initiating dao call to get single product:2c3674ee-0840-4aec-98e8-655f68589e59
+07:22 16:57:55.413 [http-nio-7997-exec-6] [INFO] [c.b.e.s.impl.ProductServiceImpl] -completed dao call to get single product details:2c3674ee-0840-4aec-98e8-655f68589e59
+07:22 16:57:55.413 [http-nio-7997-exec-6] [INFO] [c.b.e.controller.ProductController] -completed  request to get single product details:2c3674ee-0840-4aec-98e8-655f68589e59
+07:22 16:59:34.225 [http-nio-7997-exec-10] [INFO] [c.b.e.controller.ProductController] -Initiating request to get single product details:2c3674ee-0840-4aec-98e8-655f68589e59
+07:22 16:59:34.227 [http-nio-7997-exec-10] [INFO] [c.b.e.s.impl.ProductServiceImpl] -Initiating dao call to get single product:2c3674ee-0840-4aec-98e8-655f68589e59
+07:22 16:59:34.236 [http-nio-7997-exec-10] [INFO] [c.b.e.s.impl.ProductServiceImpl] -completed dao call to get single product details:2c3674ee-0840-4aec-98e8-655f68589e59
+07:22 16:59:34.236 [http-nio-7997-exec-10] [INFO] [c.b.e.controller.ProductController] -completed  request to get single product details:2c3674ee-0840-4aec-98e8-655f68589e59
+07:22 17:01:35.970 [http-nio-7997-exec-1] [INFO] [c.b.e.controller.ProductController] -Initiating request to get All product details
+07:22 17:01:35.973 [http-nio-7997-exec-1] [INFO] [c.b.e.s.impl.ProductServiceImpl] -Initiating dao call to get all product details
+07:22 17:01:36.766 [http-nio-7997-exec-1] [INFO] [c.b.e.s.impl.ProductServiceImpl] -completed dao call to get all product details
+07:22 17:01:36.766 [http-nio-7997-exec-1] [INFO] [c.b.e.controller.ProductController] -completed request to get All product details
+07:22 17:02:05.854 [http-nio-7997-exec-4] [INFO] [c.b.e.controller.ProductController] -Initiating request to get All product details
+07:22 17:02:05.885 [http-nio-7997-exec-4] [INFO] [c.b.e.s.impl.ProductServiceImpl] -Initiating dao call to get all product details
+07:22 17:02:06.094 [http-nio-7997-exec-4] [INFO] [c.b.e.s.impl.ProductServiceImpl] -completed dao call to get all product details
+07:22 17:02:06.094 [http-nio-7997-exec-4] [INFO] [c.b.e.controller.ProductController] -completed request to get All product details
+07:22 17:02:23.379 [http-nio-7997-exec-5] [INFO] [c.b.e.controller.ProductController] -Initiating request to get All product details
+07:22 17:02:23.380 [http-nio-7997-exec-5] [INFO] [c.b.e.s.impl.ProductServiceImpl] -Initiating dao call to get all product details
+07:22 17:02:23.437 [http-nio-7997-exec-5] [INFO] [c.b.e.s.impl.ProductServiceImpl] -completed dao call to get all product details
+07:22 17:02:23.438 [http-nio-7997-exec-5] [INFO] [c.b.e.controller.ProductController] -completed request to get All product details
+07:22 17:02:36.629 [http-nio-7997-exec-7] [INFO] [c.b.e.controller.ProductController] -Initiating request to get All product details
+07:22 17:02:36.629 [http-nio-7997-exec-7] [INFO] [c.b.e.s.impl.ProductServiceImpl] -Initiating dao call to get all product details
+07:22 17:02:36.701 [http-nio-7997-exec-7] [INFO] [c.b.e.s.impl.ProductServiceImpl] -completed dao call to get all product details
+07:22 17:02:36.702 [http-nio-7997-exec-7] [INFO] [c.b.e.controller.ProductController] -completed request to get All product details
+07:22 17:05:00.342 [http-nio-7997-exec-9] [INFO] [c.b.e.controller.ProductController] -Initiating request to get All product details
+07:22 17:05:00.346 [http-nio-7997-exec-9] [INFO] [c.b.e.s.impl.ProductServiceImpl] -Initiating dao call to get all product details
+07:22 17:05:00.830 [http-nio-7997-exec-9] [ERROR] [o.a.c.c.C.[.[.[.[dispatcherServlet]] -Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.data.mapping.PropertyReferenceException: No property 'name' found for type 'Product'] with root cause
+org.springframework.data.mapping.PropertyReferenceException: No property 'name' found for type 'Product'
+	at org.springframework.data.mapping.PropertyPath.<init>(PropertyPath.java:91)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:438)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:414)
+	at org.springframework.data.mapping.PropertyPath.lambda$from$0(PropertyPath.java:367)
+	at java.base/java.util.concurrent.ConcurrentMap.computeIfAbsent(ConcurrentMap.java:330)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:349)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:332)
+	at org.springframework.data.jpa.repository.query.QueryUtils.toJpaOrder(QueryUtils.java:726)
+	at org.springframework.data.jpa.repository.query.QueryUtils.toOrders(QueryUtils.java:679)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.getQuery(SimpleJpaRepository.java:817)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.getQuery(SimpleJpaRepository.java:774)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll(SimpleJpaRepository.java:515)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll(SimpleJpaRepository.java:482)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:289)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:530)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:286)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:640)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:164)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:76)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:241)
+	at jdk.proxy3/jdk.proxy3.$Proxy115.findAll(Unknown Source)
+	at com.bikkadit.electronic_store.service.impl.ProductServiceImpl.getAllProducts(ProductServiceImpl.java:91)
+	at com.bikkadit.electronic_store.controller.ProductController.getAllProducts(ProductController.java:106)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:529)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+07:22 17:05:17.984 [http-nio-7997-exec-10] [INFO] [c.b.e.controller.ProductController] -Initiating request to get All product details
+07:22 17:05:17.985 [http-nio-7997-exec-10] [INFO] [c.b.e.s.impl.ProductServiceImpl] -Initiating dao call to get all product details
+07:22 17:05:18.085 [http-nio-7997-exec-10] [INFO] [c.b.e.s.impl.ProductServiceImpl] -completed dao call to get all product details
+07:22 17:05:18.085 [http-nio-7997-exec-10] [INFO] [c.b.e.controller.ProductController] -completed request to get All product details
+07:22 17:05:37.091 [http-nio-7997-exec-3] [INFO] [c.b.e.controller.ProductController] -Initiating request to get live product details
+07:22 17:05:37.092 [http-nio-7997-exec-3] [INFO] [c.b.e.s.impl.ProductServiceImpl] -Initiating dao call to get all live product details
+07:22 17:05:37.823 [http-nio-7997-exec-3] [INFO] [c.b.e.s.impl.ProductServiceImpl] -completed dao call to get all live product details
+07:22 17:05:37.824 [http-nio-7997-exec-3] [INFO] [c.b.e.controller.ProductController] -completed request to get Live product details
+07:22 17:06:03.793 [http-nio-7997-exec-1] [INFO] [c.b.e.controller.ProductController] -Initiating request to get live product details
+07:22 17:06:03.794 [http-nio-7997-exec-1] [INFO] [c.b.e.s.impl.ProductServiceImpl] -Initiating dao call to get all live product details
+07:22 17:06:03.874 [http-nio-7997-exec-1] [INFO] [c.b.e.s.impl.ProductServiceImpl] -completed dao call to get all live product details
+07:22 17:06:03.875 [http-nio-7997-exec-1] [INFO] [c.b.e.controller.ProductController] -completed request to get Live product details
+07:22 17:07:42.451 [http-nio-7997-exec-7] [INFO] [c.b.e.controller.ProductController] -Initiating request to search product details:R
+07:22 17:07:42.467 [http-nio-7997-exec-7] [INFO] [c.b.e.s.impl.ProductServiceImpl] -Initiating dao call to search product details:R
+07:22 17:07:42.958 [http-nio-7997-exec-7] [INFO] [c.b.e.s.impl.ProductServiceImpl] -completed dao call to search product details:R
+07:22 17:07:42.958 [http-nio-7997-exec-7] [INFO] [c.b.e.controller.ProductController] -Initiating request to search product details:R
+07:22 17:08:11.859 [http-nio-7997-exec-6] [INFO] [c.b.e.controller.ProductController] -Initiating request to search product details:R
+07:22 17:08:11.860 [http-nio-7997-exec-6] [INFO] [c.b.e.s.impl.ProductServiceImpl] -Initiating dao call to search product details:R
+07:22 17:08:11.880 [http-nio-7997-exec-6] [INFO] [c.b.e.s.impl.ProductServiceImpl] -completed dao call to search product details:R
+07:22 17:08:11.881 [http-nio-7997-exec-6] [INFO] [c.b.e.controller.ProductController] -Initiating request to search product details:R
+07:22 17:08:22.971 [http-nio-7997-exec-8] [INFO] [c.b.e.controller.ProductController] -Initiating request to search product details:boat
+07:22 17:08:22.971 [http-nio-7997-exec-8] [INFO] [c.b.e.s.impl.ProductServiceImpl] -Initiating dao call to search product details:boat
+07:22 17:08:22.979 [http-nio-7997-exec-8] [INFO] [c.b.e.s.impl.ProductServiceImpl] -completed dao call to search product details:boat
+07:22 17:08:22.979 [http-nio-7997-exec-8] [INFO] [c.b.e.controller.ProductController] -Initiating request to search product details:boat
+07:22 17:08:44.970 [http-nio-7997-exec-9] [INFO] [c.b.e.controller.ProductController] -Initiating request to search product details:headphones
+07:22 17:08:44.970 [http-nio-7997-exec-9] [INFO] [c.b.e.s.impl.ProductServiceImpl] -Initiating dao call to search product details:headphones
+07:22 17:08:45.009 [http-nio-7997-exec-9] [INFO] [c.b.e.s.impl.ProductServiceImpl] -completed dao call to search product details:headphones
+07:22 17:08:45.010 [http-nio-7997-exec-9] [INFO] [c.b.e.controller.ProductController] -Initiating request to search product details:headphones
+07:22 17:08:59.924 [http-nio-7997-exec-2] [INFO] [c.b.e.controller.ProductController] -Initiating request to search product details:headphones
+07:22 17:08:59.925 [http-nio-7997-exec-2] [INFO] [c.b.e.s.impl.ProductServiceImpl] -Initiating dao call to search product details:headphones
+07:22 17:08:59.935 [http-nio-7997-exec-2] [INFO] [c.b.e.s.impl.ProductServiceImpl] -completed dao call to search product details:headphones
+07:22 17:08:59.957 [http-nio-7997-exec-2] [INFO] [c.b.e.controller.ProductController] -Initiating request to search product details:headphones
+07:22 17:11:31.267 [http-nio-7997-exec-3] [INFO] [c.b.e.controller.ProductController] -Initiating request to get single product details:26591e2f-7aff-4ccd-8203-ea998bbd032d
+07:22 17:11:31.270 [http-nio-7997-exec-3] [INFO] [c.b.e.s.impl.ProductServiceImpl] -Initiating dao call to get single product:26591e2f-7aff-4ccd-8203-ea998bbd032d
+07:22 17:11:31.294 [http-nio-7997-exec-3] [INFO] [c.b.e.s.impl.ProductServiceImpl] -completed dao call to get single product details:26591e2f-7aff-4ccd-8203-ea998bbd032d
+07:22 17:11:31.295 [http-nio-7997-exec-3] [INFO] [c.b.e.controller.ProductController] -completed  request to get single product details:26591e2f-7aff-4ccd-8203-ea998bbd032d
+07:22 17:11:40.233 [http-nio-7997-exec-4] [INFO] [c.b.e.controller.ProductController] -Initiating request to delete single product details:26591e2f-7aff-4ccd-8203-ea998bbd032d
+07:22 17:11:40.259 [http-nio-7997-exec-4] [INFO] [c.b.e.s.impl.ProductServiceImpl] -Initiating dao call to update product details:26591e2f-7aff-4ccd-8203-ea998bbd032d
+07:22 17:11:40.365 [http-nio-7997-exec-4] [INFO] [c.b.e.s.impl.ProductServiceImpl] -Completed dao call to update product details:26591e2f-7aff-4ccd-8203-ea998bbd032d
+07:22 17:11:43.223 [http-nio-7997-exec-4] [INFO] [c.b.e.controller.ProductController] -completed request to delete  single product details:26591e2f-7aff-4ccd-8203-ea998bbd032d
