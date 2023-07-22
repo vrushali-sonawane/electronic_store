@@ -3,6 +3,7 @@ package com.bikkadit.electronic_store.service.impl;
 import com.bikkadit.electronic_store.dto.ProductDto;
 import com.bikkadit.electronic_store.entity.Product;
 import com.bikkadit.electronic_store.exception.ResourceNotFoundException;
+import com.bikkadit.electronic_store.payload.AppConstants;
 import com.bikkadit.electronic_store.payload.Helper;
 import com.bikkadit.electronic_store.payload.PageableResponse;
 import com.bikkadit.electronic_store.repository.ProductRepositoryI;
@@ -45,7 +46,8 @@ public class ProductServiceImpl implements ProductServiceI {
     @Override
     public ProductDto updateProduct(ProductDto productDto, String productId) {
         logger.info("Initiating dao call to update product details:{}",productId);
-        Product product = productRepositoryI.findById(productId).orElseThrow(() -> new ResourceNotFoundException());
+        Product product = productRepositoryI.findById(productId)
+                .orElseThrow(() -> new ResourceNotFoundException(AppConstants.PRODUCT_NOT_FOUND + productId));
 
         product.setTitle(productDto.getTitle());
         product.setDescription(productDto.getDescription());
@@ -63,7 +65,8 @@ public class ProductServiceImpl implements ProductServiceI {
     @Override
     public void deteteSingleProduct(String productId) {
         logger.info("Initiating dao call to update product details:{}",productId);
-        Product product = productRepositoryI.findById(productId).orElseThrow(() -> new ResourceNotFoundException());
+        Product product = productRepositoryI.findById(productId)
+                .orElseThrow(() -> new ResourceNotFoundException(AppConstants.PRODUCT_NOT_FOUND + productId));
         logger.info("Completed dao call to update product details:{}",productId);
           productRepositoryI.delete(product);
     }
@@ -72,7 +75,8 @@ public class ProductServiceImpl implements ProductServiceI {
     public ProductDto getSingleProduct(String productId) {
            logger.info("Initiating dao call to get single product:{}",productId);
 
-        Product product = productRepositoryI.findById(productId).orElseThrow(() -> new ResourceNotFoundException());
+        Product product = productRepositoryI.findById(productId)
+                .orElseThrow(() -> new ResourceNotFoundException(AppConstants.PRODUCT_NOT_FOUND + productId));
         ProductDto productDto = modelMapper.map(product, ProductDto.class);
         logger.info("completed dao call to get single product details:{}",productId);
         return productDto;

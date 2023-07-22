@@ -23,7 +23,15 @@ public class ProductController {
 
     private static Logger logger= LoggerFactory.getLogger(ProductController.class);
 
+
     //create
+
+    /**
+     * @author Vrushali Sonawane
+     * @apiNote  create product
+     * @param productDto
+     * @return productDto
+     */
     @PostMapping("/")
     public ResponseEntity<ProductDto> createProduct(@Valid @RequestBody ProductDto productDto){
         logger.info("Initiating request to create product");
@@ -33,6 +41,12 @@ public class ProductController {
     }
 
     //update
+    /**
+     * @author Vrushali Sonawane
+     * @apiNote  update product
+     * @param productDto
+     * @return productDto
+     */
     @PutMapping("/{productId}")
     public ResponseEntity<ProductDto> updateProduct(@Valid @RequestBody ProductDto productDto, @PathVariable String productId){
         logger.info("Initiating request to update product details:{}",productId);
@@ -41,6 +55,10 @@ public class ProductController {
         return  new ResponseEntity<>(updatedProduct, HttpStatus.CREATED);
     }
     //delete
+    /**
+     * @author Vrushali Sonawane
+     * @apiNote  delete single product
+     */
     @DeleteMapping("/{productId}")
     public ResponseEntity<String> deleteProduct(@PathVariable String productId){
         logger.info("Initiating request to delete single product details:{}",productId);
@@ -50,6 +68,13 @@ public class ProductController {
     }
 
     //getSingleProduct
+
+    /**
+     * @author Vrushali Sonawane
+     * @apiNote get single product
+     * @param productId
+     * @return productDto
+     */
     @GetMapping("/{productId}")
     public ResponseEntity<ProductDto> getSingleProduct(@PathVariable String productId){
         logger.info("Initiating request to get single product details:{}",productId);
@@ -60,6 +85,16 @@ public class ProductController {
     }
 
     //getAllProducts
+
+    /**
+     * @author Vrushali Sonawane
+     * @apiNote get All products
+     * @param pageNumber
+     * @param pageSize
+     * @param sortBy
+     * @param sortDir
+     * @return
+     */
     @GetMapping("/")
     public ResponseEntity<PageableResponse<ProductDto>> getAllProducts(
             @RequestParam(value = "pageNumber",defaultValue = AppConstants.PAGE_NUMBER,required = false)int pageNumber,
@@ -74,7 +109,17 @@ public class ProductController {
     }
     //getAllLive
 
-    @GetMapping("/")
+    /**
+     * @author Vrushali Sonawane
+     * @apiNote get All live Products
+     * @param pageNumber
+     * @param pageSize
+     * @param sortBy
+     * @param sortDir
+     * @return
+     */
+
+    @GetMapping("/live")
     public ResponseEntity<PageableResponse<ProductDto>> getAllLive(
             @RequestParam(value = "pageNumber",defaultValue = AppConstants.PAGE_NUMBER,required = false)int pageNumber,
             @RequestParam(value = "pageSize",defaultValue = AppConstants.PAGE_SIZE,required = false)int pageSize,
@@ -87,7 +132,18 @@ public class ProductController {
         return  new ResponseEntity<>(allProducts,HttpStatus.OK);
     }
     //searchProduct
-    @GetMapping("/{subTitle}")
+
+    /**
+     * @author Vrushali Sonawane
+     * @apiNote  search product by title
+     * @param pageNumber
+     * @param pageSize
+     * @param sortBy
+     * @param sortDir
+     * @param subTitle
+     * @return
+     */
+    @GetMapping("search/{subTitle}")
     public ResponseEntity<PageableResponse<ProductDto>> searchProducts(
             @RequestParam(value = "pageNumber",defaultValue = AppConstants.PAGE_NUMBER,required = false)int pageNumber,
             @RequestParam(value = "pageSize",defaultValue = AppConstants.PAGE_SIZE,required = false)int pageSize,
