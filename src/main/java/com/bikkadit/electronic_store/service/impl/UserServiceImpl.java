@@ -120,15 +120,17 @@ public class UserServiceImpl implements UserServiceI {
     }
 
     @Override
-    public List<UserDto> searchUser(String keyword) {
+    public PageableResponse<UserDto> searchUser(String keyword,int pageNumber, int pageSize, String sortBy, String sortDir) {
         log.info("Initiating dao call to get users record:{}"+keyword);
-        List<User> users=userRepositoryI.findUserByNameContaining(keyword);
-        List<UserDto> userDtos = users.stream()
-                .map((user) -> modelMapper.map(user, UserDto.class))
-                .collect(Collectors.toList());
 
+        Sort sort=(sortDir.equalsIgnoreCase("desc"))?(Sort.by(sortBy).descending()):(Sort.by(sortBy).ascending());
+
+        Pageable pageable= PageRequest.of(pageNumber, pageSize,sort);
+        Page<User> page = userRepositoryI.findUserByNameContaining(keyword, pageable);
+
+        PageableResponse<UserDto> response = Helper.getpageableResponse(page, UserDto.class);
         log.info("Initiating dao call to get users record:{}"+keyword);
-        return userDtos;
+        return response;
     }
 
     @Override

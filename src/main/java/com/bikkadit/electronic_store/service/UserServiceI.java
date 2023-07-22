@@ -23,7 +23,7 @@ public interface UserServiceI {
     void deleteUser(String userId);
 
     //search user
-    List<UserDto> searchUser(String keyword);
+    PageableResponse<UserDto> searchUser(String keyword,int pageNumber, int pageSize, String sortBy, String sortDir);
 
     //get All Users
     PageableResponse<UserDto> getAllUser(int pageNumber, int pageSize, String sortBy, String sortDir);
