@@ -16,6 +16,8 @@ public class AppConstants {
 
     public static final String PRODUCT_NOT_FOUND="Product Not found with this productId";
 
+    public  static final String IMAGE_UPLOAD="Image upload successfully";
+
     public static final String PAGE_NUMBER="0";
     public static final String PAGE_SIZE="10";
 

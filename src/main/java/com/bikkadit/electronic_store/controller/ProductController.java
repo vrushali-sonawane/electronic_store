@@ -2,17 +2,27 @@ package com.bikkadit.electronic_store.controller;
 
 import com.bikkadit.electronic_store.dto.ProductDto;
 import com.bikkadit.electronic_store.payload.AppConstants;
+import com.bikkadit.electronic_store.payload.ImageResponse;
 import com.bikkadit.electronic_store.payload.PageableResponse;
+import com.bikkadit.electronic_store.service.FileServiceI;
 import com.bikkadit.electronic_store.service.ProductServiceI;
 import lombok.Getter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.util.StreamUtils;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
+
+import java.io.IOException;
+import java.io.InputStream;
 
 @RestController
 @RequestMapping("/products")
@@ -20,6 +30,12 @@ public class ProductController {
 
     @Autowired
     private ProductServiceI productServiceI;
+
+    @Autowired
+    private FileServiceI fileServiceI;
+
+    @Value("${product.image.path}")
+    private String imagePath;
 
     private static Logger logger= LoggerFactory.getLogger(ProductController.class);
 
@@ -153,8 +169,35 @@ public class ProductController {
     ){
         logger.info("Initiating request to search product details:{}",subTitle);
         PageableResponse<ProductDto> allProducts = productServiceI.searchProducts(subTitle,pageNumber, pageSize, sortBy, sortDir);
-        logger.info("Initiating request to search product details:{}",subTitle);
+        logger.info("completed request to search product details:{}",subTitle);
         return  new ResponseEntity<>(allProducts,HttpStatus.OK);
     }
 
+    @PostMapping("/image/{productId}")
+    public ResponseEntity<ImageResponse> uploadProductImage(@RequestParam("productImage")MultipartFile image,@PathVariable String productId) throws IOException {
+        logger.info("Initiating request to upload product image:{}",productId);
+        String imageName = fileServiceI.uploadFile(image, imagePath);
+        ProductDto productDto = productServiceI.getSingleProduct(productId);
+        productDto.setProductImage(imageName);
+        ProductDto productDto1 = productServiceI.updateProduct(productDto, productId);
+
+        ImageResponse response = ImageResponse.builder()
+                .imageName(imageName).message(AppConstants.IMAGE_UPLOAD).success(true).status(HttpStatus.CREATED).build();
+        logger.info("completed request to upload product image:{}",productId);
+        return new ResponseEntity<>(response,HttpStatus.CREATED);
+    }
+
+    @GetMapping("/image/{productId}")
+    public void downloadProductImage(@PathVariable String productId, HttpServletResponse response) throws IOException {
+       logger.info("Initiating request to download product image:{}",productId);
+        ProductDto productDto = productServiceI.getSingleProduct(productId);
+        //String productImage = productDto.getProductImage();
+
+        InputStream resource = fileServiceI.getResource(imagePath, productDto.getProductImage());
+        response.setContentType(MediaType.IMAGE_JPEG_VALUE);
+
+        StreamUtils.copy(resource,response.getOutputStream());
+        logger.info("Completed request to download product image:{}",productId);
+
+    }
 }

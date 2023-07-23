@@ -37,6 +37,7 @@ public class CategoryServiceImpl implements CategoryServiceI {
     @Autowired
     private ModelMapper modelMapper;
 
+
     @Value("${category.image.path}")
     private String imagepath;
 
@@ -57,7 +58,7 @@ public class CategoryServiceImpl implements CategoryServiceI {
     public CategoryDto updateCategory(CategoryDto categoryDto, String categoryId) {
         logger.info("Initiating dao call to update category:{}" ,categoryId);
         Category category = categoryRepositoryI.findById(categoryId)
-                .orElseThrow(() -> new ResourceNotFoundException(AppConstants.CATEGORY_NOT_FOUND + categoryId));
+                .orElseThrow(() -> new ResourceNotFoundException(AppConstants.CATEGORY_NOT_FOUND ));
 
         category.setTitle(categoryDto.getTitle());
         category.setCategoryDescription(categoryDto.getCategoryDescription());
@@ -72,7 +73,7 @@ public class CategoryServiceImpl implements CategoryServiceI {
     public void deleteCategory(String categoryId) {
         logger.info("Initiating dao call to delete category:{}" ,categoryId);
         Category category = categoryRepositoryI.findById(categoryId)
-                .orElseThrow(() -> new ResourceNotFoundException(AppConstants.CATEGORY_NOT_FOUND + categoryId));
+                .orElseThrow(() -> new ResourceNotFoundException(AppConstants.CATEGORY_NOT_FOUND ));
         String fullPath= imagepath+ category.getCoverImage();
         try{
             Path path = Paths.get(fullPath);
@@ -92,7 +93,7 @@ public class CategoryServiceImpl implements CategoryServiceI {
     public CategoryDto getCategoryById(String categoryId) {
         logger.info("Initiating dao call to get single category:{}" ,categoryId);
         Category category = categoryRepositoryI.findById(categoryId)
-                .orElseThrow(() -> new ResourceNotFoundException(AppConstants.CATEGORY_NOT_FOUND + categoryId));
+                .orElseThrow(() -> new ResourceNotFoundException(AppConstants.CATEGORY_NOT_FOUND ));
 
         logger.info("completed dao call to get single category:{}" ,categoryId);
         return modelMapper.map(category,CategoryDto.class);
@@ -100,25 +101,26 @@ public class CategoryServiceImpl implements CategoryServiceI {
 
     @Override
     public PageableResponse<CategoryDto> getAllCategories(int pageNumber, int pageSize, String sortBy, String sortDir) {
-       logger.info("Initiating dao call to get All users");
+       logger.info("Initiating dao call to get All categories");
         Sort sort=(sortDir.equalsIgnoreCase("desc"))? (Sort.by(sortBy).descending()):(Sort.by(sortBy).ascending());
         Pageable pageable= PageRequest.of(pageNumber, pageSize,sort);
         Page<Category> page = categoryRepositoryI.findAll(pageable);
 
         PageableResponse<CategoryDto> response = Helper.getpageableResponse(page, CategoryDto.class);
 
-        logger.info("completed dao call to get All users");
+        logger.info("completed dao call to get All categories");
         return response;
     }
 
     @Override
     public PageableResponse<CategoryDto> searchCategories(int pageNumber, int pageSize, String sortBy, String sortDir,String title) {
-
+        logger.info("Initiating dao call to search  categories");
         Sort sort=(sortDir.equalsIgnoreCase("desc"))? (Sort.by(sortBy).descending()):(Sort.by(sortBy).ascending());
         Pageable pageable=PageRequest.of(pageNumber,pageSize,sort);
         Page<Category> page = categoryRepositoryI.findByTitleContaining(pageable, title);
 
         PageableResponse<CategoryDto> response = Helper.getpageableResponse(page, CategoryDto.class);
+        logger.info("completed dao call to search  categories");
         return response;
     }
 }

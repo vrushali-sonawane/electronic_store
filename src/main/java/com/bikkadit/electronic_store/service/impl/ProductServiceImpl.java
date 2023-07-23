@@ -12,6 +12,7 @@ import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -19,6 +20,11 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.NoSuchFileException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.UUID;
 
 @Service
@@ -29,6 +35,9 @@ public class ProductServiceImpl implements ProductServiceI {
 
     @Autowired
     private ModelMapper modelMapper;
+
+    @Value("${product.image.path}")
+    private String imagePath;
 
     private static Logger logger= LoggerFactory.getLogger(ProductServiceImpl.class);
 
@@ -47,7 +56,7 @@ public class ProductServiceImpl implements ProductServiceI {
     public ProductDto updateProduct(ProductDto productDto, String productId) {
         logger.info("Initiating dao call to update product details:{}",productId);
         Product product = productRepositoryI.findById(productId)
-                .orElseThrow(() -> new ResourceNotFoundException(AppConstants.PRODUCT_NOT_FOUND + productId));
+                .orElseThrow(() -> new ResourceNotFoundException(AppConstants.PRODUCT_NOT_FOUND));
 
         product.setTitle(productDto.getTitle());
         product.setDescription(productDto.getDescription());
@@ -56,6 +65,7 @@ public class ProductServiceImpl implements ProductServiceI {
         product.setQuantity(productDto.getQuantity());
         product.setLive(productDto.isLive());
         product.setStock(productDto.isStock());
+        product.setProductImage(productDto.getProductImage());
 
         Product updatedProduct = productRepositoryI.save(product);
         logger.info("completed dao call to update product details:{}",productId);
@@ -66,7 +76,18 @@ public class ProductServiceImpl implements ProductServiceI {
     public void deteteSingleProduct(String productId) {
         logger.info("Initiating dao call to update product details:{}",productId);
         Product product = productRepositoryI.findById(productId)
-                .orElseThrow(() -> new ResourceNotFoundException(AppConstants.PRODUCT_NOT_FOUND + productId));
+                .orElseThrow(() -> new ResourceNotFoundException(AppConstants.PRODUCT_NOT_FOUND ));
+        String fullPath = imagePath + product.getProductImage();
+        try{
+            Path path = Paths.get(fullPath);
+            Files.delete(path);
+        } catch (NoSuchFileException e) {
+            logger.info("product image not found in this folder");
+            e.printStackTrace();
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+
         logger.info("Completed dao call to update product details:{}",productId);
           productRepositoryI.delete(product);
     }
@@ -76,7 +97,7 @@ public class ProductServiceImpl implements ProductServiceI {
            logger.info("Initiating dao call to get single product:{}",productId);
 
         Product product = productRepositoryI.findById(productId)
-                .orElseThrow(() -> new ResourceNotFoundException(AppConstants.PRODUCT_NOT_FOUND + productId));
+                .orElseThrow(() -> new ResourceNotFoundException(AppConstants.PRODUCT_NOT_FOUND ));
         ProductDto productDto = modelMapper.map(product, ProductDto.class);
         logger.info("completed dao call to get single product details:{}",productId);
         return productDto;

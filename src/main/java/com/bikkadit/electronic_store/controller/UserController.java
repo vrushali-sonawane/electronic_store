@@ -66,9 +66,9 @@ public class UserController {
     @PutMapping("/{userId}")
     public ResponseEntity<UserDto> upadteUser(@Valid @RequestBody UserDto userDto,
                                               @PathVariable("userId") String userId) {
-        log.info("Initiating request to update user:{}" + userId);
+        log.info("Initiating request to update user:{}" , userId);
         UserDto updatedUser = userServiceI.updateUser(userDto, userId);
-        log.info("Completing request  to update user:{}" + userId);
+        log.info("Completing request  to update user:{}" , userId);
         return new ResponseEntity<>(updatedUser, HttpStatus.CREATED);
 
     }
@@ -83,9 +83,9 @@ public class UserController {
      */
     @GetMapping("/{userId}")
     public ResponseEntity<UserDto> getSingleUSerById(@PathVariable("userId") String userId) {
-        log.info("Initiating request to get single user:{}" + userId);
+        log.info("Initiating request to get single user:{}" , userId);
         UserDto userDto = userServiceI.getUserById(userId);
-        log.info("Completing request to update user:{}" + userId);
+        log.info("Completing request to update user:{}" , userId);
         return new ResponseEntity<>(userDto, HttpStatus.OK);
     }
     //getUserByEmail
@@ -98,9 +98,9 @@ public class UserController {
      */
     @GetMapping("/email/{email}")
     public ResponseEntity<UserDto> getUserByEmail(@PathVariable("email") String email) {
-        log.info("Initiating request to get single  user by email:{}" + email);
+        log.info("Initiating request to get single  user by email:{}" , email);
         UserDto userDto1 = userServiceI.getUserByEmail(email);
-        log.info("Completing request to get single  user by email:{}" + email);
+        log.info("Completing request to get single  user by email:{}" , email);
         return new ResponseEntity<>(userDto1, HttpStatus.OK);
     }
     //deleteUser
@@ -113,10 +113,10 @@ public class UserController {
      */
     @DeleteMapping("/{userId}")
     public ResponseEntity<?> deleteUser(@PathVariable("userId") String userId) {
-        log.info("Initiating request to delete single user:{}" + userId);
+        log.info("Initiating request to delete single user:{}" , userId);
         userServiceI.deleteUser(userId);
 
-        log.info("Completing  request to delete single user:{}" + userId);
+        log.info("Completing  request to delete single user:{}" , userId);
         return new ResponseEntity<>(AppConstants.DELETE_USER, HttpStatus.OK);
     }
 
@@ -134,9 +134,9 @@ public class UserController {
         @RequestParam(value = "pageSize",defaultValue = AppConstants.PAGE_SIZE,required = false)int pageSize,
         @RequestParam(value="sortBy",defaultValue = AppConstants.SORT_BY,required = false)String sortBy,
         @RequestParam(value = "sortDir",defaultValue = AppConstants.SORT_DIR,required = false)String sortDir){
-        log.info("Initiating request to get users:{}" + keyword);
+        log.info("Initiating request to get users:{}" , keyword);
         PageableResponse<UserDto> userDtos = userServiceI.searchUser(keyword,pageNumber,pageSize,sortBy,sortDir);
-        log.info("Initiating request to get users:{}" + keyword);
+        log.info("Initiating request to get users:{}" , keyword);
         return new ResponseEntity<>(userDtos, HttpStatus.OK);
 
     }
@@ -183,7 +183,7 @@ public class UserController {
         UserDto userDto = userServiceI.updateUser(user, userId);
 
         ImageResponse response = ImageResponse.builder()
-                .imageName(imageName).message("Image is uploaded successfully").success(true).status(HttpStatus.CREATED).build();
+                .imageName(imageName).message(AppConstants.IMAGE_UPLOAD).success(true).status(HttpStatus.CREATED).build();
         log.info("Initiating request to upload category image: {}", userId);
         return new ResponseEntity<>(response, HttpStatus.CREATED);
     }

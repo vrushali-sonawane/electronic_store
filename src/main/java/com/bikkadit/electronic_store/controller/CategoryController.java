@@ -167,7 +167,7 @@ public class CategoryController {
         CategoryDto updatedCategory = categoryServiceI.updateCategory(categoryDto, categoryId);
 
         ImageResponse response=ImageResponse.builder()
-                .imageName(categoryImage).message("Image is uploaded successfully").success(true).status(HttpStatus.CREATED).build();
+                .imageName(categoryImage).message(AppConstants.IMAGE_UPLOAD).success(true).status(HttpStatus.CREATED).build();
         logger.info("completed request to upload category image: {}",categoryId);
         return new ResponseEntity<>(response,HttpStatus.OK);
     }
@@ -186,7 +186,7 @@ public class CategoryController {
     public void downloadCategoryImage(@PathVariable String categoryId, HttpServletResponse response) throws IOException {
         logger.info("Initiating request to download user image: {}",categoryId);
         CategoryDto categoryDto = categoryServiceI.getCategoryById(categoryId);
-        logger.info("category Image name: {}", categoryDto.getTitle());
+        logger.info("category Image name: {}", categoryDto.getCoverImage());
 
         InputStream resource = fileServiceI.getResource(imagepath, categoryDto.getCoverImage());
 

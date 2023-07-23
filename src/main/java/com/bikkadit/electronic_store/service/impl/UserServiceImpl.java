@@ -60,9 +60,9 @@ public class UserServiceImpl implements UserServiceI {
 
     @Override
     public UserDto updateUser(UserDto userDto, String userId) {
-        log.info("Initiating dao call to update user:{}"+userId);
+        log.info("Initiating dao call to update user:{}",userId);
       User user=  userRepositoryI.findById(userId).orElseThrow(() ->
-              new ResourceNotFoundException(AppConstants.USER_NOT_FOUND + userId));
+              new ResourceNotFoundException(AppConstants.USER_NOT_FOUND ));
         user.setName(userDto.getName());
         user.setEmail(userDto.getEmail());
         user.setPassword(userDto.getPassword());
@@ -72,37 +72,37 @@ public class UserServiceImpl implements UserServiceI {
        User updatedUser= userRepositoryI.save(user);
       // UserDto userDto1=entityToDto(updatedUser);
         UserDto userDto1=modelMapper.map(updatedUser, UserDto.class);
-        log.info("Completing dao call to update user:{}"+userId);
+        log.info("Completing dao call to update user:{}",userId);
         return userDto1;
     }
 
     @Override
     public UserDto getUserById(String userId) {
-        log.info("Initiating dao call to get single user:{}"+userId);
+        log.info("Initiating dao call to get single user:{}",userId);
        User user= userRepositoryI.findById(userId).orElseThrow(() ->
-               new ResourceNotFoundException(AppConstants.USER_NOT_FOUND + userId));
+               new ResourceNotFoundException(AppConstants.USER_NOT_FOUND ));
        // UserDto userDto1=  entityToDto(user);
         UserDto userDto1=modelMapper.map(user, UserDto.class);
-        log.info("Initiating dao call to get single user:{}"+userId);
+        log.info("completed dao call to get single user:{}",userId);
         return userDto1;
     }
 
     @Override
     public UserDto getUserByEmail(String email) {
-        log.info("Initiating dao call to get user record:{}"+email);
+        log.info("Initiating dao call to get user record:{}",email);
       User user=  userRepositoryI.findUserByEmail(email).orElseThrow(() ->
-              new ResourceNotFoundException(AppConstants.NOT_FOUND + email));
+              new ResourceNotFoundException(AppConstants.NOT_FOUND ));
       //UserDto userDto2= entityToDto(user);
         UserDto  userDto2=modelMapper.map(user, UserDto.class);
-        log.info("Completing dao call to get user record:{}"+email);
+        log.info("Completing dao call to get user record:{}",email);
         return userDto2;
     }
 
     @Override
     public void deleteUser(String userId) {
-        log.info("Initiating dao call to delete user record:{}"+userId);
+        log.info("Initiating dao call to delete user record:{}",userId);
       User user=  userRepositoryI.findById(userId).orElseThrow(()->
-              new ResourceNotFoundException(AppConstants.USER_NOT_FOUND + userId));
+              new ResourceNotFoundException(AppConstants.USER_NOT_FOUND ));
         //delete user profile image
         //path- image/users/abc.png
       String fullPath= imageUploadPath+ user.getImageName();
@@ -115,13 +115,13 @@ public class UserServiceImpl implements UserServiceI {
       }catch (IOException e){
           e.printStackTrace();
       }
-        log.info("Completing dao call to delete user record:{}"+userId);
+        log.info("Completing dao call to delete user record:{}",userId);
       userRepositoryI.delete(user);
     }
 
     @Override
     public PageableResponse<UserDto> searchUser(String keyword,int pageNumber, int pageSize, String sortBy, String sortDir) {
-        log.info("Initiating dao call to get users record:{}"+keyword);
+        log.info("Initiating dao call to get users record:{}",keyword);
 
         Sort sort=(sortDir.equalsIgnoreCase("desc"))?(Sort.by(sortBy).descending()):(Sort.by(sortBy).ascending());
 
@@ -129,7 +129,7 @@ public class UserServiceImpl implements UserServiceI {
         Page<User> page = userRepositoryI.findUserByNameContaining(keyword, pageable);
 
         PageableResponse<UserDto> response = Helper.getpageableResponse(page, UserDto.class);
-        log.info("Initiating dao call to get users record:{}"+keyword);
+        log.info("completed dao call to get users record:{}",keyword);
         return response;
     }
 
