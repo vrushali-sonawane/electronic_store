@@ -1,6 +1,7 @@
 package com.bikkadit.electronic_store.dto;
 
 
+import com.bikkadit.electronic_store.entity.Category;
 import com.bikkadit.electronic_store.validate.ImageNameValid;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.*;
@@ -34,4 +35,6 @@ public class ProductDto {
     private boolean stock;
     @ImageNameValid
     private String productImage;
+
+    private CategoryDto category;
 }

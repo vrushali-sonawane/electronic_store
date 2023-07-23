@@ -2,9 +2,7 @@ package com.bikkadit.electronic_store.entity;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
 
 
@@ -28,4 +26,8 @@ public class Product {
     private boolean live;
     private boolean stock;
     private String productImage;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name="category_Id")
+    private Category category;
 }

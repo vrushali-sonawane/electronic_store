@@ -1,12 +1,14 @@
 package com.bikkadit.electronic_store.controller;
 
 import com.bikkadit.electronic_store.dto.CategoryDto;
+import com.bikkadit.electronic_store.dto.ProductDto;
 import com.bikkadit.electronic_store.payload.ApiResponseMessage;
 import com.bikkadit.electronic_store.payload.AppConstants;
 import com.bikkadit.electronic_store.payload.ImageResponse;
 import com.bikkadit.electronic_store.payload.PageableResponse;
 import com.bikkadit.electronic_store.service.CategoryServiceI;
 import com.bikkadit.electronic_store.service.FileServiceI;
+import com.bikkadit.electronic_store.service.ProductServiceI;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,6 +33,9 @@ public class CategoryController {
     private static Logger logger= LoggerFactory.getLogger(CategoryController.class);
     @Autowired
     private CategoryServiceI categoryServiceI;
+
+    @Autowired
+    private ProductServiceI productServiceI;
 
     @Autowired
     private FileServiceI fileServiceI;
@@ -194,9 +199,23 @@ public class CategoryController {
 
         StreamUtils.copy(resource,response.getOutputStream());
         logger.info("completed request to download category image: {}",categoryId);
+    }
 
+    /**
+     * @author Vrushali Sonawane
+     * @apiNote create product with category
+     * @param categoryId
+     * @param productDto
+     * @return productDto
+     */
+    @PostMapping("/{categoryId}/products")
+    public ResponseEntity<ProductDto> createProductWithCategory(@PathVariable String categoryId, @RequestBody ProductDto productDto){
+        logger.info("Initiating request to create product with category:{}",categoryId);
 
+        ProductDto productWithCategory = productServiceI.createProductWithCategory(productDto, categoryId);
 
+        logger.info("Completed request to create product with category:{}",categoryId);
+        return new ResponseEntity<>(productWithCategory,HttpStatus.CREATED);
 
     }
 }

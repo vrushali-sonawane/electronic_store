@@ -1,11 +1,13 @@
 package com.bikkadit.electronic_store.service.impl;
 
 import com.bikkadit.electronic_store.dto.ProductDto;
+import com.bikkadit.electronic_store.entity.Category;
 import com.bikkadit.electronic_store.entity.Product;
 import com.bikkadit.electronic_store.exception.ResourceNotFoundException;
 import com.bikkadit.electronic_store.payload.AppConstants;
 import com.bikkadit.electronic_store.payload.Helper;
 import com.bikkadit.electronic_store.payload.PageableResponse;
+import com.bikkadit.electronic_store.repository.CategoryRepositoryI;
 import com.bikkadit.electronic_store.repository.ProductRepositoryI;
 import com.bikkadit.electronic_store.service.ProductServiceI;
 import org.modelmapper.ModelMapper;
@@ -25,6 +27,7 @@ import java.nio.file.Files;
 import java.nio.file.NoSuchFileException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Date;
 import java.util.UUID;
 
 @Service
@@ -32,6 +35,9 @@ public class ProductServiceImpl implements ProductServiceI {
 
     @Autowired
     private ProductRepositoryI productRepositoryI;
+
+    @Autowired
+    private CategoryRepositoryI categoryRepositoryI;
 
     @Autowired
     private ModelMapper modelMapper;
@@ -46,6 +52,7 @@ public class ProductServiceImpl implements ProductServiceI {
         logger.info("Initiating dao call to create product details");
         String productId = UUID.randomUUID().toString();
         productDto.setProductId(productId);
+        productDto.setAddedDate(new Date());
         Product product = modelMapper.map(productDto, Product.class);
         Product savedProduct = productRepositoryI.save(product);
         logger.info("completed dao call to create product details");
@@ -142,6 +149,25 @@ public class ProductServiceImpl implements ProductServiceI {
         PageableResponse<ProductDto> response = Helper.getpageableResponse(page, ProductDto.class);
         logger.info("completed dao call to search product details:{}",subTitle);
         return response;
+    }
+
+    @Override
+    public ProductDto createProductWithCategory(ProductDto productDto, String categoryId) {
+       logger.info("Initiating dao call to create product with category:{}",categoryId);
+        Category category = categoryRepositoryI.findById(categoryId).orElseThrow(() -> new ResourceNotFoundException(AppConstants.CATEGORY_NOT_FOUND));
+
+        String productId = UUID.randomUUID().toString();
+        productDto.setProductId(productId);
+        productDto.setAddedDate(new Date());
+
+        Product product = modelMapper.map(productDto, Product.class);
+        product.setCategory(category);
+        Product savedProduct = productRepositoryI.save(product);
+
+        logger.info("Completed dao call to create product with category:{}",categoryId);
+        return modelMapper.map(savedProduct,ProductDto.class);
+
+
     }
 
 
