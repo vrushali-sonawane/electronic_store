@@ -14024,3 +14024,110 @@ java.lang.StackOverflowError: null
 07:23 18:14:38.778 [http-nio-7997-exec-3] [INFO] [c.b.e.s.impl.ProductServiceImpl] -Initiating dao call to get all product details
 07:23 18:14:39.240 [http-nio-7997-exec-3] [INFO] [c.b.e.s.impl.ProductServiceImpl] -completed dao call to get all product details
 07:23 18:14:39.241 [http-nio-7997-exec-3] [INFO] [c.b.e.controller.ProductController] -completed request to get All product details
+07:23 18:48:54.553 [background-preinit] [INFO] [o.h.validator.internal.util.Version] -HV000001: Hibernate Validator 6.2.5.Final
+07:23 18:48:54.663 [restartedMain] [INFO] [c.b.e.ElectronicStoreApplication] -Starting ElectronicStoreApplication using Java 17.0.6 on DESKTOP-2OI3U43 with PID 3916 (E:\newproject07\electronic_store\target\classes started by KSAV in E:\newproject07\electronic_store)
+07:23 18:48:54.665 [restartedMain] [INFO] [c.b.e.ElectronicStoreApplication] -No active profile set, falling back to 1 default profile: "default"
+07:23 18:48:55.028 [restartedMain] [INFO] [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] -Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+07:23 18:48:55.029 [restartedMain] [INFO] [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] -For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+07:23 18:48:59.425 [restartedMain] [INFO] [o.s.d.r.c.RepositoryConfigurationDelegate] -Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+07:23 18:48:59.910 [restartedMain] [INFO] [o.s.d.r.c.RepositoryConfigurationDelegate] -Finished Spring Data repository scanning in 415 ms. Found 3 JPA repository interfaces.
+07:23 18:49:02.927 [restartedMain] [INFO] [o.s.b.w.e.tomcat.TomcatWebServer] -Tomcat initialized with port(s): 7997 (http)
+07:23 18:49:03.034 [restartedMain] [INFO] [o.a.coyote.http11.Http11NioProtocol] -Initializing ProtocolHandler ["http-nio-7997"]
+07:23 18:49:03.069 [restartedMain] [INFO] [o.a.catalina.core.StandardService] -Starting service [Tomcat]
+07:23 18:49:03.069 [restartedMain] [INFO] [o.a.catalina.core.StandardEngine] -Starting Servlet engine: [Apache Tomcat/9.0.76]
+07:23 18:49:03.768 [restartedMain] [INFO] [o.a.c.c.C.[Tomcat].[localhost].[/]] -Initializing Spring embedded WebApplicationContext
+07:23 18:49:03.768 [restartedMain] [INFO] [o.s.b.w.s.c.ServletWebServerApplicationContext] -Root WebApplicationContext: initialization completed in 8738 ms
+07:23 18:49:04.429 [restartedMain] [INFO] [o.h.jpa.internal.util.LogHelper] -HHH000204: Processing PersistenceUnitInfo [name: default]
+07:23 18:49:04.662 [restartedMain] [INFO] [org.hibernate.Version] -HHH000412: Hibernate ORM core version 5.6.15.Final
+07:23 18:49:05.267 [restartedMain] [INFO] [o.h.annotations.common.Version] -HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+07:23 18:49:05.784 [restartedMain] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Starting...
+07:23 18:49:08.818 [restartedMain] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Start completed.
+07:23 18:49:08.919 [restartedMain] [INFO] [org.hibernate.dialect.Dialect] -HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+07:23 18:49:13.418 [restartedMain] [INFO] [o.h.e.t.j.p.i.JtaPlatformInitiator] -HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+07:23 18:49:13.460 [restartedMain] [INFO] [o.s.o.j.LocalContainerEntityManagerFactoryBean] -Initialized JPA EntityManagerFactory for persistence unit 'default'
+07:23 18:49:15.327 [restartedMain] [WARN] [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration] -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+07:23 18:49:16.619 [restartedMain] [INFO] [o.s.b.d.a.OptionalLiveReloadServer] -LiveReload server is running on port 35729
+07:23 18:49:16.674 [restartedMain] [INFO] [o.a.coyote.http11.Http11NioProtocol] -Starting ProtocolHandler ["http-nio-7997"]
+07:23 18:49:16.890 [restartedMain] [INFO] [o.s.b.w.e.tomcat.TomcatWebServer] -Tomcat started on port(s): 7997 (http) with context path ''
+07:23 18:49:16.910 [restartedMain] [INFO] [c.b.e.ElectronicStoreApplication] -Started ElectronicStoreApplication in 24.506 seconds (JVM running for 34.405)
+07:23 18:52:38.580 [http-nio-7997-exec-1] [INFO] [o.a.c.c.C.[Tomcat].[localhost].[/]] -Initializing Spring DispatcherServlet 'dispatcherServlet'
+07:23 18:52:38.607 [http-nio-7997-exec-1] [INFO] [o.s.web.servlet.DispatcherServlet] -Initializing Servlet 'dispatcherServlet'
+07:23 18:52:38.608 [http-nio-7997-exec-1] [INFO] [o.s.web.servlet.DispatcherServlet] -Completed initialization in 1 ms
+07:23 18:52:39.320 [http-nio-7997-exec-1] [INFO] [c.b.e.validate.ImageNameValidator] -Message from isValid : abc.png
+07:23 18:52:39.323 [http-nio-7997-exec-1] [INFO] [c.b.e.controller.CategoryController] -Initiating request to create category
+07:23 18:52:39.324 [http-nio-7997-exec-1] [INFO] [c.b.e.s.impl.CategoryServiceImpl] -Initiating dao call to save category
+07:23 18:52:40.594 [http-nio-7997-exec-1] [INFO] [c.b.e.s.impl.CategoryServiceImpl] -Completed dao call to save category
+07:23 18:52:40.596 [http-nio-7997-exec-1] [INFO] [c.b.e.controller.CategoryController] -completed request to create category
+07:23 18:53:30.364 [http-nio-7997-exec-3] [INFO] [c.b.e.validate.ImageNameValidator] -Message from isValid : abc.png
+07:23 18:53:30.366 [http-nio-7997-exec-3] [INFO] [c.b.e.controller.CategoryController] -Initiating request to create category
+07:23 18:53:30.366 [http-nio-7997-exec-3] [INFO] [c.b.e.s.impl.CategoryServiceImpl] -Initiating dao call to save category
+07:23 18:53:30.546 [http-nio-7997-exec-3] [INFO] [c.b.e.s.impl.CategoryServiceImpl] -Completed dao call to save category
+07:23 18:53:30.547 [http-nio-7997-exec-3] [INFO] [c.b.e.controller.CategoryController] -completed request to create category
+07:23 18:54:21.326 [http-nio-7997-exec-4] [INFO] [c.b.e.validate.ImageNameValidator] -Message from isValid : def.png
+07:23 18:54:21.328 [http-nio-7997-exec-4] [INFO] [c.b.e.controller.ProductController] -Initiating request to create product
+07:23 18:54:21.328 [http-nio-7997-exec-4] [INFO] [c.b.e.s.impl.ProductServiceImpl] -Initiating dao call to create product details
+07:23 18:54:21.848 [http-nio-7997-exec-4] [INFO] [c.b.e.s.impl.ProductServiceImpl] -completed dao call to create product details
+07:23 18:54:21.853 [http-nio-7997-exec-4] [INFO] [c.b.e.controller.ProductController] -completed request to create product
+07:23 18:55:01.648 [http-nio-7997-exec-5] [INFO] [c.b.e.validate.ImageNameValidator] -Message from isValid : def.png
+07:23 18:55:01.650 [http-nio-7997-exec-5] [INFO] [c.b.e.controller.ProductController] -Initiating request to create product
+07:23 18:55:01.651 [http-nio-7997-exec-5] [INFO] [c.b.e.s.impl.ProductServiceImpl] -Initiating dao call to create product details
+07:23 18:55:01.717 [http-nio-7997-exec-5] [INFO] [c.b.e.s.impl.ProductServiceImpl] -completed dao call to create product details
+07:23 18:55:01.718 [http-nio-7997-exec-5] [INFO] [c.b.e.controller.ProductController] -completed request to create product
+07:23 18:55:47.741 [http-nio-7997-exec-6] [INFO] [c.b.e.validate.ImageNameValidator] -Message from isValid : def.png
+07:23 18:55:47.742 [http-nio-7997-exec-6] [INFO] [c.b.e.controller.ProductController] -Initiating request to create product
+07:23 18:55:47.742 [http-nio-7997-exec-6] [INFO] [c.b.e.s.impl.ProductServiceImpl] -Initiating dao call to create product details
+07:23 18:55:47.861 [http-nio-7997-exec-6] [INFO] [c.b.e.s.impl.ProductServiceImpl] -completed dao call to create product details
+07:23 18:55:47.862 [http-nio-7997-exec-6] [INFO] [c.b.e.controller.ProductController] -completed request to create product
+07:23 18:56:39.146 [http-nio-7997-exec-7] [INFO] [c.b.e.validate.ImageNameValidator] -Message from isValid : def.png
+07:23 18:56:39.148 [http-nio-7997-exec-7] [INFO] [c.b.e.controller.ProductController] -Initiating request to create product
+07:23 18:56:39.148 [http-nio-7997-exec-7] [INFO] [c.b.e.s.impl.ProductServiceImpl] -Initiating dao call to create product details
+07:23 18:56:39.242 [http-nio-7997-exec-7] [INFO] [c.b.e.s.impl.ProductServiceImpl] -completed dao call to create product details
+07:23 18:56:39.244 [http-nio-7997-exec-7] [INFO] [c.b.e.controller.ProductController] -completed request to create product
+07:23 18:57:45.861 [http-nio-7997-exec-10] [INFO] [c.b.e.controller.CategoryController] -Initiating request to get All categories
+07:23 18:57:45.862 [http-nio-7997-exec-10] [INFO] [c.b.e.s.impl.CategoryServiceImpl] -Initiating dao call to get All categories
+07:23 18:57:46.471 [http-nio-7997-exec-10] [INFO] [c.b.e.s.impl.CategoryServiceImpl] -completed dao call to get All categories
+07:23 18:57:46.471 [http-nio-7997-exec-10] [INFO] [c.b.e.controller.CategoryController] -completed request to get All categories
+07:23 18:58:24.803 [http-nio-7997-exec-2] [INFO] [c.b.e.controller.ProductController] -Initiating request to get All product details
+07:23 18:58:24.809 [http-nio-7997-exec-2] [INFO] [c.b.e.s.impl.ProductServiceImpl] -Initiating dao call to get all product details
+07:23 18:58:24.929 [http-nio-7997-exec-2] [INFO] [c.b.e.s.impl.ProductServiceImpl] -completed dao call to get all product details
+07:23 18:58:24.930 [http-nio-7997-exec-2] [INFO] [c.b.e.controller.ProductController] -completed request to get All product details
+07:23 18:59:03.751 [http-nio-7997-exec-1] [INFO] [c.b.e.controller.CategoryController] -Initiating request  to update category:755c5dfa-2c26-4a51-8946-5ddaa9885507
+07:23 18:59:03.752 [http-nio-7997-exec-1] [INFO] [c.b.e.s.impl.ProductServiceImpl] -Initiating dao call to update category:755c5dfa-2c26-4a51-8946-5ddaa9885507
+07:23 18:59:03.924 [http-nio-7997-exec-1] [INFO] [c.b.e.s.impl.ProductServiceImpl] -competed  dao call to update category:755c5dfa-2c26-4a51-8946-5ddaa9885507
+07:23 18:59:03.929 [http-nio-7997-exec-1] [INFO] [c.b.e.controller.CategoryController] -completed request  to update category:755c5dfa-2c26-4a51-8946-5ddaa9885507
+07:23 19:00:35.764 [http-nio-7997-exec-5] [INFO] [c.b.e.controller.ProductController] -Initiating request to get All product details
+07:23 19:00:35.765 [http-nio-7997-exec-5] [INFO] [c.b.e.s.impl.ProductServiceImpl] -Initiating dao call to get all product details
+07:23 19:00:35.844 [http-nio-7997-exec-5] [INFO] [c.b.e.s.impl.ProductServiceImpl] -completed dao call to get all product details
+07:23 19:00:35.845 [http-nio-7997-exec-5] [INFO] [c.b.e.controller.ProductController] -completed request to get All product details
+07:23 19:01:28.711 [http-nio-7997-exec-6] [INFO] [c.b.e.controller.CategoryController] -Initiating request to get All categories
+07:23 19:01:28.712 [http-nio-7997-exec-6] [INFO] [c.b.e.s.impl.CategoryServiceImpl] -Initiating dao call to get All categories
+07:23 19:01:28.728 [http-nio-7997-exec-6] [INFO] [c.b.e.s.impl.CategoryServiceImpl] -completed dao call to get All categories
+07:23 19:01:28.729 [http-nio-7997-exec-6] [INFO] [c.b.e.controller.CategoryController] -completed request to get All categories
+07:23 19:01:40.379 [http-nio-7997-exec-7] [INFO] [c.b.e.controller.CategoryController] -Initiating request  to update category:755c5dfa-2c26-4a51-8946-5ddaa9885507
+07:23 19:01:40.379 [http-nio-7997-exec-7] [INFO] [c.b.e.s.impl.ProductServiceImpl] -Initiating dao call to update category:755c5dfa-2c26-4a51-8946-5ddaa9885507
+07:23 19:01:40.702 [http-nio-7997-exec-7] [INFO] [c.b.e.s.impl.ProductServiceImpl] -competed  dao call to update category:755c5dfa-2c26-4a51-8946-5ddaa9885507
+07:23 19:01:40.703 [http-nio-7997-exec-7] [INFO] [c.b.e.controller.CategoryController] -completed request  to update category:755c5dfa-2c26-4a51-8946-5ddaa9885507
+07:23 19:02:55.854 [http-nio-7997-exec-10] [INFO] [c.b.e.controller.ProductController] -Initiating request to get All product details
+07:23 19:02:55.855 [http-nio-7997-exec-10] [INFO] [c.b.e.s.impl.ProductServiceImpl] -Initiating dao call to get all product details
+07:23 19:02:55.897 [http-nio-7997-exec-10] [INFO] [c.b.e.s.impl.ProductServiceImpl] -completed dao call to get all product details
+07:23 19:02:55.897 [http-nio-7997-exec-10] [INFO] [c.b.e.controller.ProductController] -completed request to get All product details
+07:23 19:03:48.960 [http-nio-7997-exec-2] [INFO] [c.b.e.controller.ProductController] -Initiating request to get All product details
+07:23 19:03:48.962 [http-nio-7997-exec-2] [INFO] [c.b.e.s.impl.ProductServiceImpl] -Initiating dao call to get all product details
+07:23 19:03:49.021 [http-nio-7997-exec-2] [INFO] [c.b.e.s.impl.ProductServiceImpl] -completed dao call to get all product details
+07:23 19:03:49.021 [http-nio-7997-exec-2] [INFO] [c.b.e.controller.ProductController] -completed request to get All product details
+07:23 19:04:28.042 [http-nio-7997-exec-1] [INFO] [c.b.e.controller.CategoryController] -Initiating request to get All categories
+07:23 19:04:28.043 [http-nio-7997-exec-1] [INFO] [c.b.e.s.impl.CategoryServiceImpl] -Initiating dao call to get All categories
+07:23 19:04:28.054 [http-nio-7997-exec-1] [INFO] [c.b.e.s.impl.CategoryServiceImpl] -completed dao call to get All categories
+07:23 19:04:28.054 [http-nio-7997-exec-1] [INFO] [c.b.e.controller.CategoryController] -completed request to get All categories
+07:23 19:05:00.923 [http-nio-7997-exec-3] [INFO] [c.b.e.controller.CategoryController] -Initiating request  to update category:6983c382-94cc-4a25-8a3c-54cabb30d479
+07:23 19:05:00.945 [http-nio-7997-exec-3] [INFO] [c.b.e.s.impl.ProductServiceImpl] -Initiating dao call to update category:6983c382-94cc-4a25-8a3c-54cabb30d479
+07:23 19:05:01.116 [http-nio-7997-exec-3] [INFO] [c.b.e.s.impl.ProductServiceImpl] -competed  dao call to update category:6983c382-94cc-4a25-8a3c-54cabb30d479
+07:23 19:05:01.117 [http-nio-7997-exec-3] [INFO] [c.b.e.controller.CategoryController] -completed request  to update category:6983c382-94cc-4a25-8a3c-54cabb30d479
+07:23 19:08:19.132 [http-nio-7997-exec-6] [INFO] [c.b.e.controller.CategoryController] -Initiating request  to update category:6983c382-94cc-4a25-8a3c-54cabb30d479
+07:23 19:08:19.133 [http-nio-7997-exec-6] [INFO] [c.b.e.s.impl.ProductServiceImpl] -Initiating dao call to update category:6983c382-94cc-4a25-8a3c-54cabb30d479
+07:23 19:08:19.225 [http-nio-7997-exec-6] [INFO] [c.b.e.s.impl.ProductServiceImpl] -competed  dao call to update category:6983c382-94cc-4a25-8a3c-54cabb30d479
+07:23 19:08:19.225 [http-nio-7997-exec-6] [INFO] [c.b.e.controller.CategoryController] -completed request  to update category:6983c382-94cc-4a25-8a3c-54cabb30d479
+07:23 19:08:36.200 [http-nio-7997-exec-7] [INFO] [c.b.e.controller.ProductController] -Initiating request to get live product details
+07:23 19:08:36.201 [http-nio-7997-exec-7] [INFO] [c.b.e.s.impl.ProductServiceImpl] -Initiating dao call to get all live product details
+07:23 19:08:36.274 [http-nio-7997-exec-7] [INFO] [c.b.e.s.impl.ProductServiceImpl] -completed dao call to get all live product details
+07:23 19:08:36.274 [http-nio-7997-exec-7] [INFO] [c.b.e.controller.ProductController] -completed request to get Live product details
