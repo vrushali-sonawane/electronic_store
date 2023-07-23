@@ -181,5 +181,18 @@ public class ProductServiceImpl implements ProductServiceI {
         return  modelMapper.map(savedProduct,ProductDto.class);
     }
 
+    @Override
+    public PageableResponse<ProductDto> getAllProductsOfCategory(String categotyId, int pageNumber, int pageSize, String sortBy, String sortDir) {
+        logger.info("Initiating dao call get products of category:{}",categotyId);
+        Category category = categoryRepositoryI.findById(categotyId).orElseThrow(() -> new ResourceNotFoundException(AppConstants.CATEGORY_NOT_FOUND));
+        Sort sort=(sortDir.equalsIgnoreCase("desc"))?(Sort.by(sortBy).descending()):(Sort.by(sortBy).ascending());
+        Pageable pageable=PageRequest.of(pageNumber,pageSize,sort);
+        Page<Product> page = productRepositoryI.findByCategory(category, pageable);
+
+        PageableResponse<ProductDto> response = Helper.getpageableResponse(page, ProductDto.class);
+        logger.info("completed dao call get products of category:{}",categotyId);
+        return response;
+    }
+
 
 }

@@ -218,7 +218,15 @@ public class CategoryController {
         return new ResponseEntity<>(productWithCategory,HttpStatus.CREATED);
 
     }
+  //update category
 
+    /**
+     * @author Vrushali Sonawane
+     * @apiNote  update category
+     * @param categoryId
+     * @param productId
+     * @return
+     */
     @PutMapping("/{categoryId}/products/{productId}")
     public ResponseEntity<ProductDto> updateCategory(@PathVariable String categoryId,
                                                      @PathVariable String productId){
@@ -227,5 +235,29 @@ public class CategoryController {
         logger.info("completed request  to update category:{}",categoryId);
         return new ResponseEntity<>(productDto,HttpStatus.CREATED);
 
+    }
+    //get All products of category
+
+    /**
+     * @author Vrushali Sonawane
+     * @apiNote  to get All products of category
+     * @param categoryId
+     * @param pageNumber
+     * @param pageSize
+     * @param sortBy
+     * @param sortDir
+     * @return
+     */
+    @GetMapping("/{categoryId}/products")
+    public ResponseEntity<PageableResponse<ProductDto>> getAllProductsOfCategories(@PathVariable String categoryId,
+        @RequestParam(value="pageNumber",defaultValue = AppConstants.PAGE_NUMBER,required = false)int pageNumber,
+        @RequestParam(value = "pageSize",defaultValue = AppConstants.PAGE_SIZE,required = false)int pageSize,
+        @RequestParam(value="sortBy",defaultValue = AppConstants.SORT_BY_TITLE,required = false)String sortBy,
+         @RequestParam(value = "sortDir",defaultValue = AppConstants.SORT_DIR,required = false)String sortDir){
+
+        logger.info("Initiating request to  get all products of category:{}",categoryId);
+        PageableResponse<ProductDto> allProductsOfCategory = productServiceI.getAllProductsOfCategory(categoryId, pageNumber, pageSize, sortBy, sortDir);
+        logger.info("completed request to  get all products of category:{}",categoryId);
+        return  new ResponseEntity<>(allProductsOfCategory,HttpStatus.OK);
     }
 }

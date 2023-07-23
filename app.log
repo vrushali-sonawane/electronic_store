@@ -14131,3 +14131,143 @@ java.lang.StackOverflowError: null
 07:23 19:08:36.201 [http-nio-7997-exec-7] [INFO] [c.b.e.s.impl.ProductServiceImpl] -Initiating dao call to get all live product details
 07:23 19:08:36.274 [http-nio-7997-exec-7] [INFO] [c.b.e.s.impl.ProductServiceImpl] -completed dao call to get all live product details
 07:23 19:08:36.274 [http-nio-7997-exec-7] [INFO] [c.b.e.controller.ProductController] -completed request to get Live product details
+07:23 19:11:30.883 [http-nio-7997-exec-10] [INFO] [c.b.e.controller.ProductController] -Initiating request to get single product details:0edfa567-e9b6-4f6f-8383-79c0260de5af
+07:23 19:11:30.884 [http-nio-7997-exec-10] [INFO] [c.b.e.s.impl.ProductServiceImpl] -Initiating dao call to get single product:0edfa567-e9b6-4f6f-8383-79c0260de5af
+07:23 19:11:30.918 [http-nio-7997-exec-10] [INFO] [c.b.e.s.impl.ProductServiceImpl] -completed dao call to get single product details:0edfa567-e9b6-4f6f-8383-79c0260de5af
+07:23 19:11:30.918 [http-nio-7997-exec-10] [INFO] [c.b.e.controller.ProductController] -completed  request to get single product details:0edfa567-e9b6-4f6f-8383-79c0260de5af
+07:23 19:47:45.918 [restartedMain] [INFO] [c.b.e.ElectronicStoreApplication] -Starting ElectronicStoreApplication using Java 17.0.6 on DESKTOP-2OI3U43 with PID 1308 (E:\newproject07\electronic_store\target\classes started by KSAV in E:\newproject07\electronic_store)
+07:23 19:47:46.069 [background-preinit] [INFO] [o.h.validator.internal.util.Version] -HV000001: Hibernate Validator 6.2.5.Final
+07:23 19:47:46.109 [restartedMain] [INFO] [c.b.e.ElectronicStoreApplication] -No active profile set, falling back to 1 default profile: "default"
+07:23 19:47:46.422 [restartedMain] [INFO] [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] -Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+07:23 19:47:46.423 [restartedMain] [INFO] [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] -For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+07:23 19:47:50.464 [restartedMain] [INFO] [o.s.d.r.c.RepositoryConfigurationDelegate] -Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+07:23 19:47:50.716 [restartedMain] [INFO] [o.s.d.r.c.RepositoryConfigurationDelegate] -Finished Spring Data repository scanning in 227 ms. Found 3 JPA repository interfaces.
+07:23 19:47:53.495 [restartedMain] [INFO] [o.s.b.w.e.tomcat.TomcatWebServer] -Tomcat initialized with port(s): 7997 (http)
+07:23 19:47:53.530 [restartedMain] [INFO] [o.a.coyote.http11.Http11NioProtocol] -Initializing ProtocolHandler ["http-nio-7997"]
+07:23 19:47:53.540 [restartedMain] [INFO] [o.a.catalina.core.StandardService] -Starting service [Tomcat]
+07:23 19:47:53.540 [restartedMain] [INFO] [o.a.catalina.core.StandardEngine] -Starting Servlet engine: [Apache Tomcat/9.0.76]
+07:23 19:47:53.818 [restartedMain] [INFO] [o.a.c.c.C.[Tomcat].[localhost].[/]] -Initializing Spring embedded WebApplicationContext
+07:23 19:47:53.819 [restartedMain] [INFO] [o.s.b.w.s.c.ServletWebServerApplicationContext] -Root WebApplicationContext: initialization completed in 7393 ms
+07:23 19:47:54.517 [restartedMain] [INFO] [o.h.jpa.internal.util.LogHelper] -HHH000204: Processing PersistenceUnitInfo [name: default]
+07:23 19:47:54.737 [restartedMain] [INFO] [org.hibernate.Version] -HHH000412: Hibernate ORM core version 5.6.15.Final
+07:23 19:47:55.202 [restartedMain] [INFO] [o.h.annotations.common.Version] -HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+07:23 19:47:55.567 [restartedMain] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Starting...
+07:23 19:47:57.414 [restartedMain] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Start completed.
+07:23 19:47:57.490 [restartedMain] [INFO] [org.hibernate.dialect.Dialect] -HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+07:23 19:48:00.346 [restartedMain] [INFO] [o.h.e.t.j.p.i.JtaPlatformInitiator] -HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+07:23 19:48:00.399 [restartedMain] [INFO] [o.s.o.j.LocalContainerEntityManagerFactoryBean] -Initialized JPA EntityManagerFactory for persistence unit 'default'
+07:23 19:48:01.849 [restartedMain] [WARN] [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration] -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+07:23 19:48:02.520 [restartedMain] [WARN] [o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext] -Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'categoryController' method 
+com.bikkadit.electronic_store.controller.CategoryController#getAllProductsOfCategories(String, int, int, String, String)
+to {GET [/categories/{categoryId}]}: There is already 'categoryController' bean method
+com.bikkadit.electronic_store.controller.CategoryController#getSingleCategory(String) mapped.
+07:23 19:48:02.522 [restartedMain] [INFO] [o.s.o.j.LocalContainerEntityManagerFactoryBean] -Closing JPA EntityManagerFactory for persistence unit 'default'
+07:23 19:48:02.526 [restartedMain] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Shutdown initiated...
+07:23 19:48:02.594 [restartedMain] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Shutdown completed.
+07:23 19:48:02.598 [restartedMain] [INFO] [o.a.catalina.core.StandardService] -Stopping service [Tomcat]
+07:23 19:48:02.631 [restartedMain] [INFO] [o.s.b.a.l.ConditionEvaluationReportLoggingListener] -
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+07:23 19:48:02.742 [restartedMain] [ERROR] [o.s.boot.SpringApplication] -Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'categoryController' method 
+com.bikkadit.electronic_store.controller.CategoryController#getAllProductsOfCategories(String, int, int, String, String)
+to {GET [/categories/{categoryId}]}: There is already 'categoryController' bean method
+com.bikkadit.electronic_store.controller.CategoryController#getSingleCategory(String) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.bikkadit.electronic_store.ElectronicStoreApplication.main(ElectronicStoreApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'categoryController' method 
+com.bikkadit.electronic_store.controller.CategoryController#getAllProductsOfCategories(String, int, int, String, String)
+to {GET [/categories/{categoryId}]}: There is already 'categoryController' bean method
+com.bikkadit.electronic_store.controller.CategoryController#getSingleCategory(String) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:669)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:635)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:332)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:420)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:299)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:297)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:266)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:225)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:213)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:205)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 21 common frames omitted
+07:23 19:49:06.884 [background-preinit] [INFO] [o.h.validator.internal.util.Version] -HV000001: Hibernate Validator 6.2.5.Final
+07:23 19:49:06.897 [restartedMain] [INFO] [c.b.e.ElectronicStoreApplication] -Starting ElectronicStoreApplication using Java 17.0.6 on DESKTOP-2OI3U43 with PID 2728 (E:\newproject07\electronic_store\target\classes started by KSAV in E:\newproject07\electronic_store)
+07:23 19:49:06.905 [restartedMain] [INFO] [c.b.e.ElectronicStoreApplication] -No active profile set, falling back to 1 default profile: "default"
+07:23 19:49:07.064 [restartedMain] [INFO] [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] -Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+07:23 19:49:07.064 [restartedMain] [INFO] [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] -For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+07:23 19:49:09.047 [restartedMain] [INFO] [o.s.d.r.c.RepositoryConfigurationDelegate] -Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+07:23 19:49:09.197 [restartedMain] [INFO] [o.s.d.r.c.RepositoryConfigurationDelegate] -Finished Spring Data repository scanning in 130 ms. Found 3 JPA repository interfaces.
+07:23 19:49:11.395 [restartedMain] [INFO] [o.s.b.w.e.tomcat.TomcatWebServer] -Tomcat initialized with port(s): 7997 (http)
+07:23 19:49:11.412 [restartedMain] [INFO] [o.a.coyote.http11.Http11NioProtocol] -Initializing ProtocolHandler ["http-nio-7997"]
+07:23 19:49:11.416 [restartedMain] [INFO] [o.a.catalina.core.StandardService] -Starting service [Tomcat]
+07:23 19:49:11.416 [restartedMain] [INFO] [o.a.catalina.core.StandardEngine] -Starting Servlet engine: [Apache Tomcat/9.0.76]
+07:23 19:49:11.744 [restartedMain] [INFO] [o.a.c.c.C.[Tomcat].[localhost].[/]] -Initializing Spring embedded WebApplicationContext
+07:23 19:49:11.745 [restartedMain] [INFO] [o.s.b.w.s.c.ServletWebServerApplicationContext] -Root WebApplicationContext: initialization completed in 4680 ms
+07:23 19:49:12.483 [restartedMain] [INFO] [o.h.jpa.internal.util.LogHelper] -HHH000204: Processing PersistenceUnitInfo [name: default]
+07:23 19:49:12.596 [restartedMain] [INFO] [org.hibernate.Version] -HHH000412: Hibernate ORM core version 5.6.15.Final
+07:23 19:49:13.146 [restartedMain] [INFO] [o.h.annotations.common.Version] -HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+07:23 19:49:13.687 [restartedMain] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Starting...
+07:23 19:49:19.658 [restartedMain] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Start completed.
+07:23 19:49:20.063 [restartedMain] [INFO] [org.hibernate.dialect.Dialect] -HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+07:23 19:49:26.998 [restartedMain] [INFO] [o.h.e.t.j.p.i.JtaPlatformInitiator] -HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+07:23 19:49:27.213 [restartedMain] [INFO] [o.s.o.j.LocalContainerEntityManagerFactoryBean] -Initialized JPA EntityManagerFactory for persistence unit 'default'
+07:23 19:49:30.728 [restartedMain] [WARN] [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration] -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+07:23 19:49:34.499 [restartedMain] [INFO] [o.s.b.d.a.OptionalLiveReloadServer] -LiveReload server is running on port 35729
+07:23 19:49:34.673 [restartedMain] [INFO] [o.a.coyote.http11.Http11NioProtocol] -Starting ProtocolHandler ["http-nio-7997"]
+07:23 19:49:34.976 [restartedMain] [INFO] [o.s.b.w.e.tomcat.TomcatWebServer] -Tomcat started on port(s): 7997 (http) with context path ''
+07:23 19:49:35.066 [restartedMain] [INFO] [c.b.e.ElectronicStoreApplication] -Started ElectronicStoreApplication in 29.028 seconds (JVM running for 30.745)
+07:23 19:51:26.845 [http-nio-7997-exec-1] [INFO] [o.a.c.c.C.[Tomcat].[localhost].[/]] -Initializing Spring DispatcherServlet 'dispatcherServlet'
+07:23 19:51:26.847 [http-nio-7997-exec-1] [INFO] [o.s.web.servlet.DispatcherServlet] -Initializing Servlet 'dispatcherServlet'
+07:23 19:51:26.849 [http-nio-7997-exec-1] [INFO] [o.s.web.servlet.DispatcherServlet] -Completed initialization in 2 ms
+07:23 19:51:27.088 [http-nio-7997-exec-1] [INFO] [c.b.e.controller.CategoryController] -Initiating request to get All categories
+07:23 19:51:27.088 [http-nio-7997-exec-1] [INFO] [c.b.e.s.impl.CategoryServiceImpl] -Initiating dao call to get All categories
+07:23 19:51:27.982 [http-nio-7997-exec-1] [INFO] [c.b.e.s.impl.CategoryServiceImpl] -completed dao call to get All categories
+07:23 19:51:27.982 [http-nio-7997-exec-1] [INFO] [c.b.e.controller.CategoryController] -completed request to get All categories
+07:23 19:52:01.161 [http-nio-7997-exec-3] [INFO] [c.b.e.controller.CategoryController] -Initiating request to  get all products of category:6983c382-94cc-4a25-8a3c-54cabb30d479
+07:23 19:52:01.163 [http-nio-7997-exec-3] [INFO] [c.b.e.s.impl.ProductServiceImpl] -Initiating dao call get products of category:6983c382-94cc-4a25-8a3c-54cabb30d479
+07:23 19:52:01.370 [http-nio-7997-exec-3] [INFO] [c.b.e.s.impl.ProductServiceImpl] -completed dao call get products of category:6983c382-94cc-4a25-8a3c-54cabb30d479
+07:23 19:52:01.370 [http-nio-7997-exec-3] [INFO] [c.b.e.controller.CategoryController] -completed request to  get all products of category:6983c382-94cc-4a25-8a3c-54cabb30d479
+07:23 19:53:13.453 [http-nio-7997-exec-6] [INFO] [c.b.e.controller.CategoryController] -Initiating request to  get all products of category:6983c382-94cc-4a25-8a3c-54cabb30d479
+07:23 19:53:13.457 [http-nio-7997-exec-6] [INFO] [c.b.e.s.impl.ProductServiceImpl] -Initiating dao call get products of category:6983c382-94cc-4a25-8a3c-54cabb30d479
+07:23 19:53:13.524 [http-nio-7997-exec-6] [INFO] [c.b.e.s.impl.ProductServiceImpl] -completed dao call get products of category:6983c382-94cc-4a25-8a3c-54cabb30d479
+07:23 19:53:13.524 [http-nio-7997-exec-6] [INFO] [c.b.e.controller.CategoryController] -completed request to  get all products of category:6983c382-94cc-4a25-8a3c-54cabb30d479
+07:23 19:53:49.458 [http-nio-7997-exec-7] [INFO] [c.b.e.controller.ProductController] -Initiating request to get All product details
+07:23 19:53:49.458 [http-nio-7997-exec-7] [INFO] [c.b.e.s.impl.ProductServiceImpl] -Initiating dao call to get all product details
+07:23 19:53:49.508 [http-nio-7997-exec-7] [INFO] [c.b.e.s.impl.ProductServiceImpl] -completed dao call to get all product details
+07:23 19:53:49.509 [http-nio-7997-exec-7] [INFO] [c.b.e.controller.ProductController] -completed request to get All product details
+07:23 19:54:20.323 [http-nio-7997-exec-8] [INFO] [c.b.e.controller.ProductController] -Initiating request to get All product details
+07:23 19:54:20.358 [http-nio-7997-exec-8] [INFO] [c.b.e.s.impl.ProductServiceImpl] -Initiating dao call to get all product details
+07:23 19:54:20.452 [http-nio-7997-exec-8] [INFO] [c.b.e.s.impl.ProductServiceImpl] -completed dao call to get all product details
+07:23 19:54:20.452 [http-nio-7997-exec-8] [INFO] [c.b.e.controller.ProductController] -completed request to get All product details
+07:23 19:54:48.928 [http-nio-7997-exec-9] [INFO] [c.b.e.controller.CategoryController] -Initiating request to  get all products of category:755c5dfa-2c26-4a51-8946-5ddaa9885507
+07:23 19:54:48.929 [http-nio-7997-exec-9] [INFO] [c.b.e.s.impl.ProductServiceImpl] -Initiating dao call get products of category:755c5dfa-2c26-4a51-8946-5ddaa9885507
+07:23 19:54:48.953 [http-nio-7997-exec-9] [INFO] [c.b.e.s.impl.ProductServiceImpl] -completed dao call get products of category:755c5dfa-2c26-4a51-8946-5ddaa9885507
+07:23 19:54:48.954 [http-nio-7997-exec-9] [INFO] [c.b.e.controller.CategoryController] -completed request to  get all products of category:755c5dfa-2c26-4a51-8946-5ddaa9885507
+07:23 19:54:53.550 [http-nio-7997-exec-10] [INFO] [c.b.e.controller.CategoryController] -Initiating request to  get all products of category:755c5dfa-2c26-4a51-8946-5ddaa9885507
+07:23 19:54:53.551 [http-nio-7997-exec-10] [INFO] [c.b.e.s.impl.ProductServiceImpl] -Initiating dao call get products of category:755c5dfa-2c26-4a51-8946-5ddaa9885507
+07:23 19:54:53.571 [http-nio-7997-exec-10] [INFO] [c.b.e.s.impl.ProductServiceImpl] -completed dao call get products of category:755c5dfa-2c26-4a51-8946-5ddaa9885507
+07:23 19:54:53.571 [http-nio-7997-exec-10] [INFO] [c.b.e.controller.CategoryController] -completed request to  get all products of category:755c5dfa-2c26-4a51-8946-5ddaa9885507
