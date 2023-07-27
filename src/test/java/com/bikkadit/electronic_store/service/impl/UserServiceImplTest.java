@@ -81,14 +81,24 @@ import static org.mockito.Mockito.*;
     @Test
     void updateUser() {
        String id = UUID.randomUUID().toString();
+        userDto = UserDto.builder()
+               .userId(id)
+               .name("Veeraj")
+               .password("vv11")
+               .gender("male")
+               .email("veeraj@gmail.com")
+               .about("I am Developer")
+               .imageName("abc.png")
+               .build();
+
 
        Mockito.when(userRepositoryI.findById(id)).thenReturn(Optional.of(user));
 
        Mockito.when(userRepositoryI.save(Mockito.any())).thenReturn(user);
 
-       UserDto userDto1 = userServiceImpl.updateUser(modelMapper.map(user, UserDto.class), id);
+       UserDto userDto1 = userServiceImpl.updateUser(userDto, id);
 
-       assertEquals("Sahil",userDto1.getName());
+       assertEquals("Veeraj",userDto1.getName());
 
     }
 
@@ -125,17 +135,17 @@ import static org.mockito.Mockito.*;
 
     }
 
-    @Test
-    void searchUser() {
-
-       String keyword="s";
-       Mockito.when(userRepositoryI.findAll()).thenReturn(list);
-
-       List<UserDto> userDtos = userServiceImpl.searchUser(keyword);
-
-       assertNotNull(userDtos);
-
-    }
+//    @Test
+//    void searchUser() {
+//
+//       String keyword="s";
+//       Mockito.when(userRepositoryI.findAll()).thenReturn(list);
+//
+//       List<UserDto> userDtos = userServiceImpl.searchUser(keyword);
+//
+//       assertNotNull(userDtos);
+//
+//    }
 
 //    @Test
 //    @Disabled

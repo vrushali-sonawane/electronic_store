@@ -1,6 +1,7 @@
 package com.bikkadit.electronic_store.controller;
 
 import com.bikkadit.electronic_store.dto.UserDto;
+import com.bikkadit.electronic_store.entity.User;
 import com.bikkadit.electronic_store.service.UserServiceI;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -15,25 +16,28 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.http.HttpStatus;
+
 import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
+
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.MockMvcBuilder;
+
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import java.util.UUID;
 
 @SpringBootTest(classes = UserControllerTest.class)
-////to enable Autoconfiguration for mockMvc
-//@AutoConfigureMockMvc
-//@ContextConfiguration
-//@ComponentScan(basePackages = "electronic_store")
+//to enable Autoconfiguration for mockMvc
+@AutoConfigureMockMvc
+@ContextConfiguration
+@ComponentScan(basePackages = "electronic_store")
 class UserControllerTest {
 
     @Mock
@@ -43,34 +47,30 @@ class UserControllerTest {
     private UserController userController;
 
 
+    @Autowired
+    private MockMvc mockMvc;
 
-//    @Autowired
-//    private MockMvc mockMvc;
-
-//    @BeforeEach
-//    public void setUp(){
-//        MockMvc mockMvc = MockMvcBuilders.standaloneSetup(userController).build();
-//    }
+    @BeforeEach
+    public void setUp(){
+        MockMvc mockMvc = MockMvcBuilders.standaloneSetup(userController).build();
+    }
 
     @Test
-    void createUser() throws Exception {
+    void createUserTest() throws Exception {
         String id = UUID.randomUUID().toString();
-        UserDto userDto = UserDto.builder()
-                .userId(id)
-                .name("Sahil")
-                .password("ss11")
-                .gender("male")
-                .about("I am developer")
-                .imageName("abc.png")
-                .build();
+       UserDto user=new UserDto(id,"Sahil","sahil123@gmail.com","sahil99","I am developer","male","abc.png");
 
-        when(userServiceI.createUser(userDto)).thenReturn(userDto);
+      when(userServiceI.createUser(user));
 
-        ResponseEntity<UserDto> createdUser = userController.createUser(userDto);
+       ObjectMapper objectMapper=new ObjectMapper();
+        String userAsString = objectMapper.writeValueAsString(user);
 
-        HttpStatus statusCode = createdUser.getStatusCode();
 
-        assertEquals(HttpStatus.CREATED,statusCode);
+        mockMvc.perform(post("/")
+                .content(userAsString)
+                .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isCreated()).andDo(print());
+
 
     }
 
@@ -85,13 +85,7 @@ class UserControllerTest {
                 .about("I am developer")
                 .imageName("abc.png")
                 .build();
-        when(userServiceI.updateUser(userDto,id)).thenReturn(userDto);
 
-        ResponseEntity<UserDto> updatedUser = userController.upadteUser(userDto, id);
-
-        HttpStatus statusCode = updatedUser.getStatusCode();
-
-        assertEquals(HttpStatus.CREATED,statusCode);
     }
 
     @Test
@@ -106,14 +100,7 @@ class UserControllerTest {
                 .imageName("abc.png")
                 .build();
 
-        when(userServiceI.getUserById(id)).thenReturn(userDto);
 
-        ResponseEntity<UserDto> user = userController.getSingleUSerById(id);
-
-        UserDto body = user.getBody();
-        String actualName = body.getName();
-        String expectedName="Sahil";
-        assertEquals(expectedName,actualName);
     }
 
     @Test

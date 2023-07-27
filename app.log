@@ -14271,3 +14271,875 @@ com.bikkadit.electronic_store.controller.CategoryController#getSingleCategory(St
 07:23 19:54:53.551 [http-nio-7997-exec-10] [INFO] [c.b.e.s.impl.ProductServiceImpl] -Initiating dao call get products of category:755c5dfa-2c26-4a51-8946-5ddaa9885507
 07:23 19:54:53.571 [http-nio-7997-exec-10] [INFO] [c.b.e.s.impl.ProductServiceImpl] -completed dao call get products of category:755c5dfa-2c26-4a51-8946-5ddaa9885507
 07:23 19:54:53.571 [http-nio-7997-exec-10] [INFO] [c.b.e.controller.CategoryController] -completed request to  get all products of category:755c5dfa-2c26-4a51-8946-5ddaa9885507
+07:23 19:58:44.036 [SpringApplicationShutdownHook] [INFO] [o.s.o.j.LocalContainerEntityManagerFactoryBean] -Closing JPA EntityManagerFactory for persistence unit 'default'
+07:23 19:58:44.090 [SpringApplicationShutdownHook] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Shutdown initiated...
+07:23 19:58:44.256 [SpringApplicationShutdownHook] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Shutdown completed.
+07:23 22:46:27.537 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.bikkadit.electronic_store.service.impl.CategoryServiceImplTest], using SpringBootContextLoader
+07:23 22:46:27.790 [main] [INFO] [o.s.t.c.s.AbstractContextLoader] -Could not detect default resource locations for test class [com.bikkadit.electronic_store.service.impl.CategoryServiceImplTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+07:23 22:46:27.791 [main] [INFO] [o.s.t.c.s.AnnotationConfigContextLoaderUtils] -Could not detect default configuration classes for test class [com.bikkadit.electronic_store.service.impl.CategoryServiceImplTest]: CategoryServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+07:23 22:46:29.658 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Found @SpringBootConfiguration com.bikkadit.electronic_store.ElectronicStoreApplication for test class com.bikkadit.electronic_store.service.impl.CategoryServiceImplTest
+07:23 22:46:31.055 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+07:23 22:46:31.154 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@26bab2f1, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3724af13, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@68ead359, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@6b53bcc2, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@180da663, org.springframework.test.context.support.DirtiesContextTestExecutionListener@a43ce46, org.springframework.test.context.transaction.TransactionalTestExecutionListener@340da44c, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@424ebba3, org.springframework.test.context.event.EventPublishingTestExecutionListener@37052337, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2320fa6f, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@7a560583, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@4d722ac9, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@53f0a4cb, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@77a7cf58, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@3d97a632]
+07:23 22:46:34.031 [main] [INFO] [c.b.e.s.impl.CategoryServiceImplTest] -Starting CategoryServiceImplTest using Java 17.0.6 on DESKTOP-2OI3U43 with PID 6828 (started by KSAV in E:\newproject07\electronic_store)
+07:23 22:46:34.034 [main] [INFO] [c.b.e.s.impl.CategoryServiceImplTest] -No active profile set, falling back to 1 default profile: "default"
+07:23 22:46:34.379 [background-preinit] [INFO] [o.h.validator.internal.util.Version] -HV000001: Hibernate Validator 6.2.5.Final
+07:23 22:46:40.843 [main] [INFO] [o.s.d.r.c.RepositoryConfigurationDelegate] -Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+07:23 22:46:41.184 [main] [INFO] [o.s.d.r.c.RepositoryConfigurationDelegate] -Finished Spring Data repository scanning in 305 ms. Found 3 JPA repository interfaces.
+07:23 22:46:44.639 [main] [INFO] [o.h.jpa.internal.util.LogHelper] -HHH000204: Processing PersistenceUnitInfo [name: default]
+07:23 22:46:44.884 [main] [INFO] [org.hibernate.Version] -HHH000412: Hibernate ORM core version 5.6.15.Final
+07:23 22:46:45.015 [main] [INFO] [o.h.annotations.common.Version] -HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+07:23 22:46:45.544 [main] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Starting...
+07:23 22:46:51.798 [main] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Start completed.
+07:23 22:46:51.914 [main] [INFO] [org.hibernate.dialect.Dialect] -HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+07:23 22:46:56.509 [main] [INFO] [o.h.e.t.j.p.i.JtaPlatformInitiator] -HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+07:23 22:46:56.522 [main] [INFO] [o.s.o.j.LocalContainerEntityManagerFactoryBean] -Initialized JPA EntityManagerFactory for persistence unit 'default'
+07:23 22:46:58.740 [main] [WARN] [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration] -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+07:23 22:47:00.464 [main] [INFO] [c.b.e.s.impl.CategoryServiceImplTest] -Started CategoryServiceImplTest in 28.843 seconds (JVM running for 39.162)
+07:23 22:47:00.659 [main] [INFO] [c.b.e.s.impl.CategoryServiceImpl] -Initiating dao call to save category
+07:23 22:47:00.667 [main] [INFO] [c.b.e.s.impl.CategoryServiceImpl] -Completed dao call to save category
+07:23 22:47:00.731 [SpringApplicationShutdownHook] [INFO] [o.s.o.j.LocalContainerEntityManagerFactoryBean] -Closing JPA EntityManagerFactory for persistence unit 'default'
+07:23 22:47:00.734 [SpringApplicationShutdownHook] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Shutdown initiated...
+07:23 22:47:00.807 [SpringApplicationShutdownHook] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Shutdown completed.
+07:23 22:53:06.367 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.bikkadit.electronic_store.service.impl.CategoryServiceImplTest], using SpringBootContextLoader
+07:23 22:53:06.515 [main] [INFO] [o.s.t.c.s.AbstractContextLoader] -Could not detect default resource locations for test class [com.bikkadit.electronic_store.service.impl.CategoryServiceImplTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+07:23 22:53:06.517 [main] [INFO] [o.s.t.c.s.AnnotationConfigContextLoaderUtils] -Could not detect default configuration classes for test class [com.bikkadit.electronic_store.service.impl.CategoryServiceImplTest]: CategoryServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+07:23 22:53:07.361 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Found @SpringBootConfiguration com.bikkadit.electronic_store.ElectronicStoreApplication for test class com.bikkadit.electronic_store.service.impl.CategoryServiceImplTest
+07:23 22:53:07.960 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+07:23 22:53:08.104 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@12bd8a64, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@61e94def, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@3300f4fd, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@ebb6851, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@70ab2d48, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5b068087, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6f152006, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3a393455, org.springframework.test.context.event.EventPublishingTestExecutionListener@13518f37, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@7cbc3762, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@3a6f2de3, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@49872d67, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@56303b57, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4b2a01d4, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@8692d67]
+07:23 22:53:09.755 [main] [INFO] [c.b.e.s.impl.CategoryServiceImplTest] -Starting CategoryServiceImplTest using Java 17.0.6 on DESKTOP-2OI3U43 with PID 6984 (started by KSAV in E:\newproject07\electronic_store)
+07:23 22:53:09.757 [main] [INFO] [c.b.e.s.impl.CategoryServiceImplTest] -No active profile set, falling back to 1 default profile: "default"
+07:23 22:53:09.845 [background-preinit] [INFO] [o.h.validator.internal.util.Version] -HV000001: Hibernate Validator 6.2.5.Final
+07:23 22:53:14.814 [main] [INFO] [o.s.d.r.c.RepositoryConfigurationDelegate] -Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+07:23 22:53:15.132 [main] [INFO] [o.s.d.r.c.RepositoryConfigurationDelegate] -Finished Spring Data repository scanning in 248 ms. Found 3 JPA repository interfaces.
+07:23 22:53:18.983 [main] [INFO] [o.h.jpa.internal.util.LogHelper] -HHH000204: Processing PersistenceUnitInfo [name: default]
+07:23 22:53:19.252 [main] [INFO] [org.hibernate.Version] -HHH000412: Hibernate ORM core version 5.6.15.Final
+07:23 22:53:19.410 [main] [INFO] [o.h.annotations.common.Version] -HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+07:23 22:53:19.880 [main] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Starting...
+07:23 22:53:21.662 [main] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Start completed.
+07:23 22:53:21.739 [main] [INFO] [org.hibernate.dialect.Dialect] -HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+07:23 22:53:23.563 [main] [INFO] [o.h.e.t.j.p.i.JtaPlatformInitiator] -HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+07:23 22:53:23.610 [main] [INFO] [o.s.o.j.LocalContainerEntityManagerFactoryBean] -Initialized JPA EntityManagerFactory for persistence unit 'default'
+07:23 22:53:25.618 [main] [WARN] [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration] -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+07:23 22:53:27.339 [main] [INFO] [c.b.e.s.impl.CategoryServiceImplTest] -Started CategoryServiceImplTest in 18.913 seconds (JVM running for 24.29)
+07:23 22:53:27.560 [main] [INFO] [c.b.e.s.impl.CategoryServiceImpl] -Initiating dao call to update category:7fa77623-c590-4904-8f86-0243cc34131e
+07:23 22:53:27.566 [main] [INFO] [c.b.e.s.impl.CategoryServiceImpl] -completed  dao call to update category:7fa77623-c590-4904-8f86-0243cc34131e
+07:23 22:53:27.619 [SpringApplicationShutdownHook] [INFO] [o.s.o.j.LocalContainerEntityManagerFactoryBean] -Closing JPA EntityManagerFactory for persistence unit 'default'
+07:23 22:53:27.621 [SpringApplicationShutdownHook] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Shutdown initiated...
+07:23 22:53:27.666 [SpringApplicationShutdownHook] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Shutdown completed.
+07:23 22:55:50.190 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.bikkadit.electronic_store.service.impl.CategoryServiceImplTest], using SpringBootContextLoader
+07:23 22:55:50.217 [main] [INFO] [o.s.t.c.s.AbstractContextLoader] -Could not detect default resource locations for test class [com.bikkadit.electronic_store.service.impl.CategoryServiceImplTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+07:23 22:55:50.218 [main] [INFO] [o.s.t.c.s.AnnotationConfigContextLoaderUtils] -Could not detect default configuration classes for test class [com.bikkadit.electronic_store.service.impl.CategoryServiceImplTest]: CategoryServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+07:23 22:55:50.512 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Found @SpringBootConfiguration com.bikkadit.electronic_store.ElectronicStoreApplication for test class com.bikkadit.electronic_store.service.impl.CategoryServiceImplTest
+07:23 22:55:50.792 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+07:23 22:55:50.831 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@ebb6851, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@70ab2d48, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@5b068087, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@6f152006, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@3a393455, org.springframework.test.context.support.DirtiesContextTestExecutionListener@13518f37, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7cbc3762, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3a6f2de3, org.springframework.test.context.event.EventPublishingTestExecutionListener@49872d67, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@56303b57, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4b2a01d4, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@8692d67, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@78f5c518, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@2f48b3d2, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@34f7234e]
+07:23 22:55:51.612 [main] [INFO] [c.b.e.s.impl.CategoryServiceImplTest] -Starting CategoryServiceImplTest using Java 17.0.6 on DESKTOP-2OI3U43 with PID 10408 (started by KSAV in E:\newproject07\electronic_store)
+07:23 22:55:51.614 [main] [INFO] [c.b.e.s.impl.CategoryServiceImplTest] -No active profile set, falling back to 1 default profile: "default"
+07:23 22:55:51.730 [background-preinit] [INFO] [o.h.validator.internal.util.Version] -HV000001: Hibernate Validator 6.2.5.Final
+07:23 22:55:53.450 [main] [INFO] [o.s.d.r.c.RepositoryConfigurationDelegate] -Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+07:23 22:55:53.629 [main] [INFO] [o.s.d.r.c.RepositoryConfigurationDelegate] -Finished Spring Data repository scanning in 157 ms. Found 3 JPA repository interfaces.
+07:23 22:55:56.557 [main] [INFO] [o.h.jpa.internal.util.LogHelper] -HHH000204: Processing PersistenceUnitInfo [name: default]
+07:23 22:55:56.668 [main] [INFO] [org.hibernate.Version] -HHH000412: Hibernate ORM core version 5.6.15.Final
+07:23 22:55:56.797 [main] [INFO] [o.h.annotations.common.Version] -HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+07:23 22:55:57.194 [main] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Starting...
+07:23 22:55:58.181 [main] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Start completed.
+07:23 22:55:58.235 [main] [INFO] [org.hibernate.dialect.Dialect] -HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+07:23 22:56:00.247 [main] [INFO] [o.h.e.t.j.p.i.JtaPlatformInitiator] -HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+07:23 22:56:00.272 [main] [INFO] [o.s.o.j.LocalContainerEntityManagerFactoryBean] -Initialized JPA EntityManagerFactory for persistence unit 'default'
+07:23 22:56:01.901 [main] [WARN] [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration] -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+07:23 22:56:03.315 [main] [INFO] [c.b.e.s.impl.CategoryServiceImplTest] -Started CategoryServiceImplTest in 12.391 seconds (JVM running for 15.16)
+07:23 22:56:03.433 [main] [INFO] [c.b.e.s.impl.CategoryServiceImpl] -Initiating dao call to get single category:c03d22ae-2bad-4f5b-9438-29635d46e572
+07:23 22:56:03.441 [main] [INFO] [c.b.e.s.impl.CategoryServiceImpl] -completed dao call to get single category:c03d22ae-2bad-4f5b-9438-29635d46e572
+07:23 22:56:03.546 [SpringApplicationShutdownHook] [INFO] [o.s.o.j.LocalContainerEntityManagerFactoryBean] -Closing JPA EntityManagerFactory for persistence unit 'default'
+07:23 22:56:03.549 [SpringApplicationShutdownHook] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Shutdown initiated...
+07:23 22:56:03.572 [SpringApplicationShutdownHook] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Shutdown completed.
+07:23 22:58:50.099 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.bikkadit.electronic_store.service.impl.CategoryServiceImplTest], using SpringBootContextLoader
+07:23 22:58:50.133 [main] [INFO] [o.s.t.c.s.AbstractContextLoader] -Could not detect default resource locations for test class [com.bikkadit.electronic_store.service.impl.CategoryServiceImplTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+07:23 22:58:50.135 [main] [INFO] [o.s.t.c.s.AnnotationConfigContextLoaderUtils] -Could not detect default configuration classes for test class [com.bikkadit.electronic_store.service.impl.CategoryServiceImplTest]: CategoryServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+07:23 22:58:50.408 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Found @SpringBootConfiguration com.bikkadit.electronic_store.ElectronicStoreApplication for test class com.bikkadit.electronic_store.service.impl.CategoryServiceImplTest
+07:23 22:58:50.675 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+07:23 22:58:50.709 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5b068087, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6f152006, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@3a393455, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@13518f37, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@7cbc3762, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3a6f2de3, org.springframework.test.context.transaction.TransactionalTestExecutionListener@49872d67, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@56303b57, org.springframework.test.context.event.EventPublishingTestExecutionListener@4b2a01d4, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@8692d67, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@78f5c518, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2f48b3d2, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@34f7234e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@753432a2, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@23bff419]
+07:23 22:58:51.499 [main] [INFO] [c.b.e.s.impl.CategoryServiceImplTest] -Starting CategoryServiceImplTest using Java 17.0.6 on DESKTOP-2OI3U43 with PID 9712 (started by KSAV in E:\newproject07\electronic_store)
+07:23 22:58:51.503 [main] [INFO] [c.b.e.s.impl.CategoryServiceImplTest] -No active profile set, falling back to 1 default profile: "default"
+07:23 22:58:51.579 [background-preinit] [INFO] [o.h.validator.internal.util.Version] -HV000001: Hibernate Validator 6.2.5.Final
+07:23 22:58:53.373 [main] [INFO] [o.s.d.r.c.RepositoryConfigurationDelegate] -Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+07:23 22:58:53.526 [main] [INFO] [o.s.d.r.c.RepositoryConfigurationDelegate] -Finished Spring Data repository scanning in 136 ms. Found 3 JPA repository interfaces.
+07:23 22:58:56.163 [main] [INFO] [o.h.jpa.internal.util.LogHelper] -HHH000204: Processing PersistenceUnitInfo [name: default]
+07:23 22:58:56.278 [main] [INFO] [org.hibernate.Version] -HHH000412: Hibernate ORM core version 5.6.15.Final
+07:23 22:58:56.367 [main] [INFO] [o.h.annotations.common.Version] -HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+07:23 22:58:56.718 [main] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Starting...
+07:23 22:58:57.530 [main] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Start completed.
+07:23 22:58:57.566 [main] [INFO] [org.hibernate.dialect.Dialect] -HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+07:23 22:58:59.305 [main] [INFO] [o.h.e.t.j.p.i.JtaPlatformInitiator] -HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+07:23 22:58:59.324 [main] [INFO] [o.s.o.j.LocalContainerEntityManagerFactoryBean] -Initialized JPA EntityManagerFactory for persistence unit 'default'
+07:23 22:59:01.159 [main] [WARN] [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration] -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+07:23 22:59:02.943 [main] [INFO] [c.b.e.s.impl.CategoryServiceImplTest] -Started CategoryServiceImplTest in 12.131 seconds (JVM running for 14.718)
+07:23 22:59:03.060 [main] [INFO] [c.b.e.s.impl.CategoryServiceImpl] -Initiating dao call to delete category:6804aade-90af-4711-8e93-8f5fb0a75a09
+07:23 22:59:03.085 [main] [INFO] [c.b.e.s.impl.CategoryServiceImpl] -category image is not found in folder
+07:23 22:59:03.096 [main] [INFO] [c.b.e.s.impl.CategoryServiceImpl] -completed dao call to delete category:6804aade-90af-4711-8e93-8f5fb0a75a09
+07:23 22:59:03.171 [SpringApplicationShutdownHook] [INFO] [o.s.o.j.LocalContainerEntityManagerFactoryBean] -Closing JPA EntityManagerFactory for persistence unit 'default'
+07:23 22:59:03.174 [SpringApplicationShutdownHook] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Shutdown initiated...
+07:23 22:59:03.197 [SpringApplicationShutdownHook] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Shutdown completed.
+07:23 22:59:39.783 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.bikkadit.electronic_store.service.impl.UserServiceImplTest], using SpringBootContextLoader
+07:23 22:59:39.795 [main] [INFO] [o.s.t.c.s.AbstractContextLoader] -Could not detect default resource locations for test class [com.bikkadit.electronic_store.service.impl.UserServiceImplTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+07:23 22:59:39.797 [main] [INFO] [o.s.t.c.s.AnnotationConfigContextLoaderUtils] -Could not detect default configuration classes for test class [com.bikkadit.electronic_store.service.impl.UserServiceImplTest]: UserServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+07:23 22:59:40.083 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Found @SpringBootConfiguration com.bikkadit.electronic_store.ElectronicStoreApplication for test class com.bikkadit.electronic_store.service.impl.UserServiceImplTest
+07:23 22:59:40.344 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+07:23 22:59:40.379 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2b0f373b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2ceb80a1, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@4b45dcb8, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7216fb24, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2072acb2, org.springframework.test.context.support.DirtiesContextTestExecutionListener@50ecde95, org.springframework.test.context.transaction.TransactionalTestExecutionListener@35a9782c, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@70a36a66, org.springframework.test.context.event.EventPublishingTestExecutionListener@45815ffc, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@732f29af, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@d3957fe, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@6622fc65, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@299321e2, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@23fb172e, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@64ba3208]
+07:23 22:59:41.173 [background-preinit] [INFO] [o.h.validator.internal.util.Version] -HV000001: Hibernate Validator 6.2.5.Final
+07:23 22:59:41.176 [main] [INFO] [c.b.e.s.impl.UserServiceImplTest] -Starting UserServiceImplTest using Java 17.0.6 on DESKTOP-2OI3U43 with PID 2372 (started by KSAV in E:\newproject07\electronic_store)
+07:23 22:59:41.182 [main] [INFO] [c.b.e.s.impl.UserServiceImplTest] -No active profile set, falling back to 1 default profile: "default"
+07:23 22:59:43.376 [main] [INFO] [o.s.d.r.c.RepositoryConfigurationDelegate] -Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+07:23 22:59:43.537 [main] [INFO] [o.s.d.r.c.RepositoryConfigurationDelegate] -Finished Spring Data repository scanning in 144 ms. Found 3 JPA repository interfaces.
+07:23 22:59:46.207 [main] [INFO] [o.h.jpa.internal.util.LogHelper] -HHH000204: Processing PersistenceUnitInfo [name: default]
+07:23 22:59:46.339 [main] [INFO] [org.hibernate.Version] -HHH000412: Hibernate ORM core version 5.6.15.Final
+07:23 22:59:46.432 [main] [INFO] [o.h.annotations.common.Version] -HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+07:23 22:59:46.822 [main] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Starting...
+07:23 22:59:47.657 [main] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Start completed.
+07:23 22:59:47.694 [main] [INFO] [org.hibernate.dialect.Dialect] -HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+07:23 22:59:49.417 [main] [INFO] [o.h.e.t.j.p.i.JtaPlatformInitiator] -HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+07:23 22:59:49.437 [main] [INFO] [o.s.o.j.LocalContainerEntityManagerFactoryBean] -Initialized JPA EntityManagerFactory for persistence unit 'default'
+07:23 22:59:50.846 [main] [WARN] [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration] -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+07:23 22:59:52.127 [main] [INFO] [c.b.e.s.impl.UserServiceImplTest] -Started UserServiceImplTest in 11.649 seconds (JVM running for 14.308)
+07:23 22:59:52.285 [main] [INFO] [c.b.e.service.impl.UserServiceImpl] -Initiating dao call to get user record:sahil@gmail.com
+07:23 22:59:52.403 [main] [INFO] [c.b.e.service.impl.UserServiceImpl] -Completing dao call to get user record:sahil@gmail.com
+07:23 22:59:52.468 [main] [INFO] [c.b.e.service.impl.UserServiceImpl] -Initiating dao call to update user:a2b35234-a093-4db5-aecb-f9cbded752a1
+07:23 22:59:52.470 [main] [INFO] [c.b.e.service.impl.UserServiceImpl] -Completing dao call to update user:a2b35234-a093-4db5-aecb-f9cbded752a1
+07:23 22:59:52.482 [main] [INFO] [c.b.e.service.impl.UserServiceImpl] -Initiating dao call to create user
+07:23 22:59:52.485 [main] [INFO] [c.b.e.service.impl.UserServiceImpl] -Completing dao call to create user
+07:23 22:59:52.497 [main] [INFO] [c.b.e.service.impl.UserServiceImpl] -Initiating dao call to delete user record:368d74c1-391a-47e6-aedc-f794ad990c19
+07:23 22:59:52.571 [main] [INFO] [c.b.e.service.impl.UserServiceImpl] -User image is not found in folder
+07:23 22:59:52.577 [main] [INFO] [c.b.e.service.impl.UserServiceImpl] -Completing dao call to delete user record:368d74c1-391a-47e6-aedc-f794ad990c19
+07:23 22:59:52.591 [main] [INFO] [c.b.e.service.impl.UserServiceImpl] -Initiating dao call to get single user:9aa34aca-60c2-4d5c-b364-f974f15cdee7
+07:23 22:59:52.592 [main] [INFO] [c.b.e.service.impl.UserServiceImpl] -completed dao call to get single user:9aa34aca-60c2-4d5c-b364-f974f15cdee7
+07:23 22:59:52.612 [SpringApplicationShutdownHook] [INFO] [o.s.o.j.LocalContainerEntityManagerFactoryBean] -Closing JPA EntityManagerFactory for persistence unit 'default'
+07:23 22:59:52.615 [SpringApplicationShutdownHook] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Shutdown initiated...
+07:23 22:59:52.634 [SpringApplicationShutdownHook] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Shutdown completed.
+07:23 23:09:59.744 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.bikkadit.electronic_store.service.impl.CategoryServiceImplTest], using SpringBootContextLoader
+07:23 23:09:59.793 [main] [INFO] [o.s.t.c.s.AbstractContextLoader] -Could not detect default resource locations for test class [com.bikkadit.electronic_store.service.impl.CategoryServiceImplTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+07:23 23:09:59.794 [main] [INFO] [o.s.t.c.s.AnnotationConfigContextLoaderUtils] -Could not detect default configuration classes for test class [com.bikkadit.electronic_store.service.impl.CategoryServiceImplTest]: CategoryServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+07:23 23:10:00.358 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Found @SpringBootConfiguration com.bikkadit.electronic_store.ElectronicStoreApplication for test class com.bikkadit.electronic_store.service.impl.CategoryServiceImplTest
+07:23 23:10:00.746 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+07:23 23:10:00.799 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@49872d67, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@56303b57, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@4b2a01d4, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@8692d67, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@78f5c518, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2f48b3d2, org.springframework.test.context.transaction.TransactionalTestExecutionListener@34f7234e, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@753432a2, org.springframework.test.context.event.EventPublishingTestExecutionListener@23bff419, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4983159f, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@44e3a2b2, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@101639ae, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4c550889, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1d2bd371, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@44040454]
+07:23 23:10:01.676 [main] [INFO] [c.b.e.s.impl.CategoryServiceImplTest] -Starting CategoryServiceImplTest using Java 17.0.6 on DESKTOP-2OI3U43 with PID 7840 (started by KSAV in E:\newproject07\electronic_store)
+07:23 23:10:01.680 [main] [INFO] [c.b.e.s.impl.CategoryServiceImplTest] -No active profile set, falling back to 1 default profile: "default"
+07:23 23:10:01.791 [background-preinit] [INFO] [o.h.validator.internal.util.Version] -HV000001: Hibernate Validator 6.2.5.Final
+07:23 23:10:05.176 [main] [INFO] [o.s.d.r.c.RepositoryConfigurationDelegate] -Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+07:23 23:10:05.882 [main] [INFO] [o.s.d.r.c.RepositoryConfigurationDelegate] -Finished Spring Data repository scanning in 548 ms. Found 3 JPA repository interfaces.
+07:23 23:10:09.567 [main] [INFO] [o.h.jpa.internal.util.LogHelper] -HHH000204: Processing PersistenceUnitInfo [name: default]
+07:23 23:10:09.788 [main] [INFO] [org.hibernate.Version] -HHH000412: Hibernate ORM core version 5.6.15.Final
+07:23 23:10:10.177 [main] [INFO] [o.h.annotations.common.Version] -HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+07:23 23:10:10.666 [main] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Starting...
+07:23 23:10:12.894 [main] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Start completed.
+07:23 23:10:13.006 [main] [INFO] [org.hibernate.dialect.Dialect] -HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+07:23 23:10:15.187 [main] [INFO] [o.h.e.t.j.p.i.JtaPlatformInitiator] -HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+07:23 23:10:15.222 [main] [INFO] [o.s.o.j.LocalContainerEntityManagerFactoryBean] -Initialized JPA EntityManagerFactory for persistence unit 'default'
+07:23 23:10:17.242 [main] [WARN] [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration] -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+07:23 23:10:19.075 [main] [INFO] [c.b.e.s.impl.CategoryServiceImplTest] -Started CategoryServiceImplTest in 18.149 seconds (JVM running for 21.626)
+07:23 23:10:19.298 [main] [WARN] [o.s.test.context.TestContextManager] -Caught exception while invoking 'afterTestMethod' callback on TestExecutionListener [org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4983159f] for test method [public void com.bikkadit.electronic_store.service.impl.CategoryServiceImplTest.getAllCategoriesTest()] and test instance [com.bikkadit.electronic_store.service.impl.CategoryServiceImplTest@1ef7e4c7]
+org.mockito.exceptions.misusing.UnfinishedStubbingException: 
+Unfinished stubbing detected here:
+-> at com.bikkadit.electronic_store.service.impl.CategoryServiceImplTest.getAllCategoriesTest(CategoryServiceImplTest.java:117)
+
+E.g. thenReturn() may be missing.
+Examples of correct stubbing:
+    when(mock.isOk()).thenReturn(true);
+    when(mock.isOk()).thenThrow(exception);
+    doThrow(exception).when(mock).someVoidMethod();
+Hints:
+ 1. missing thenReturn()
+ 2. you are trying to stub a final method, which is not supported
+ 3. you are stubbing the behaviour of another mock inside before 'thenReturn' instruction is completed
+
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.resetMocks(ResetMocksTestExecutionListener.java:85)
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.resetMocks(ResetMocksTestExecutionListener.java:72)
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.afterTestMethod(ResetMocksTestExecutionListener.java:66)
+	at org.springframework.test.context.TestContextManager.afterTestMethod(TestContextManager.java:445)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.afterEach(SpringExtension.java:206)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAfterEachCallbacks$12(TestMethodTestDescriptor.java:257)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$13(TestMethodTestDescriptor.java:273)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$14(TestMethodTestDescriptor.java:273)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAllAfterMethodsOrCallbacks(TestMethodTestDescriptor.java:272)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAfterEachCallbacks(TestMethodTestDescriptor.java:256)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:141)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+07:23 23:10:19.338 [SpringApplicationShutdownHook] [INFO] [o.s.o.j.LocalContainerEntityManagerFactoryBean] -Closing JPA EntityManagerFactory for persistence unit 'default'
+07:23 23:10:19.367 [SpringApplicationShutdownHook] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Shutdown initiated...
+07:23 23:10:19.385 [SpringApplicationShutdownHook] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Shutdown completed.
+07:25 15:21:36.920 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.bikkadit.electronic_store.service.impl.CategoryServiceImplTest], using SpringBootContextLoader
+07:25 15:21:37.302 [main] [INFO] [o.s.t.c.s.AbstractContextLoader] -Could not detect default resource locations for test class [com.bikkadit.electronic_store.service.impl.CategoryServiceImplTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+07:25 15:21:37.303 [main] [INFO] [o.s.t.c.s.AnnotationConfigContextLoaderUtils] -Could not detect default configuration classes for test class [com.bikkadit.electronic_store.service.impl.CategoryServiceImplTest]: CategoryServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+07:25 15:21:39.659 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Found @SpringBootConfiguration com.bikkadit.electronic_store.ElectronicStoreApplication for test class com.bikkadit.electronic_store.service.impl.CategoryServiceImplTest
+07:25 15:21:43.757 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+07:25 15:21:44.822 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5b068087, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6f152006, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@3a393455, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@13518f37, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@7cbc3762, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3a6f2de3, org.springframework.test.context.transaction.TransactionalTestExecutionListener@49872d67, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@56303b57, org.springframework.test.context.event.EventPublishingTestExecutionListener@4b2a01d4, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@8692d67, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@78f5c518, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2f48b3d2, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@34f7234e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@753432a2, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@23bff419]
+07:25 15:21:54.561 [main] [INFO] [c.b.e.s.impl.CategoryServiceImplTest] -Starting CategoryServiceImplTest using Java 17.0.6 on DESKTOP-2OI3U43 with PID 10584 (started by KSAV in E:\newproject07\electronic_store)
+07:25 15:21:54.563 [main] [INFO] [c.b.e.s.impl.CategoryServiceImplTest] -No active profile set, falling back to 1 default profile: "default"
+07:25 15:21:54.729 [background-preinit] [INFO] [o.h.validator.internal.util.Version] -HV000001: Hibernate Validator 6.2.5.Final
+07:25 15:22:06.327 [main] [INFO] [o.s.d.r.c.RepositoryConfigurationDelegate] -Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+07:25 15:22:07.228 [main] [INFO] [o.s.d.r.c.RepositoryConfigurationDelegate] -Finished Spring Data repository scanning in 762 ms. Found 3 JPA repository interfaces.
+07:25 15:22:17.223 [main] [INFO] [o.h.jpa.internal.util.LogHelper] -HHH000204: Processing PersistenceUnitInfo [name: default]
+07:25 15:22:18.093 [main] [INFO] [org.hibernate.Version] -HHH000412: Hibernate ORM core version 5.6.15.Final
+07:25 15:22:18.373 [main] [INFO] [o.h.annotations.common.Version] -HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+07:25 15:22:20.304 [main] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Starting...
+07:25 15:22:45.230 [main] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Start completed.
+07:25 15:22:46.875 [main] [INFO] [org.hibernate.dialect.Dialect] -HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+07:25 15:23:42.079 [main] [INFO] [o.h.e.t.j.p.i.JtaPlatformInitiator] -HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+07:25 15:23:44.179 [main] [INFO] [o.s.o.j.LocalContainerEntityManagerFactoryBean] -Initialized JPA EntityManagerFactory for persistence unit 'default'
+07:25 15:24:08.341 [main] [WARN] [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration] -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+07:25 15:24:24.803 [main] [INFO] [c.b.e.s.impl.CategoryServiceImplTest] -Started CategoryServiceImplTest in 157.891 seconds (JVM running for 189.72)
+07:25 15:24:26.665 [main] [WARN] [o.s.test.context.TestContextManager] -Caught exception while invoking 'afterTestMethod' callback on TestExecutionListener [org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@8692d67] for test method [public void com.bikkadit.electronic_store.service.impl.CategoryServiceImplTest.getAllCategoriesTest()] and test instance [com.bikkadit.electronic_store.service.impl.CategoryServiceImplTest@29811d4d]
+org.mockito.exceptions.misusing.UnfinishedStubbingException: 
+Unfinished stubbing detected here:
+-> at com.bikkadit.electronic_store.service.impl.CategoryServiceImplTest.getAllCategoriesTest(CategoryServiceImplTest.java:117)
+
+E.g. thenReturn() may be missing.
+Examples of correct stubbing:
+    when(mock.isOk()).thenReturn(true);
+    when(mock.isOk()).thenThrow(exception);
+    doThrow(exception).when(mock).someVoidMethod();
+Hints:
+ 1. missing thenReturn()
+ 2. you are trying to stub a final method, which is not supported
+ 3. you are stubbing the behaviour of another mock inside before 'thenReturn' instruction is completed
+
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.resetMocks(ResetMocksTestExecutionListener.java:85)
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.resetMocks(ResetMocksTestExecutionListener.java:72)
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.afterTestMethod(ResetMocksTestExecutionListener.java:66)
+	at org.springframework.test.context.TestContextManager.afterTestMethod(TestContextManager.java:445)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.afterEach(SpringExtension.java:206)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAfterEachCallbacks$12(TestMethodTestDescriptor.java:257)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$13(TestMethodTestDescriptor.java:273)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$14(TestMethodTestDescriptor.java:273)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAllAfterMethodsOrCallbacks(TestMethodTestDescriptor.java:272)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAfterEachCallbacks(TestMethodTestDescriptor.java:256)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:141)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+07:25 15:24:28.099 [SpringApplicationShutdownHook] [INFO] [o.s.o.j.LocalContainerEntityManagerFactoryBean] -Closing JPA EntityManagerFactory for persistence unit 'default'
+07:25 15:24:28.365 [SpringApplicationShutdownHook] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Shutdown initiated...
+07:25 15:24:29.411 [SpringApplicationShutdownHook] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Shutdown completed.
+07:25 15:54:14.928 [main] [INFO] [o.s.t.c.s.AbstractContextLoader] -Could not detect default resource locations for test class [com.bikkadit.electronic_store.controller.UserControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+07:25 15:54:16.611 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+07:25 15:54:16.852 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1e8ce150, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@604f2bd2, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@1d3ac898, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1b73be9f, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@628c4ac0, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7b84fcf8, org.springframework.test.context.transaction.TransactionalTestExecutionListener@30b19518, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@363042d7, org.springframework.test.context.event.EventPublishingTestExecutionListener@366ac49b, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6ad59d92, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@56f0cc85, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@62e20a76, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2cc44ad, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@44b3606b, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@1477089c]
+07:25 15:54:19.944 [background-preinit] [INFO] [o.h.validator.internal.util.Version] -HV000001: Hibernate Validator 6.2.5.Final
+07:25 15:54:20.247 [main] [INFO] [c.b.e.controller.UserControllerTest] -Starting UserControllerTest using Java 17.0.6 on DESKTOP-2OI3U43 with PID 12072 (started by KSAV in E:\newproject07\electronic_store)
+07:25 15:54:20.248 [main] [INFO] [c.b.e.controller.UserControllerTest] -No active profile set, falling back to 1 default profile: "default"
+07:25 15:54:24.783 [main] [INFO] [o.s.b.t.m.w.SpringBootMockServletContext] -Initializing Spring TestDispatcherServlet ''
+07:25 15:54:24.783 [main] [INFO] [o.s.t.w.s.TestDispatcherServlet] -Initializing Servlet ''
+07:25 15:54:25.511 [main] [INFO] [o.s.t.w.s.TestDispatcherServlet] -Completed initialization in 728 ms
+07:25 15:54:25.650 [main] [INFO] [c.b.e.controller.UserControllerTest] -Started UserControllerTest in 8.05 seconds (JVM running for 16.956)
+07:25 15:54:25.730 [main] [ERROR] [o.s.test.context.TestContextManager] -Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@628c4ac0] to prepare test instance [com.bikkadit.electronic_store.controller.UserControllerTest@4eea94a4]
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'com.bikkadit.electronic_store.controller.UserControllerTest': Unsatisfied dependency expressed through field 'userController'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.bikkadit.electronic_store.controller.UserController' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:660)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:417)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:119)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:43)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:248)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:138)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$8(ClassBasedTestDescriptor.java:363)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:368)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$9(ClassBasedTestDescriptor.java:363)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:362)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:283)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:282)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:272)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:271)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:102)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:101)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:66)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.bikkadit.electronic_store.controller.UserController' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1801)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1357)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:657)
+	... 76 common frames omitted
+07:25 15:56:00.087 [main] [INFO] [o.s.t.c.s.AbstractContextLoader] -Could not detect default resource locations for test class [com.bikkadit.electronic_store.controller.UserControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+07:25 15:56:00.552 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+07:25 15:56:00.589 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@66fdec9, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@57abad67, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@550a1967, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@2a640157, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@52851b44, org.springframework.test.context.support.DirtiesContextTestExecutionListener@584f54e6, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5d8bafa9, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@576f63f6, org.springframework.test.context.event.EventPublishingTestExecutionListener@2dca0d64, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@f80945f, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@ff684e1, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@23aa363a, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@5ef6ae06, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@55dfebeb, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@6e35bc3d]
+07:25 15:56:01.440 [background-preinit] [INFO] [o.h.validator.internal.util.Version] -HV000001: Hibernate Validator 6.2.5.Final
+07:25 15:56:01.465 [main] [INFO] [c.b.e.controller.UserControllerTest] -Starting UserControllerTest using Java 17.0.6 on DESKTOP-2OI3U43 with PID 13240 (started by KSAV in E:\newproject07\electronic_store)
+07:25 15:56:01.470 [main] [INFO] [c.b.e.controller.UserControllerTest] -No active profile set, falling back to 1 default profile: "default"
+07:25 15:56:02.619 [main] [INFO] [o.s.b.t.m.w.SpringBootMockServletContext] -Initializing Spring TestDispatcherServlet ''
+07:25 15:56:02.620 [main] [INFO] [o.s.t.w.s.TestDispatcherServlet] -Initializing Servlet ''
+07:25 15:56:03.203 [main] [INFO] [o.s.t.w.s.TestDispatcherServlet] -Completed initialization in 582 ms
+07:25 15:56:03.334 [main] [INFO] [c.b.e.controller.UserControllerTest] -Started UserControllerTest in 2.644 seconds (JVM running for 5.316)
+07:25 15:56:04.607 [main] [ERROR] [o.s.test.context.TestContextManager] -Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@52851b44] to prepare test instance [com.bikkadit.electronic_store.controller.UserControllerTest@2d0b05]
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'com.bikkadit.electronic_store.controller.UserControllerTest': Unsatisfied dependency expressed through field 'modelMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.modelmapper.ModelMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:660)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:417)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:119)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:43)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:248)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:138)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$8(ClassBasedTestDescriptor.java:363)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:368)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$9(ClassBasedTestDescriptor.java:363)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:362)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:283)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:282)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:272)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:271)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:102)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:101)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:66)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.modelmapper.ModelMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1801)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1357)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:657)
+	... 76 common frames omitted
+07:25 16:02:55.991 [main] [INFO] [o.s.t.c.s.AbstractContextLoader] -Could not detect default resource locations for test class [com.bikkadit.electronic_store.controller.UserControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+07:25 16:02:57.471 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+07:25 16:02:57.560 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@550a1967, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2a640157, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@52851b44, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@584f54e6, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@5d8bafa9, org.springframework.test.context.support.DirtiesContextTestExecutionListener@576f63f6, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2dca0d64, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@f80945f, org.springframework.test.context.event.EventPublishingTestExecutionListener@ff684e1, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@23aa363a, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5ef6ae06, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@55dfebeb, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6e35bc3d, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1cdc4c27, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@77b14724]
+07:25 16:03:01.241 [main] [INFO] [c.b.e.controller.UserControllerTest] -Starting UserControllerTest using Java 17.0.6 on DESKTOP-2OI3U43 with PID 9572 (started by KSAV in E:\newproject07\electronic_store)
+07:25 16:03:01.245 [main] [INFO] [c.b.e.controller.UserControllerTest] -No active profile set, falling back to 1 default profile: "default"
+07:25 16:03:01.475 [background-preinit] [INFO] [o.h.validator.internal.util.Version] -HV000001: Hibernate Validator 6.2.5.Final
+07:25 16:03:05.481 [main] [INFO] [o.s.b.t.m.w.SpringBootMockServletContext] -Initializing Spring TestDispatcherServlet ''
+07:25 16:03:05.482 [main] [INFO] [o.s.t.w.s.TestDispatcherServlet] -Initializing Servlet ''
+07:25 16:03:08.230 [main] [INFO] [o.s.t.w.s.TestDispatcherServlet] -Completed initialization in 2748 ms
+07:25 16:03:08.515 [main] [INFO] [c.b.e.controller.UserControllerTest] -Started UserControllerTest in 10.521 seconds (JVM running for 19.877)
+07:25 16:03:11.604 [main] [ERROR] [o.s.test.context.TestContextManager] -Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@5d8bafa9] to prepare test instance [com.bikkadit.electronic_store.controller.UserControllerTest@2d0b05]
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'com.bikkadit.electronic_store.controller.UserControllerTest': Unsatisfied dependency expressed through field 'modelMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.modelmapper.ModelMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:660)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:417)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:119)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:43)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:248)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:138)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$8(ClassBasedTestDescriptor.java:363)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:368)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$9(ClassBasedTestDescriptor.java:363)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:362)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:283)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:282)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:272)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:271)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:102)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:101)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:66)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.modelmapper.ModelMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1801)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1357)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:657)
+	... 76 common frames omitted
+07:25 16:04:42.004 [main] [INFO] [o.s.t.c.s.AbstractContextLoader] -Could not detect default resource locations for test class [com.bikkadit.electronic_store.controller.UserControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+07:25 16:04:42.570 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+07:25 16:04:42.610 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6ad59d92, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@56f0cc85, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@62e20a76, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@2cc44ad, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@44b3606b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1477089c, org.springframework.test.context.transaction.TransactionalTestExecutionListener@663411de, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@63dd899, org.springframework.test.context.event.EventPublishingTestExecutionListener@59d2400d, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@75cd8043, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@33b1c5c5, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5b202a3a, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@10b9db7b, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@9ef8eb7, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@34cdeda2]
+07:25 16:04:43.654 [background-preinit] [INFO] [o.h.validator.internal.util.Version] -HV000001: Hibernate Validator 6.2.5.Final
+07:25 16:04:43.656 [main] [INFO] [c.b.e.controller.UserControllerTest] -Starting UserControllerTest using Java 17.0.6 on DESKTOP-2OI3U43 with PID 11280 (started by KSAV in E:\newproject07\electronic_store)
+07:25 16:04:43.658 [main] [INFO] [c.b.e.controller.UserControllerTest] -No active profile set, falling back to 1 default profile: "default"
+07:25 16:04:44.484 [main] [INFO] [o.s.b.t.m.w.SpringBootMockServletContext] -Initializing Spring TestDispatcherServlet ''
+07:25 16:04:44.484 [main] [INFO] [o.s.t.w.s.TestDispatcherServlet] -Initializing Servlet ''
+07:25 16:04:44.945 [main] [INFO] [o.s.t.w.s.TestDispatcherServlet] -Completed initialization in 461 ms
+07:25 16:04:45.073 [main] [INFO] [c.b.e.controller.UserControllerTest] -Started UserControllerTest in 2.345 seconds (JVM running for 5.69)
+07:25 16:04:47.025 [main] [INFO] [o.s.mock.web.MockServletContext] -Initializing Spring TestDispatcherServlet ''
+07:25 16:04:47.025 [main] [INFO] [o.s.t.w.s.TestDispatcherServlet] -Initializing Servlet ''
+07:25 16:04:47.026 [main] [INFO] [o.s.t.w.s.TestDispatcherServlet] -Completed initialization in 1 ms
+07:25 16:05:32.224 [main] [INFO] [o.s.t.c.s.AbstractContextLoader] -Could not detect default resource locations for test class [com.bikkadit.electronic_store.controller.UserControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+07:25 16:05:32.641 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+07:25 16:05:32.683 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@49d3c823, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@436bc36, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@5fe1ce85, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@604c5de8, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@37091312, org.springframework.test.context.support.DirtiesContextTestExecutionListener@66fdec9, org.springframework.test.context.transaction.TransactionalTestExecutionListener@57abad67, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@550a1967, org.springframework.test.context.event.EventPublishingTestExecutionListener@2a640157, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@52851b44, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@584f54e6, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5d8bafa9, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@576f63f6, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@2dca0d64, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@f80945f]
+07:25 16:05:33.537 [background-preinit] [INFO] [o.h.validator.internal.util.Version] -HV000001: Hibernate Validator 6.2.5.Final
+07:25 16:05:33.575 [main] [INFO] [c.b.e.controller.UserControllerTest] -Starting UserControllerTest using Java 17.0.6 on DESKTOP-2OI3U43 with PID 1352 (started by KSAV in E:\newproject07\electronic_store)
+07:25 16:05:33.578 [main] [INFO] [c.b.e.controller.UserControllerTest] -No active profile set, falling back to 1 default profile: "default"
+07:25 16:05:34.627 [main] [INFO] [o.s.b.t.m.w.SpringBootMockServletContext] -Initializing Spring TestDispatcherServlet ''
+07:25 16:05:34.628 [main] [INFO] [o.s.t.w.s.TestDispatcherServlet] -Initializing Servlet ''
+07:25 16:05:35.179 [main] [INFO] [o.s.t.w.s.TestDispatcherServlet] -Completed initialization in 551 ms
+07:25 16:05:35.284 [main] [INFO] [c.b.e.controller.UserControllerTest] -Started UserControllerTest in 2.493 seconds (JVM running for 5.063)
+07:25 16:05:36.653 [main] [INFO] [o.s.mock.web.MockServletContext] -Initializing Spring TestDispatcherServlet ''
+07:25 16:05:36.653 [main] [INFO] [o.s.t.w.s.TestDispatcherServlet] -Initializing Servlet ''
+07:25 16:05:36.654 [main] [INFO] [o.s.t.w.s.TestDispatcherServlet] -Completed initialization in 1 ms
+07:25 16:05:37.089 [main] [WARN] [o.s.web.servlet.PageNotFound] -No mapping for POST /users/
+07:25 16:06:36.063 [main] [INFO] [o.s.t.c.s.AbstractContextLoader] -Could not detect default resource locations for test class [com.bikkadit.electronic_store.controller.UserControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+07:25 16:06:36.480 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+07:25 16:06:36.517 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@49d3c823, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@436bc36, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@5fe1ce85, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@604c5de8, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@37091312, org.springframework.test.context.support.DirtiesContextTestExecutionListener@66fdec9, org.springframework.test.context.transaction.TransactionalTestExecutionListener@57abad67, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@550a1967, org.springframework.test.context.event.EventPublishingTestExecutionListener@2a640157, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@52851b44, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@584f54e6, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5d8bafa9, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@576f63f6, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@2dca0d64, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@f80945f]
+07:25 16:06:37.444 [background-preinit] [INFO] [o.h.validator.internal.util.Version] -HV000001: Hibernate Validator 6.2.5.Final
+07:25 16:06:37.486 [main] [INFO] [c.b.e.controller.UserControllerTest] -Starting UserControllerTest using Java 17.0.6 on DESKTOP-2OI3U43 with PID 968 (started by KSAV in E:\newproject07\electronic_store)
+07:25 16:06:37.488 [main] [INFO] [c.b.e.controller.UserControllerTest] -No active profile set, falling back to 1 default profile: "default"
+07:25 16:06:38.609 [main] [INFO] [o.s.b.t.m.w.SpringBootMockServletContext] -Initializing Spring TestDispatcherServlet ''
+07:25 16:06:38.610 [main] [INFO] [o.s.t.w.s.TestDispatcherServlet] -Initializing Servlet ''
+07:25 16:06:39.172 [main] [INFO] [o.s.t.w.s.TestDispatcherServlet] -Completed initialization in 561 ms
+07:25 16:06:39.287 [main] [INFO] [c.b.e.controller.UserControllerTest] -Started UserControllerTest in 2.637 seconds (JVM running for 5.169)
+07:25 16:06:40.694 [main] [INFO] [o.s.mock.web.MockServletContext] -Initializing Spring TestDispatcherServlet ''
+07:25 16:06:40.695 [main] [INFO] [o.s.t.w.s.TestDispatcherServlet] -Initializing Servlet ''
+07:25 16:06:40.695 [main] [INFO] [o.s.t.w.s.TestDispatcherServlet] -Completed initialization in 0 ms
+07:25 16:06:40.995 [main] [WARN] [o.s.web.servlet.PageNotFound] -No mapping for POST /users/
+07:25 16:07:33.828 [main] [INFO] [o.s.t.c.s.AbstractContextLoader] -Could not detect default resource locations for test class [com.bikkadit.electronic_store.controller.UserControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+07:25 16:07:34.325 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+07:25 16:07:34.377 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@49d3c823, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@436bc36, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@5fe1ce85, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@604c5de8, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@37091312, org.springframework.test.context.support.DirtiesContextTestExecutionListener@66fdec9, org.springframework.test.context.transaction.TransactionalTestExecutionListener@57abad67, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@550a1967, org.springframework.test.context.event.EventPublishingTestExecutionListener@2a640157, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@52851b44, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@584f54e6, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5d8bafa9, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@576f63f6, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@2dca0d64, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@f80945f]
+07:25 16:07:35.131 [background-preinit] [INFO] [o.h.validator.internal.util.Version] -HV000001: Hibernate Validator 6.2.5.Final
+07:25 16:07:35.150 [main] [INFO] [c.b.e.controller.UserControllerTest] -Starting UserControllerTest using Java 17.0.6 on DESKTOP-2OI3U43 with PID 2884 (started by KSAV in E:\newproject07\electronic_store)
+07:25 16:07:35.151 [main] [INFO] [c.b.e.controller.UserControllerTest] -No active profile set, falling back to 1 default profile: "default"
+07:25 16:07:36.238 [main] [INFO] [o.s.b.t.m.w.SpringBootMockServletContext] -Initializing Spring TestDispatcherServlet ''
+07:25 16:07:36.238 [main] [INFO] [o.s.t.w.s.TestDispatcherServlet] -Initializing Servlet ''
+07:25 16:07:36.831 [main] [INFO] [o.s.t.w.s.TestDispatcherServlet] -Completed initialization in 591 ms
+07:25 16:07:36.935 [main] [INFO] [c.b.e.controller.UserControllerTest] -Started UserControllerTest in 2.456 seconds (JVM running for 5.204)
+07:25 16:07:38.351 [main] [INFO] [o.s.mock.web.MockServletContext] -Initializing Spring TestDispatcherServlet ''
+07:25 16:07:38.352 [main] [INFO] [o.s.t.w.s.TestDispatcherServlet] -Initializing Servlet ''
+07:25 16:07:38.353 [main] [INFO] [o.s.t.w.s.TestDispatcherServlet] -Completed initialization in 1 ms
+07:25 16:07:38.738 [main] [WARN] [o.s.web.servlet.PageNotFound] -No mapping for POST /users/
+07:25 16:08:38.610 [main] [INFO] [o.s.t.c.s.AbstractContextLoader] -Could not detect default resource locations for test class [com.bikkadit.electronic_store.controller.UserControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+07:25 16:08:39.058 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+07:25 16:08:39.093 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@49d3c823, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@436bc36, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@5fe1ce85, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@604c5de8, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@37091312, org.springframework.test.context.support.DirtiesContextTestExecutionListener@66fdec9, org.springframework.test.context.transaction.TransactionalTestExecutionListener@57abad67, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@550a1967, org.springframework.test.context.event.EventPublishingTestExecutionListener@2a640157, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@52851b44, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@584f54e6, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5d8bafa9, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@576f63f6, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@2dca0d64, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@f80945f]
+07:25 16:08:39.862 [background-preinit] [INFO] [o.h.validator.internal.util.Version] -HV000001: Hibernate Validator 6.2.5.Final
+07:25 16:08:39.891 [main] [INFO] [c.b.e.controller.UserControllerTest] -Starting UserControllerTest using Java 17.0.6 on DESKTOP-2OI3U43 with PID 7080 (started by KSAV in E:\newproject07\electronic_store)
+07:25 16:08:39.893 [main] [INFO] [c.b.e.controller.UserControllerTest] -No active profile set, falling back to 1 default profile: "default"
+07:25 16:08:40.916 [main] [INFO] [o.s.b.t.m.w.SpringBootMockServletContext] -Initializing Spring TestDispatcherServlet ''
+07:25 16:08:40.917 [main] [INFO] [o.s.t.w.s.TestDispatcherServlet] -Initializing Servlet ''
+07:25 16:08:41.445 [main] [INFO] [o.s.t.w.s.TestDispatcherServlet] -Completed initialization in 528 ms
+07:25 16:08:41.546 [main] [INFO] [c.b.e.controller.UserControllerTest] -Started UserControllerTest in 2.356 seconds (JVM running for 4.993)
+07:25 16:08:42.996 [main] [INFO] [o.s.mock.web.MockServletContext] -Initializing Spring TestDispatcherServlet ''
+07:25 16:08:42.997 [main] [INFO] [o.s.t.w.s.TestDispatcherServlet] -Initializing Servlet ''
+07:25 16:08:42.998 [main] [INFO] [o.s.t.w.s.TestDispatcherServlet] -Completed initialization in 1 ms
+07:25 16:08:43.427 [main] [WARN] [o.s.web.servlet.PageNotFound] -No mapping for POST /
+07:25 16:32:30.739 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.bikkadit.electronic_store.service.impl.CategoryServiceImplTest], using SpringBootContextLoader
+07:25 16:32:30.916 [main] [INFO] [o.s.t.c.s.AbstractContextLoader] -Could not detect default resource locations for test class [com.bikkadit.electronic_store.service.impl.CategoryServiceImplTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+07:25 16:32:30.918 [main] [INFO] [o.s.t.c.s.AnnotationConfigContextLoaderUtils] -Could not detect default configuration classes for test class [com.bikkadit.electronic_store.service.impl.CategoryServiceImplTest]: CategoryServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+07:25 16:32:32.687 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Found @SpringBootConfiguration com.bikkadit.electronic_store.ElectronicStoreApplication for test class com.bikkadit.electronic_store.service.impl.CategoryServiceImplTest
+07:25 16:32:33.653 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+07:25 16:32:34.074 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3a393455, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@13518f37, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@7cbc3762, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@3a6f2de3, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@49872d67, org.springframework.test.context.support.DirtiesContextTestExecutionListener@56303b57, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4b2a01d4, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@8692d67, org.springframework.test.context.event.EventPublishingTestExecutionListener@78f5c518, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2f48b3d2, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@34f7234e, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@753432a2, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@23bff419, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4983159f, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@44e3a2b2]
+07:25 16:32:35.867 [main] [INFO] [c.b.e.s.impl.CategoryServiceImplTest] -Starting CategoryServiceImplTest using Java 17.0.6 on DESKTOP-2OI3U43 with PID 1308 (started by KSAV in E:\newproject07\electronic_store)
+07:25 16:32:35.871 [main] [INFO] [c.b.e.s.impl.CategoryServiceImplTest] -No active profile set, falling back to 1 default profile: "default"
+07:25 16:32:35.916 [background-preinit] [INFO] [o.h.validator.internal.util.Version] -HV000001: Hibernate Validator 6.2.5.Final
+07:25 16:32:41.440 [main] [INFO] [o.s.d.r.c.RepositoryConfigurationDelegate] -Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+07:25 16:32:42.011 [main] [INFO] [o.s.d.r.c.RepositoryConfigurationDelegate] -Finished Spring Data repository scanning in 491 ms. Found 3 JPA repository interfaces.
+07:25 16:32:49.216 [main] [INFO] [o.h.jpa.internal.util.LogHelper] -HHH000204: Processing PersistenceUnitInfo [name: default]
+07:25 16:32:50.271 [main] [INFO] [org.hibernate.Version] -HHH000412: Hibernate ORM core version 5.6.15.Final
+07:25 16:32:50.565 [main] [INFO] [o.h.annotations.common.Version] -HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+07:25 16:32:52.880 [main] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Starting...
+07:25 16:33:12.192 [main] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Start completed.
+07:25 16:33:12.670 [main] [INFO] [org.hibernate.dialect.Dialect] -HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+07:25 16:33:33.942 [main] [INFO] [o.h.e.t.j.p.i.JtaPlatformInitiator] -HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+07:25 16:33:34.030 [main] [INFO] [o.s.o.j.LocalContainerEntityManagerFactoryBean] -Initialized JPA EntityManagerFactory for persistence unit 'default'
+07:25 16:33:37.471 [main] [WARN] [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration] -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+07:25 16:33:40.007 [main] [INFO] [c.b.e.s.impl.CategoryServiceImplTest] -Started CategoryServiceImplTest in 65.553 seconds (JVM running for 74.251)
+07:25 16:33:40.327 [main] [WARN] [o.s.test.context.TestContextManager] -Caught exception while invoking 'afterTestMethod' callback on TestExecutionListener [org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2f48b3d2] for test method [public void com.bikkadit.electronic_store.service.impl.CategoryServiceImplTest.getAllCategoriesTest()] and test instance [com.bikkadit.electronic_store.service.impl.CategoryServiceImplTest@193c810]
+org.mockito.exceptions.misusing.UnfinishedStubbingException: 
+Unfinished stubbing detected here:
+-> at com.bikkadit.electronic_store.service.impl.CategoryServiceImplTest.getAllCategoriesTest(CategoryServiceImplTest.java:117)
+
+E.g. thenReturn() may be missing.
+Examples of correct stubbing:
+    when(mock.isOk()).thenReturn(true);
+    when(mock.isOk()).thenThrow(exception);
+    doThrow(exception).when(mock).someVoidMethod();
+Hints:
+ 1. missing thenReturn()
+ 2. you are trying to stub a final method, which is not supported
+ 3. you are stubbing the behaviour of another mock inside before 'thenReturn' instruction is completed
+
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.resetMocks(ResetMocksTestExecutionListener.java:85)
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.resetMocks(ResetMocksTestExecutionListener.java:72)
+	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.afterTestMethod(ResetMocksTestExecutionListener.java:66)
+	at org.springframework.test.context.TestContextManager.afterTestMethod(TestContextManager.java:445)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.afterEach(SpringExtension.java:206)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAfterEachCallbacks$12(TestMethodTestDescriptor.java:257)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$13(TestMethodTestDescriptor.java:273)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$14(TestMethodTestDescriptor.java:273)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAllAfterMethodsOrCallbacks(TestMethodTestDescriptor.java:272)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAfterEachCallbacks(TestMethodTestDescriptor.java:256)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:141)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+07:25 16:33:40.463 [SpringApplicationShutdownHook] [INFO] [o.s.o.j.LocalContainerEntityManagerFactoryBean] -Closing JPA EntityManagerFactory for persistence unit 'default'
+07:25 16:33:40.477 [SpringApplicationShutdownHook] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Shutdown initiated...
+07:25 16:33:40.673 [SpringApplicationShutdownHook] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Shutdown completed.
+07:27 13:49:26.657 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.bikkadit.electronic_store.service.impl.UserServiceImplTest], using SpringBootContextLoader
+07:27 13:49:26.898 [main] [INFO] [o.s.t.c.s.AbstractContextLoader] -Could not detect default resource locations for test class [com.bikkadit.electronic_store.service.impl.UserServiceImplTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+07:27 13:49:26.901 [main] [INFO] [o.s.t.c.s.AnnotationConfigContextLoaderUtils] -Could not detect default configuration classes for test class [com.bikkadit.electronic_store.service.impl.UserServiceImplTest]: UserServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+07:27 13:49:28.231 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Found @SpringBootConfiguration com.bikkadit.electronic_store.ElectronicStoreApplication for test class com.bikkadit.electronic_store.service.impl.UserServiceImplTest
+07:27 13:49:29.266 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+07:27 13:49:29.385 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@70ab2d48, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5b068087, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@6f152006, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@3a393455, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@13518f37, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7cbc3762, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3a6f2de3, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@49872d67, org.springframework.test.context.event.EventPublishingTestExecutionListener@56303b57, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4b2a01d4, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@8692d67, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@78f5c518, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2f48b3d2, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@34f7234e, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@753432a2]
+07:27 13:49:31.622 [main] [INFO] [c.b.e.s.impl.UserServiceImplTest] -Starting UserServiceImplTest using Java 17.0.6 on DESKTOP-2OI3U43 with PID 1092 (started by KSAV in E:\newproject07\electronic_store)
+07:27 13:49:31.624 [main] [INFO] [c.b.e.s.impl.UserServiceImplTest] -No active profile set, falling back to 1 default profile: "default"
+07:27 13:49:31.787 [background-preinit] [INFO] [o.h.validator.internal.util.Version] -HV000001: Hibernate Validator 6.2.5.Final
+07:27 13:49:37.606 [main] [INFO] [o.s.d.r.c.RepositoryConfigurationDelegate] -Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+07:27 13:49:39.335 [main] [INFO] [o.s.d.r.c.RepositoryConfigurationDelegate] -Finished Spring Data repository scanning in 1581 ms. Found 3 JPA repository interfaces.
+07:27 13:49:46.303 [main] [INFO] [o.h.jpa.internal.util.LogHelper] -HHH000204: Processing PersistenceUnitInfo [name: default]
+07:27 13:49:46.770 [main] [INFO] [org.hibernate.Version] -HHH000412: Hibernate ORM core version 5.6.15.Final
+07:27 13:49:46.988 [main] [INFO] [o.h.annotations.common.Version] -HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+07:27 13:49:48.243 [main] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Starting...
+07:27 13:49:57.058 [main] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Start completed.
+07:27 13:49:57.312 [main] [INFO] [org.hibernate.dialect.Dialect] -HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+07:27 13:50:07.680 [main] [INFO] [o.h.e.t.j.p.i.JtaPlatformInitiator] -HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+07:27 13:50:08.106 [main] [INFO] [o.s.o.j.LocalContainerEntityManagerFactoryBean] -Initialized JPA EntityManagerFactory for persistence unit 'default'
+07:27 13:50:12.903 [main] [WARN] [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration] -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+07:27 13:50:15.705 [main] [INFO] [c.b.e.s.impl.UserServiceImplTest] -Started UserServiceImplTest in 46.019 seconds (JVM running for 54.693)
+07:27 13:50:16.685 [main] [INFO] [c.b.e.service.impl.UserServiceImpl] -Initiating dao call to update user:9e0927c7-ab81-414e-a660-32bf83a05d68
+07:27 13:50:16.855 [main] [INFO] [c.b.e.service.impl.UserServiceImpl] -Completing dao call to update user:9e0927c7-ab81-414e-a660-32bf83a05d68
+07:27 13:50:16.978 [SpringApplicationShutdownHook] [INFO] [o.s.o.j.LocalContainerEntityManagerFactoryBean] -Closing JPA EntityManagerFactory for persistence unit 'default'
+07:27 13:50:17.153 [SpringApplicationShutdownHook] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Shutdown initiated...
+07:27 13:50:17.535 [SpringApplicationShutdownHook] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Shutdown completed.
+07:27 13:56:05.715 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.bikkadit.electronic_store.service.impl.CategoryServiceImplTest], using SpringBootContextLoader
+07:27 13:56:05.847 [main] [INFO] [o.s.t.c.s.AbstractContextLoader] -Could not detect default resource locations for test class [com.bikkadit.electronic_store.service.impl.CategoryServiceImplTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+07:27 13:56:05.873 [main] [INFO] [o.s.t.c.s.AnnotationConfigContextLoaderUtils] -Could not detect default configuration classes for test class [com.bikkadit.electronic_store.service.impl.CategoryServiceImplTest]: CategoryServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+07:27 13:56:06.591 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Found @SpringBootConfiguration com.bikkadit.electronic_store.ElectronicStoreApplication for test class com.bikkadit.electronic_store.service.impl.CategoryServiceImplTest
+07:27 13:56:07.137 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+07:27 13:56:07.268 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@340da44c, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@424ebba3, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@37052337, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@2320fa6f, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@7a560583, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4d722ac9, org.springframework.test.context.transaction.TransactionalTestExecutionListener@53f0a4cb, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@77a7cf58, org.springframework.test.context.event.EventPublishingTestExecutionListener@3d97a632, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@616fe72b, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@37efd131, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@7e7b159b, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@7e5d9a50, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@60957c0f, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@293a5f75]
+07:27 13:56:08.650 [main] [INFO] [c.b.e.s.impl.CategoryServiceImplTest] -Starting CategoryServiceImplTest using Java 17.0.6 on DESKTOP-2OI3U43 with PID 1536 (started by KSAV in E:\newproject07\electronic_store)
+07:27 13:56:08.652 [main] [INFO] [c.b.e.s.impl.CategoryServiceImplTest] -No active profile set, falling back to 1 default profile: "default"
+07:27 13:56:08.717 [background-preinit] [INFO] [o.h.validator.internal.util.Version] -HV000001: Hibernate Validator 6.2.5.Final
+07:27 13:56:12.487 [main] [INFO] [o.s.d.r.c.RepositoryConfigurationDelegate] -Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+07:27 13:56:12.796 [main] [INFO] [o.s.d.r.c.RepositoryConfigurationDelegate] -Finished Spring Data repository scanning in 283 ms. Found 3 JPA repository interfaces.
+07:27 13:56:16.941 [main] [INFO] [o.h.jpa.internal.util.LogHelper] -HHH000204: Processing PersistenceUnitInfo [name: default]
+07:27 13:56:17.262 [main] [INFO] [org.hibernate.Version] -HHH000412: Hibernate ORM core version 5.6.15.Final
+07:27 13:56:17.527 [main] [INFO] [o.h.annotations.common.Version] -HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+07:27 13:56:18.022 [main] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Starting...
+07:27 13:56:20.094 [main] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Start completed.
+07:27 13:56:20.217 [main] [INFO] [org.hibernate.dialect.Dialect] -HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+07:27 13:56:22.162 [main] [INFO] [o.h.e.t.j.p.i.JtaPlatformInitiator] -HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+07:27 13:56:22.178 [main] [INFO] [o.s.o.j.LocalContainerEntityManagerFactoryBean] -Initialized JPA EntityManagerFactory for persistence unit 'default'
+07:27 13:56:24.560 [main] [WARN] [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration] -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+07:27 13:56:26.497 [main] [INFO] [c.b.e.s.impl.CategoryServiceImplTest] -Started CategoryServiceImplTest in 19.006 seconds (JVM running for 23.677)
+07:27 13:56:26.669 [main] [INFO] [c.b.e.s.impl.CategoryServiceImpl] -Initiating dao call to update category:beba9d54-3a39-4ccc-bd5e-925d2a9730d4
+07:27 13:56:26.678 [main] [INFO] [c.b.e.s.impl.CategoryServiceImpl] -completed  dao call to update category:beba9d54-3a39-4ccc-bd5e-925d2a9730d4
+07:27 13:56:26.782 [SpringApplicationShutdownHook] [INFO] [o.s.o.j.LocalContainerEntityManagerFactoryBean] -Closing JPA EntityManagerFactory for persistence unit 'default'
+07:27 13:56:26.789 [SpringApplicationShutdownHook] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Shutdown initiated...
+07:27 13:56:26.820 [SpringApplicationShutdownHook] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Shutdown completed.
+07:27 13:57:25.058 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.bikkadit.electronic_store.service.impl.CategoryServiceImplTest], using SpringBootContextLoader
+07:27 13:57:25.078 [main] [INFO] [o.s.t.c.s.AbstractContextLoader] -Could not detect default resource locations for test class [com.bikkadit.electronic_store.service.impl.CategoryServiceImplTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+07:27 13:57:25.080 [main] [INFO] [o.s.t.c.s.AnnotationConfigContextLoaderUtils] -Could not detect default configuration classes for test class [com.bikkadit.electronic_store.service.impl.CategoryServiceImplTest]: CategoryServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+07:27 13:57:25.391 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Found @SpringBootConfiguration com.bikkadit.electronic_store.ElectronicStoreApplication for test class com.bikkadit.electronic_store.service.impl.CategoryServiceImplTest
+07:27 13:57:25.632 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+07:27 13:57:25.684 [main] [INFO] [o.s.b.t.c.SpringBootTestContextBootstrapper] -Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3a393455, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@13518f37, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@7cbc3762, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@3a6f2de3, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@49872d67, org.springframework.test.context.support.DirtiesContextTestExecutionListener@56303b57, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4b2a01d4, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@8692d67, org.springframework.test.context.event.EventPublishingTestExecutionListener@78f5c518, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2f48b3d2, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@34f7234e, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@753432a2, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@23bff419, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4983159f, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@44e3a2b2]
+07:27 13:57:26.431 [main] [INFO] [c.b.e.s.impl.CategoryServiceImplTest] -Starting CategoryServiceImplTest using Java 17.0.6 on DESKTOP-2OI3U43 with PID 9520 (started by KSAV in E:\newproject07\electronic_store)
+07:27 13:57:26.434 [main] [INFO] [c.b.e.s.impl.CategoryServiceImplTest] -No active profile set, falling back to 1 default profile: "default"
+07:27 13:57:26.445 [background-preinit] [INFO] [o.h.validator.internal.util.Version] -HV000001: Hibernate Validator 6.2.5.Final
+07:27 13:57:28.640 [main] [INFO] [o.s.d.r.c.RepositoryConfigurationDelegate] -Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+07:27 13:57:28.797 [main] [INFO] [o.s.d.r.c.RepositoryConfigurationDelegate] -Finished Spring Data repository scanning in 139 ms. Found 3 JPA repository interfaces.
+07:27 13:57:31.422 [main] [INFO] [o.h.jpa.internal.util.LogHelper] -HHH000204: Processing PersistenceUnitInfo [name: default]
+07:27 13:57:31.557 [main] [INFO] [org.hibernate.Version] -HHH000412: Hibernate ORM core version 5.6.15.Final
+07:27 13:57:31.655 [main] [INFO] [o.h.annotations.common.Version] -HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+07:27 13:57:32.022 [main] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Starting...
+07:27 13:57:32.818 [main] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Start completed.
+07:27 13:57:32.856 [main] [INFO] [org.hibernate.dialect.Dialect] -HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+07:27 13:57:34.471 [main] [INFO] [o.h.e.t.j.p.i.JtaPlatformInitiator] -HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+07:27 13:57:34.502 [main] [INFO] [o.s.o.j.LocalContainerEntityManagerFactoryBean] -Initialized JPA EntityManagerFactory for persistence unit 'default'
+07:27 13:57:36.162 [main] [WARN] [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration] -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+07:27 13:57:37.637 [main] [INFO] [c.b.e.s.impl.CategoryServiceImplTest] -Started CategoryServiceImplTest in 11.859 seconds (JVM running for 14.627)
+07:27 13:57:37.765 [main] [INFO] [c.b.e.s.impl.CategoryServiceImpl] -Initiating dao call to update category:b084e566-e233-42fc-bc47-c2ef6edaeb1c
+07:27 13:57:37.774 [main] [INFO] [c.b.e.s.impl.CategoryServiceImpl] -completed  dao call to update category:b084e566-e233-42fc-bc47-c2ef6edaeb1c
+07:27 13:57:37.873 [SpringApplicationShutdownHook] [INFO] [o.s.o.j.LocalContainerEntityManagerFactoryBean] -Closing JPA EntityManagerFactory for persistence unit 'default'
+07:27 13:57:37.877 [SpringApplicationShutdownHook] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Shutdown initiated...
+07:27 13:57:37.898 [SpringApplicationShutdownHook] [INFO] [com.zaxxer.hikari.HikariDataSource] -HikariPool-1 - Shutdown completed.
