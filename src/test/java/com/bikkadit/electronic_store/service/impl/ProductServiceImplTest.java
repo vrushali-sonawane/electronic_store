@@ -134,11 +134,11 @@ class ProductServiceImplTest {
     @Test
     void getSingleProductTest() {
 
-        String pruductId=UUID.randomUUID().toString();
+        String productId=UUID.randomUUID().toString();
 
-        Mockito.when(productRepositoryI.findById(pruductId)).thenReturn(Optional.of(product1));
+        Mockito.when(productRepositoryI.findById(productId)).thenReturn(Optional.of(product1));
 
-        ProductDto productDto1 = productServiceImpl.getSingleProduct(pruductId);
+        ProductDto productDto1 = productServiceImpl.getSingleProduct(productId);
 
         Assertions.assertNotNull(productDto1);
     }
@@ -276,6 +276,29 @@ class ProductServiceImplTest {
 
     @Test
     void getAllProductsOfCategory() {
+
+        int pageNumber=0;
+        int pageSize=2;
+        String sortBy="title";
+        String sortDir="asc";
+        String categoryId=UUID.randomUUID().toString();
+        Category category = Category.builder()
+                .categoryId(categoryId)
+                .title("Laptops")
+                .categoryDescription("Laptops available with discount")
+                .build();
+
+        Sort sort=Sort.by("title").ascending();
+        Pageable pageable= PageRequest.of(pageNumber,pageSize,sort);
+
+        Page<Product>  page=new PageImpl<>(products);
+        Mockito.when(categoryRepositoryI.findById(categoryId)).thenReturn(Optional.of(category));
+
+        Mockito.when(productRepositoryI.findByCategory(category,pageable)).thenReturn(page);
+
+        PageableResponse<ProductDto> allProductsOfCategory = productServiceImpl.getAllProductsOfCategory(categoryId,pageNumber, pageSize, sortBy, sortDir);
+
+        Assertions.assertEquals(2,allProductsOfCategory.getContent().size());
     }
 
     @Test
