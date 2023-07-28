@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import com.bikkadit.electronic_store.dto.CategoryDto;
 import com.bikkadit.electronic_store.entity.Category;
+import com.bikkadit.electronic_store.exception.ResourceNotFoundException;
 import com.bikkadit.electronic_store.payload.PageableResponse;
 import com.bikkadit.electronic_store.repository.CategoryRepositoryI;
 import org.junit.jupiter.api.Assertions;
@@ -14,10 +15,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
+import org.springframework.data.domain.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -110,6 +108,8 @@ class CategoryServiceImplTest {
         Mockito.when(categoryRepositoryI.findById(categoryId)).thenReturn(Optional.of(category1));
 
         categorySeviceImpl.deleteCategory(categoryId);
+
+        Mockito.verify(categoryRepositoryI,Mockito.times(1)).delete(category1);
     }
     @Test
     public void getAllCategoriesTest(){
@@ -117,14 +117,16 @@ class CategoryServiceImplTest {
         int pageSize=2;
         String sortBy="title";
         String sortDir="asc";
-        Sort sort=(sortDir.equalsIgnoreCase("desc"))? (Sort.by(sortBy).descending()):(Sort.by(sortBy).ascending());
+        Sort sort=Sort.by(sortBy).ascending();
        Pageable pageable= PageRequest.of(pageNumber,pageSize,sort);
 
-        Mockito.when(categoryRepositoryI.findAll(pageable)).thenReturn((Page<Category>) categories);
+       Page<Category> page=new PageImpl<>(categories);
+
+        Mockito.when(categoryRepositoryI.findAll(pageable)).thenReturn(page);
 
         PageableResponse<CategoryDto> allCategories = categorySeviceImpl.getAllCategories(pageNumber, pageSize, sortBy, sortDir);
 
-        Assertions.assertEquals(2,allCategories.getPageSize());
+        Assertions.assertEquals(2,allCategories.getContent().size());
     }
 
     @Test
@@ -133,10 +135,32 @@ class CategoryServiceImplTest {
         int pageSize=2;
         String sortBy="title";
         String sortDir="asc";
-        Sort sort=(sortDir.equalsIgnoreCase("desc"))? (Sort.by(sortBy).descending()):(Sort.by(sortBy).ascending());
+        String subTitle="s";
+        Sort sort=Sort.by(sortBy).ascending();
         Pageable pageable= PageRequest.of(pageNumber,pageSize,sort);
+        Page<Category> page=new PageImpl<>(categories);
 
+        Mockito.when(categoryRepositoryI.findByTitleContaining(pageable,subTitle)).thenReturn(page);
 
+        PageableResponse<CategoryDto> searchedCategories = categorySeviceImpl.searchCategories(pageNumber, pageSize, sortBy, sortDir, subTitle);
+
+        Assertions.assertEquals(2,searchedCategories.getContent().size());
+    }
+
+    @Test
+    public void updateCategoryExceptionTest(){
+        Assertions.assertThrows(ResourceNotFoundException.class,()-> categorySeviceImpl.updateCategory(null,null));
+
+    }
+
+    @Test
+    public void getCategoryByIdExceptionTest(){
+        Assertions.assertThrows(ResourceNotFoundException.class,()-> categorySeviceImpl.getCategoryById(null));
+    }
+
+    @Test
+    public void deleteCategoryExceptionTest(){
+        Assertions.assertThrows(ResourceNotFoundException.class,()->categorySeviceImpl.deleteCategory(null));
     }
 
 }

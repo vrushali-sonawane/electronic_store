@@ -4,6 +4,7 @@ import com.bikkadit.electronic_store.dto.ProductDto;
 import com.bikkadit.electronic_store.entity.Category;
 import com.bikkadit.electronic_store.entity.Product;
 import com.bikkadit.electronic_store.exception.ResourceNotFoundException;
+import com.bikkadit.electronic_store.payload.PageableResponse;
 import com.bikkadit.electronic_store.repository.CategoryRepositoryI;
 import com.bikkadit.electronic_store.repository.ProductRepositoryI;
 import org.junit.jupiter.api.Assertions;
@@ -14,6 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.data.domain.*;
 
 import java.util.*;
 
@@ -120,10 +122,13 @@ class ProductServiceImplTest {
 
     @Test
     void deteteSingleProductTest() {
+        String productId=UUID.randomUUID().toString();
 
         Mockito.when(productRepositoryI.findById(Mockito.anyString())).thenReturn(Optional.of(product1));
 
-        productRepositoryI.delete(product1);
+        productServiceImpl.deteteSingleProduct(productId);
+
+        Mockito.verify(productRepositoryI,Mockito.times(1)).delete(product1);
     }
 
     @Test
@@ -140,15 +145,62 @@ class ProductServiceImplTest {
 
     @Test
     void getAllProducts() {
+        int pageNumber=0;
+        int pageSize=2;
+        String sortBy="title";
+        String sortDir="asc";
 
+
+        Sort sort=Sort.by("title").ascending();
+        Pageable pageable= PageRequest.of(pageNumber,pageSize,sort);
+
+        Page<Product>  page=new PageImpl<>(products);
+
+        Mockito.when(productRepositoryI.findAll(pageable)).thenReturn(page);
+
+        PageableResponse<ProductDto> allProducts = productServiceImpl.getAllProducts(pageNumber, pageSize, sortBy, sortDir);
+
+        Assertions.assertEquals(2,allProducts.getContent().size());
     }
 
     @Test
     void getAllLive() {
+        int pageNumber=0;
+        int pageSize=2;
+        String sortBy="title";
+        String sortDir="asc";
+
+        Sort sort=Sort.by("title").ascending();
+        Pageable pageable= PageRequest.of(pageNumber,pageSize,sort);
+
+        Page<Product>  page=new PageImpl<>(products);
+
+        Mockito.when(productRepositoryI.findByLiveTrue(pageable)).thenReturn(page);
+
+        PageableResponse<ProductDto> allLiveProducts = productServiceImpl.getAllLive(pageNumber, pageSize, sortBy, sortDir);
+
+        Assertions.assertEquals(2,allLiveProducts.getContent().size());
     }
 
     @Test
     void searchProducts() {
+
+        int pageNumber=0;
+        int pageSize=2;
+        String sortBy="title";
+        String sortDir="asc";
+        String subTitle="a";
+
+        Sort sort=Sort.by("title").ascending();
+        Pageable pageable= PageRequest.of(pageNumber,pageSize,sort);
+
+        Page<Product>  page=new PageImpl<>(products);
+
+        Mockito.when(productRepositoryI.findByTitleContaining(subTitle,pageable)).thenReturn(page);
+
+        PageableResponse<ProductDto> allSearchedProducts = productServiceImpl.searchProducts(subTitle,pageNumber, pageSize, sortBy, sortDir);
+
+        Assertions.assertEquals(2,allSearchedProducts.getContent().size());
     }
 
     @Test
