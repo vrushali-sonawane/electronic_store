@@ -51,6 +51,7 @@ import static org.mockito.Mockito.*;
                 .about("I am Developer")
                 .imageName("abc.png")
                 .build();
+
        String id2= UUID.randomUUID().toString();
 
          user1 = User.builder()
@@ -70,16 +71,16 @@ import static org.mockito.Mockito.*;
     }
 
     @Test
-    void createUser() {
+    void createUserTest() {
        Mockito.when(userRepositoryI.save(Mockito.any())).thenReturn(user);
 
         UserDto userDto1 = userServiceImpl.createUser(modelMapper.map(user, UserDto.class));
 
-        assertEquals("ss11",userDto1.getPassword());
+       Assertions.assertEquals("ss11",userDto1.getPassword());
     }
 
     @Test
-    void updateUser() {
+    void updateUserTest() {
        String id = UUID.randomUUID().toString();
         userDto = UserDto.builder()
                .userId(id)
@@ -98,23 +99,23 @@ import static org.mockito.Mockito.*;
 
        UserDto userDto1 = userServiceImpl.updateUser(userDto, id);
 
-       assertEquals("Veeraj",userDto1.getName());
+       Assertions.assertEquals("Veeraj",userDto1.getName());
 
     }
 
     @Test
-    void getUserById() {
+    void getUserByIdTest() {
        String userId = UUID.randomUUID().toString();
 
        Mockito.when(userRepositoryI.findById(userId)).thenReturn(Optional.of(user));
 
        UserDto user2 = userServiceImpl.getUserById(userId);
 
-       assertEquals("ss11",user2.getPassword());
+       Assertions.assertEquals("ss11",user2.getPassword());
     }
 
     @Test
-    void getUserByEmail() {
+    void getUserByEmailTest() {
        String email="sahil@gmail.com";
 
        Mockito.when(userRepositoryI.findUserByEmail(email)).thenReturn(Optional.of(user));
@@ -122,21 +123,24 @@ import static org.mockito.Mockito.*;
        UserDto user3 = userServiceImpl.getUserByEmail(email);
 
          String name="Sahil";
-       assertEquals(name,user3.getName());
+       Assertions.assertEquals(name,user3.getName());
     }
 
     @Test
-    void deleteUser() {
+    void deleteUserTest() {
        String userId = UUID.randomUUID().toString();
 
        Mockito.when(userRepositoryI.findById(userId)).thenReturn(Optional.of(user));
 
+//       verify(userRepositoryI,times(1)).delete(user);
+
        userServiceImpl.deleteUser(userId);
+
 
     }
 
 //    @Test
-//    void searchUser() {
+//    void searchUserTest() {
 //
 //       String keyword="s";
 //       Mockito.when(userRepositoryI.findAll()).thenReturn(list);
@@ -149,7 +153,7 @@ import static org.mockito.Mockito.*;
 
 //    @Test
 //    @Disabled
-//    void getAllUser() {
+//    void getAllUserTest() {
 //
 //       Mockito.when(userRepositoryI.findAll()).thenReturn(list);
 //

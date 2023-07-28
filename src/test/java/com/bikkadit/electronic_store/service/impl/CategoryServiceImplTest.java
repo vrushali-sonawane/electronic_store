@@ -127,4 +127,16 @@ class CategoryServiceImplTest {
         Assertions.assertEquals(2,allCategories.getPageSize());
     }
 
+    @Test
+    public void searchCategoriesTest(){
+        int pageNumber=0;
+        int pageSize=2;
+        String sortBy="title";
+        String sortDir="asc";
+        Sort sort=(sortDir.equalsIgnoreCase("desc"))? (Sort.by(sortBy).descending()):(Sort.by(sortBy).ascending());
+        Pageable pageable= PageRequest.of(pageNumber,pageSize,sort);
+
+
+    }
+
 }

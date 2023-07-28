@@ -154,7 +154,8 @@ public class ProductServiceImpl implements ProductServiceI {
     @Override
     public ProductDto createProductWithCategory(ProductDto productDto, String categoryId) {
        logger.info("Initiating dao call to create product with category:{}",categoryId);
-        Category category = categoryRepositoryI.findById(categoryId).orElseThrow(() -> new ResourceNotFoundException(AppConstants.CATEGORY_NOT_FOUND));
+        Category category = categoryRepositoryI.findById(categoryId)
+                .orElseThrow(() -> new ResourceNotFoundException(AppConstants.CATEGORY_NOT_FOUND));
 
         String productId = UUID.randomUUID().toString();
         productDto.setProductId(productId);
@@ -182,15 +183,15 @@ public class ProductServiceImpl implements ProductServiceI {
     }
 
     @Override
-    public PageableResponse<ProductDto> getAllProductsOfCategory(String categotyId, int pageNumber, int pageSize, String sortBy, String sortDir) {
-        logger.info("Initiating dao call get products of category:{}",categotyId);
-        Category category = categoryRepositoryI.findById(categotyId).orElseThrow(() -> new ResourceNotFoundException(AppConstants.CATEGORY_NOT_FOUND));
+    public PageableResponse<ProductDto> getAllProductsOfCategory(String categoryId, int pageNumber, int pageSize, String sortBy, String sortDir) {
+        logger.info("Initiating dao call get products of category:{}",categoryId);
+        Category category = categoryRepositoryI.findById(categoryId).orElseThrow(() -> new ResourceNotFoundException(AppConstants.CATEGORY_NOT_FOUND));
         Sort sort=(sortDir.equalsIgnoreCase("desc"))?(Sort.by(sortBy).descending()):(Sort.by(sortBy).ascending());
         Pageable pageable=PageRequest.of(pageNumber,pageSize,sort);
         Page<Product> page = productRepositoryI.findByCategory(category, pageable);
 
         PageableResponse<ProductDto> response = Helper.getpageableResponse(page, ProductDto.class);
-        logger.info("completed dao call get products of category:{}",categotyId);
+        logger.info("completed dao call get products of category:{}",categoryId);
         return response;
     }
 
