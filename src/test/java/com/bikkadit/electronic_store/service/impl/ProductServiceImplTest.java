@@ -3,6 +3,7 @@ package com.bikkadit.electronic_store.service.impl;
 import com.bikkadit.electronic_store.dto.ProductDto;
 import com.bikkadit.electronic_store.entity.Category;
 import com.bikkadit.electronic_store.entity.Product;
+import com.bikkadit.electronic_store.exception.ResourceNotFoundException;
 import com.bikkadit.electronic_store.repository.CategoryRepositoryI;
 import com.bikkadit.electronic_store.repository.ProductRepositoryI;
 import org.junit.jupiter.api.Assertions;
@@ -28,6 +29,9 @@ class ProductServiceImplTest {
 
     @Autowired
     private ProductServiceImpl productServiceImpl;
+
+    @Autowired
+    private CategoryServiceImpl categoryServiceImpl;
 
     @Autowired
     private ModelMapper modelMapper;
@@ -220,5 +224,26 @@ class ProductServiceImplTest {
 
     @Test
     void getAllProductsOfCategory() {
+    }
+
+    @Test
+    public void updateProductExceptionTest(){
+        Assertions.assertThrows(ResourceNotFoundException.class, ()-> productServiceImpl.updateProduct(null,null));
+
+    }
+
+    @Test
+    public void getSingleProductExceptionTest(){
+
+        Assertions.assertThrows(ResourceNotFoundException.class,()-> productServiceImpl.getSingleProduct(null));
+    }
+    @Test
+    public void deleteSingleProductTest(){
+        Assertions.assertThrows(ResourceNotFoundException.class,()-> productServiceImpl.deteteSingleProduct(null));
+    }
+
+    @Test
+    public void getCategoryByIdExceptionTest(){
+        Assertions.assertThrows(ResourceNotFoundException.class,()-> categoryServiceImpl.getCategoryById(null));
     }
 }

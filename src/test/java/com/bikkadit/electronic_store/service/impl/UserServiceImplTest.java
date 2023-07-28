@@ -2,7 +2,10 @@ package com.bikkadit.electronic_store.service.impl;
 
 import com.bikkadit.electronic_store.dto.UserDto;
 import com.bikkadit.electronic_store.entity.User;
+import com.bikkadit.electronic_store.exception.ResourceNotFoundException;
+import com.bikkadit.electronic_store.payload.PageableResponse;
 import com.bikkadit.electronic_store.repository.UserRepositoryI;
+import net.bytebuddy.TypeCache;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
@@ -14,6 +17,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.data.domain.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -132,36 +136,71 @@ import static org.mockito.Mockito.*;
 
        Mockito.when(userRepositoryI.findById(userId)).thenReturn(Optional.of(user));
 
-//       verify(userRepositoryI,times(1)).delete(user);
+        userServiceImpl.deleteUser(userId);
 
-       userServiceImpl.deleteUser(userId);
+       Mockito.verify(userRepositoryI,times(1)).delete(user);
+    }
 
+    @Test
+    void searchUserTest() {
+
+      int  pageNumber=0;
+      int pageSize=2;
+      String sortBy="name";
+      String sortDir="asc";
+      String keyword="a";
+
+      Sort sort= Sort.by("name").ascending();
+      Pageable pageable=PageRequest.of(pageNumber,pageSize,sort);
+
+      Page<User> page=new PageImpl<>(list);
+
+      Mockito.when(userRepositoryI.findUserByNameContaining(keyword,pageable)).thenReturn(page);
+
+      PageableResponse<UserDto> searchedUser = userServiceImpl.searchUser(keyword, pageNumber, pageSize, sortBy, sortDir);
+
+        Assertions.assertEquals(2,searchedUser.getContent().size());
 
     }
 
-//    @Test
-//    void searchUserTest() {
-//
-//       String keyword="s";
-//       Mockito.when(userRepositoryI.findAll()).thenReturn(list);
-//
-//       List<UserDto> userDtos = userServiceImpl.searchUser(keyword);
-//
-//       assertNotNull(userDtos);
-//
-//    }
+    @Test
+    void getAllUserTest() {
+        int pageNumber=0;
+        int pageSize=2;
+        String sortBy="name";
+        String sortDir="asc";
 
-//    @Test
-//    @Disabled
-//    void getAllUserTest() {
-//
-//       Mockito.when(userRepositoryI.findAll()).thenReturn(list);
-//
-//       List<UserDto> allUser = userServiceImpl.getAllUser();
-//
-//       int size = allUser.size();
-//
-//       assertEquals(2,size);
-//
-//    }
+        Sort sort= Sort.by("name").ascending();
+
+        Page<User> page= new PageImpl<>(list);
+        Pageable pageable= PageRequest.of(pageNumber,pageSize,sort);
+
+       Mockito.when(userRepositoryI.findAll(pageable)).thenReturn(page);
+
+        PageableResponse<UserDto> allUser = userServiceImpl.getAllUser(pageNumber, pageSize, sortBy, sortDir);
+
+         Assertions.assertEquals(2,allUser.getContent().size());
+
+    }
+
+   @Test
+   public void updateUserExceptionTest(){
+       Assertions.assertThrows(ResourceNotFoundException.class,()-> userServiceImpl.updateUser(null,null));
+   }
+
+   @Test
+   public void deleteUserExceptionTest(){
+       Assertions.assertThrows(ResourceNotFoundException.class,()->userServiceImpl.deleteUser(null));
+   }
+
+   @Test
+   public void getUserByUserIdExceptionTest(){
+       Assertions.assertThrows(ResourceNotFoundException.class,()->userServiceImpl.getUserById(null));
+   }
+
+   @Test
+   public void getUserByEmailExceptionTest(){
+       Assertions.assertThrows(ResourceNotFoundException.class,()->userServiceImpl.getUserByEmail(null));
+
+   }
 }
