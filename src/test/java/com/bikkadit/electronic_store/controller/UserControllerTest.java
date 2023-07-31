@@ -132,6 +132,34 @@ class UserControllerTest {
 
 
     @Test
+    void getUserByEmail() throws Exception {
+        String email="sahil@gmail.com";
+
+        UserDto userDto = modelMapper.map(user, UserDto.class);
+
+        Mockito.when(userServiceI.getUserByEmail(email)).thenReturn(userDto);
+
+        mockMvc.perform(
+                         MockMvcRequestBuilders.get("/users/email/" +email)
+                        .accept(MediaType.APPLICATION_JSON))
+                .andDo(print())
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.email").exists());
+
+
+    }
+
+    @Test
+    void deleteUser() throws Exception {
+        String userId = UUID.randomUUID().toString();
+
+        mockMvc.perform(MockMvcRequestBuilders.delete("/users/"+userId)
+                        .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk());
+    }
+
+
+    @Test
     void searchUser() {
 
 
