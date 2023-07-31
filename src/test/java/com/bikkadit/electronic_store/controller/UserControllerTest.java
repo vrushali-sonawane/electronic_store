@@ -9,10 +9,12 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.ArgumentMatchers.startsWith;
 import static org.mockito.Mockito.when;
+
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
@@ -29,90 +31,109 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
 
+import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import java.util.UUID;
 
-@SpringBootTest(classes = UserControllerTest.class)
+@SpringBootTest
 //to enable Autoconfiguration for mockMvc
 @AutoConfigureMockMvc
-@ContextConfiguration
-@ComponentScan(basePackages = "electronic_store")
 class UserControllerTest {
 
-    @Mock
+    @MockBean
     private UserServiceI userServiceI;
 
-    @InjectMocks
+    @Autowired
     private UserController userController;
 
-
+    @Autowired
+    private ModelMapper modelMapper;
     @Autowired
     private MockMvc mockMvc;
 
+    private User user;
+
     @BeforeEach
-    public void setUp(){
-        MockMvc mockMvc = MockMvcBuilders.standaloneSetup(userController).build();
+    public void setUp() {
+
+        String id = UUID.randomUUID().toString();
+        user = User.builder()
+                .userId(id)
+                .name("Sahil")
+                .email("sahil@gmail.com")
+                .password("Sahil123")
+                .gender("male")
+                .about("I am developer")
+                .imageName("abc.png")
+                .build();
     }
 
     @Test
     void createUserTest() throws Exception {
-        String id = UUID.randomUUID().toString();
-       UserDto user=new UserDto(id,"Sahil","sahil123@gmail.com","sahil99","I am developer","male","abc.png");
 
-      when(userServiceI.createUser(user));
+        UserDto userDto = modelMapper.map(user, UserDto.class);
+        Mockito.when(userServiceI.createUser(userDto)).thenReturn(userDto);
 
-       ObjectMapper objectMapper=new ObjectMapper();
-        String userAsString = objectMapper.writeValueAsString(user);
-
-
-        mockMvc.perform(post("/")
-                .content(userAsString)
-                .contentType(MediaType.APPLICATION_JSON))
-                .andExpect(status().isCreated()).andDo(print());
+        mockMvc.perform(MockMvcRequestBuilders.post("/users/")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(convertObjectToJsonString(user))
+                        .accept(MediaType.APPLICATION_JSON))
+                .andDo(print())
+                .andExpect(status().isCreated());
+                //.andExpect(jsonPath("$.name").exists());
 
 
     }
 
-    @Test
-    void upadteUser() {
-        String id = UUID.randomUUID().toString();
-        UserDto userDto = UserDto.builder()
-                .userId(id)
-                .name("Sahil")
-                .password("ss11")
-                .gender("male")
-                .about("I am developer")
-                .imageName("abc.png")
-                .build();
+    private String convertObjectToJsonString(Object user) {
 
+        try {
+            return new ObjectMapper().writeValueAsString(user);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+
+    @Test
+    void upadteUserTest() throws Exception {
+        String userId = UUID.randomUUID().toString();
+
+        UserDto userDto = modelMapper.map(user, UserDto.class);
+        Mockito.when(userServiceI.updateUser(userDto,userId)).thenReturn(userDto);
+
+        mockMvc.perform(
+                  MockMvcRequestBuilders.put("/users/" +userId)
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(convertObjectToJsonString(user))
+                .accept(MediaType.APPLICATION_JSON))
+                .andDo(print())
+                .andExpect(status().isCreated());
+                //.andExpect(jsonPath("$.name").exists());
     }
 
     @Test
-    void getSingleUSerById() {
-        String id = UUID.randomUUID().toString();
-        UserDto userDto = UserDto.builder()
-                .userId(id)
-                .name("Sahil")
-                .password("ss11")
-                .gender("male")
-                .about("I am developer")
-                .imageName("abc.png")
-                .build();
+    void getSingleUSerById() throws Exception {
+        String userId = UUID.randomUUID().toString();
 
+        UserDto userDto = modelMapper.map(user, UserDto.class);
 
-    }
+        Mockito.when(userServiceI.getUserById(userId)).thenReturn(userDto);
 
-    @Test
-    void getUserByEmail() {
-    }
+        mockMvc.perform(MockMvcRequestBuilders.get("/users/" +userId)
+                .accept(MediaType.APPLICATION_JSON))
+                .andDo(print())
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.name").exists());
 
-    @Test
-    void deleteUser() {
     }
 
     @Test
     void searchUser() {
+
+
     }
 
     @Test
