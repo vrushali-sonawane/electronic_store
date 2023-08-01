@@ -3,6 +3,7 @@ package com.bikkadit.electronic_store.controller;
 import com.bikkadit.electronic_store.dto.UserDto;
 import com.bikkadit.electronic_store.entity.User;
 import com.bikkadit.electronic_store.payload.PageableResponse;
+import com.bikkadit.electronic_store.service.FileServiceI;
 import com.bikkadit.electronic_store.service.UserServiceI;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -13,6 +14,7 @@ import org.junit.jupiter.api.Test;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
+import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +30,10 @@ import org.springframework.test.web.servlet.MockMvc;
 
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.UUID;
 
@@ -39,6 +44,9 @@ class UserControllerTest {
 
     @MockBean
     private UserServiceI userServiceI;
+
+    @MockBean
+    private FileServiceI fileServiceI;
 
     @Autowired
     private UserController userController;
@@ -227,5 +235,32 @@ class UserControllerTest {
 
 
 
+    }
+
+    @Test
+    void uploadUserImageTest() throws Exception {
+        String fileName="abc.png";
+        String filePath="image/users";
+        String userId=UUID.randomUUID().toString();
+
+        Mockito.when(fileServiceI.uploadFile(Mockito.any(),Mockito.anyString())).thenReturn(fileName);
+
+        UserDto userDto = modelMapper.map(user, UserDto.class);
+        Mockito.when(userServiceI.getUserById(Mockito.anyString())).thenReturn(userDto);
+        userDto.setImageName(fileName);
+
+        Mockito.when(userServiceI.updateUser(userDto,userId)).thenReturn(userDto);
+
+        mockMvc.perform(MockMvcRequestBuilders.post("/users/image/"+userId)
+                .contentType(MediaType.APPLICATION_JSON)
+                .accept(MediaType.APPLICATION_JSON))
+                .andDo(print())
+                .andExpect(status().isCreated());
+
+
+    }
+
+    @Test
+    void serveUserImageTest() {
     }
 }
