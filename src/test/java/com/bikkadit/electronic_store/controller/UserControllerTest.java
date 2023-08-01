@@ -4,32 +4,26 @@ import com.bikkadit.electronic_store.dto.UserDto;
 import com.bikkadit.electronic_store.entity.User;
 import com.bikkadit.electronic_store.payload.PageableResponse;
 import com.bikkadit.electronic_store.service.UserServiceI;
-import com.fasterxml.jackson.core.JsonProcessingException;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.ArgumentMatchers.startsWith;
-import static org.mockito.Mockito.when;
 
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.context.annotation.ComponentScan;
+
 
 import org.springframework.http.MediaType;
 
-import org.springframework.test.context.ContextConfiguration;
+
 import org.springframework.test.web.servlet.MockMvc;
 
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
@@ -162,7 +156,38 @@ class UserControllerTest {
 
 
     @Test
-    void searchUser() {
+    void searchUserTest() throws Exception {
+
+
+        UserDto userDto1 = UserDto.builder().userId(UUID.randomUUID().toString()).name("Samar")
+                .email("samar@gmail.com").password("samar123").about("developer").imageName("abc.png").build();
+        UserDto userDto2 = UserDto.builder().userId(UUID.randomUUID().toString()).name("Veeraj")
+                .email("veeraj@gmail.com").password("veeraj123").about("developer").imageName("xyz.png").build();
+
+        UserDto userDto3 = UserDto.builder().userId(UUID.randomUUID().toString()).name("Sandip")
+                .email("sandip@gmail.com").password("sandip123").about("developer").imageName("def.png").build();
+
+        UserDto userDto4 = UserDto.builder().userId(UUID.randomUUID().toString()).name("Kumar")
+                .email("kumar@gmail.com").password("kumar123").about("developer").imageName("wds.png").build();
+
+
+        PageableResponse<UserDto> pageableResponse=new PageableResponse<>();
+        pageableResponse.setContent(Arrays.asList(userDto1,userDto2,userDto3,userDto4));
+        pageableResponse.setPageNumber(0);
+        pageableResponse.setPageSize(10);
+        pageableResponse.setTotalElements(1000);
+        pageableResponse.setTotalpages(100);
+        pageableResponse.setLastpage(false);
+
+        String keyword="a";
+
+        Mockito.when(userServiceI.searchUser(Mockito.anyString(),Mockito.anyInt(),Mockito.anyInt(),Mockito.anyString(),Mockito.anyString())).thenReturn(pageableResponse);
+
+        mockMvc.perform(MockMvcRequestBuilders.get("/users/search/"+keyword)
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .accept(MediaType.APPLICATION_JSON))
+                .andDo(print())
+                .andExpect(status().isOk());
 
 
 
