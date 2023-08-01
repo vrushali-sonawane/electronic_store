@@ -262,5 +262,6 @@ class UserControllerTest {
 
     @Test
     void serveUserImageTest() {
+
     }
 }
