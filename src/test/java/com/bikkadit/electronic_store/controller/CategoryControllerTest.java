@@ -1,9 +1,12 @@
 package com.bikkadit.electronic_store.controller;
 
 import com.bikkadit.electronic_store.dto.CategoryDto;
+import com.bikkadit.electronic_store.dto.ProductDto;
 import com.bikkadit.electronic_store.entity.Category;
+import com.bikkadit.electronic_store.entity.Product;
 import com.bikkadit.electronic_store.payload.PageableResponse;
 import com.bikkadit.electronic_store.service.CategoryServiceI;
+import com.bikkadit.electronic_store.service.ProductServiceI;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -18,6 +21,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
 import java.util.Arrays;
+import java.util.Date;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -32,6 +36,9 @@ class CategoryControllerTest {
 
     @MockBean
     private CategoryServiceI categoryServiceI;
+
+    @MockBean
+    private ProductServiceI productServiceI;
 
     @Autowired
     private ModelMapper modelMapper;
@@ -227,14 +234,46 @@ class CategoryControllerTest {
     }
 
     @Test
-    void createProductWithCategory() {
+    void createProductWithCategoryTest() throws Exception {
+        String categoryId=UUID.randomUUID().toString();
+
+        String productId= UUID.randomUUID().toString();
+     Product   product1 = Product.builder()
+                .productId(productId)
+                .title("Samsung A34")
+                .discountedPrice(3000.00)
+                .price(20000.00)
+                .quantity(100)
+                .live(true)
+                .addedDate(new Date())
+                .stock(true)
+                .description("This mobile  has many fetures")
+                .productImage("abc.png")
+                .category(category)
+                .build();
+
+        ProductDto productDto = modelMapper.map(product1, ProductDto.class);
+
+        Mockito.when(productServiceI.createProductWithCategory(Mockito.any(),Mockito.anyString())).thenReturn(productDto);
+
+        mockMvc.perform(MockMvcRequestBuilders.post("/categories/"+categoryId+"/products")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(convertObjectToJsonString(product1))
+                .accept(MediaType.APPLICATION_JSON))
+                .andDo(print())
+                .andExpect(status().isCreated())
+                .andExpect(jsonPath("$.title").exists());
+
+
+
+
     }
 
     @Test
-    void testUpdateCategory() {
+    void UpdateCategoryTest() {
     }
 
     @Test
-    void getAllProductsOfCategories() {
+    void getAllProductsOfCategoriesTest() {
     }
 }
