@@ -83,15 +83,15 @@ class UserControllerTest {
     void createUserTest() throws Exception {
 
         UserDto userDto = modelMapper.map(user, UserDto.class);
-        Mockito.when(userServiceI.createUser(userDto)).thenReturn(userDto);
+        Mockito.when(userServiceI.createUser(Mockito.any())).thenReturn(userDto);
 
         mockMvc.perform(MockMvcRequestBuilders.post("/users/")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(convertObjectToJsonString(user))
                         .accept(MediaType.APPLICATION_JSON))
                 .andDo(print())
-                .andExpect(status().isCreated());
-                //.andExpect(jsonPath("$.name").exists());
+                .andExpect(status().isCreated())
+                .andExpect(jsonPath("$.name").exists());
 
 
     }
@@ -112,7 +112,7 @@ class UserControllerTest {
         String userId = UUID.randomUUID().toString();
 
         UserDto userDto = modelMapper.map(user, UserDto.class);
-        Mockito.when(userServiceI.updateUser(userDto,userId)).thenReturn(userDto);
+        Mockito.when(userServiceI.updateUser(Mockito.any(),Mockito.anyString())).thenReturn(userDto);
 
         mockMvc.perform(
                   MockMvcRequestBuilders.put("/users/" +userId)
@@ -120,8 +120,8 @@ class UserControllerTest {
                 .content(convertObjectToJsonString(user))
                 .accept(MediaType.APPLICATION_JSON))
                 .andDo(print())
-                .andExpect(status().isCreated());
-                //.andExpect(jsonPath("$.name").exists());
+                .andExpect(status().isCreated())
+                .andExpect(jsonPath("$.name").exists());
     }
 
     @Test
