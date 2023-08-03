@@ -26,14 +26,20 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 
 
+import org.springframework.mock.web.MockHttpServletResponse;
 import org.springframework.test.web.servlet.MockMvc;
 
+import org.springframework.test.web.servlet.ResultActions;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+import org.springframework.util.StreamUtils;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Arrays;
 import java.util.UUID;
 
@@ -261,7 +267,22 @@ class UserControllerTest {
     }
 
     @Test
-    void serveUserImageTest() {
+    void serveUserImageTest() throws Exception {
+        String imagePath="image/users/";
+        String userId=UUID.randomUUID().toString();
+
+        UserDto userDto = modelMapper.map(user, UserDto.class);
+        Mockito.when(userServiceI.getUserById(userId)).thenReturn(userDto);
+
+        InputStream  resource=new FileInputStream(userDto.getImageName());
+        Mockito.when(fileServiceI.getResource(Mockito.anyString(),Mockito.anyString())).thenReturn(resource);
+
+        mockMvc.perform(MockMvcRequestBuilders.get("/users/image/" + userId)
+                        .accept(MediaType.APPLICATION_JSON))
+                .andExpect(content().contentType(MediaType.IMAGE_JPEG_VALUE))
+                .andExpect(status().isOk())
+                .andReturn().getResponse();
+
 
     }
 }
