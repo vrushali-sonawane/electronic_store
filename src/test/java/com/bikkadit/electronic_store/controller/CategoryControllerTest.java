@@ -176,7 +176,46 @@ class CategoryControllerTest {
     }
 
     @Test
-    void searchCategories() {
+    void searchCategoriesTest() throws Exception {
+
+        CategoryDto categoryDto1=CategoryDto.builder().categoryId(UUID.randomUUID().toString())
+                .title("Headphones")
+                .categoryDescription("Headphones available with good quality")
+                .coverImage("xyz.png")
+                .build();
+        CategoryDto categoryDto2=CategoryDto.builder().categoryId(UUID.randomUUID().toString())
+                .title("LED TVS")
+                .categoryDescription("LED TVS available with good quality")
+                .coverImage("def.png")
+                .build();
+        CategoryDto categoryDto3=CategoryDto.builder().categoryId(UUID.randomUUID().toString())
+                .title("Electronics")
+                .categoryDescription("Eletronics products available with good quality")
+                .coverImage("hjh.png")
+                .build();
+        CategoryDto categoryDto4=CategoryDto.builder().categoryId(UUID.randomUUID().toString())
+                .title("phones")
+                .categoryDescription("phones available with good quality")
+                .coverImage("dbw.png")
+                .build();
+
+        PageableResponse<CategoryDto> pageableResponse=new PageableResponse<>();
+        pageableResponse.setContent(Arrays.asList(categoryDto1,categoryDto2,categoryDto3,categoryDto4));
+        pageableResponse.setPageNumber(0);
+        pageableResponse.setPageSize(10);
+        pageableResponse.setTotalpages(100);
+        pageableResponse.setTotalElements(1000);
+        pageableResponse.setLastpage(false);
+
+        String subTitle="a";
+
+        Mockito.when(categoryServiceI.searchCategories(Mockito.anyInt(),Mockito.anyInt(),Mockito.anyString(),Mockito.anyString(),Mockito.anyString())).thenReturn(pageableResponse);
+
+        mockMvc.perform(MockMvcRequestBuilders.get("/categories/search/"+subTitle)
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .accept(MediaType.APPLICATION_JSON))
+                .andDo(print())
+                .andExpect(status().isOk());
     }
 
     @Test
