@@ -16,6 +16,7 @@ import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
+import java.util.Optional;
 import java.util.UUID;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -103,7 +104,20 @@ class CategoryControllerTest {
     }
 
     @Test
-    void getSingleCategory() {
+    void getSingleCategoryTest() throws Exception {
+        String categoryId=UUID.randomUUID().toString();
+
+        CategoryDto categoryDto = modelMapper.map(category, CategoryDto.class);
+
+        Mockito.when(categoryServiceI.getCategoryById(categoryId)).thenReturn(categoryDto);
+
+        mockMvc.perform(MockMvcRequestBuilders.get("/categories/"+categoryId)
+                .accept(MediaType.APPLICATION_JSON))
+                .andDo(print())
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.title").exists())
+                .andExpect(jsonPath("$.categoryDescription").exists());
+
     }
 
     @Test

@@ -133,6 +133,7 @@ class UserControllerTest {
         Mockito.when(userServiceI.getUserById(userId)).thenReturn(userDto);
 
         mockMvc.perform(MockMvcRequestBuilders.get("/users/" +userId)
+                        .contentType(MediaType.APPLICATION_JSON)
                 .accept(MediaType.APPLICATION_JSON))
                 .andDo(print())
                 .andExpect(status().isOk())
