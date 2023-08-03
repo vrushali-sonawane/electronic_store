@@ -79,7 +79,27 @@ class CategoryControllerTest {
     }
 
     @Test
-    void updateCategory() {
+    void updateCategoryTest() throws Exception {
+        String categoryId=UUID.randomUUID().toString();
+        CategoryDto categoryDto=CategoryDto.builder()
+                .categoryId(categoryId)
+                .title("Mobiles")
+                .categoryDescription("Mobiles available with discounts")
+                .coverImage("abc.png")
+                .build();
+
+        Mockito.when(categoryServiceI.updateCategory(Mockito.any(),Mockito.anyString())).thenReturn(categoryDto);
+
+        mockMvc.perform(MockMvcRequestBuilders.put("/categories/" +categoryId)
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(convertObjectToJsonString(category))
+                .accept(MediaType.APPLICATION_JSON))
+                .andDo(print())
+                .andExpect(status().isCreated())
+                .andExpect(jsonPath("$.title").exists())
+                .andExpect(jsonPath("$.categoryDescription").exists());
+
+
     }
 
     @Test
