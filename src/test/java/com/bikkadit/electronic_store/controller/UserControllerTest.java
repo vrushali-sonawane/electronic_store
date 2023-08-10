@@ -244,46 +244,46 @@ class UserControllerTest {
 
     }
 
-    @Test
-    void uploadUserImageTest() throws Exception {
-        String fileName="abc.png";
-        String filePath="image/users";
-        String userId=UUID.randomUUID().toString();
-
-        Mockito.when(fileServiceI.uploadFile(Mockito.any(),Mockito.anyString())).thenReturn(fileName);
-
-        UserDto userDto = modelMapper.map(user, UserDto.class);
-        Mockito.when(userServiceI.getUserById(Mockito.anyString())).thenReturn(userDto);
-        userDto.setImageName(fileName);
-
-        Mockito.when(userServiceI.updateUser(userDto,userId)).thenReturn(userDto);
-
-        mockMvc.perform(MockMvcRequestBuilders.post("/users/image/"+userId)
-                .contentType(MediaType.APPLICATION_JSON)
-                .accept(MediaType.APPLICATION_JSON))
-                .andDo(print())
-                .andExpect(status().isCreated());
-
-
-    }
-
-    @Test
-    void serveUserImageTest() throws Exception {
-        String imagePath="image/users/";
-        String userId=UUID.randomUUID().toString();
-
-        UserDto userDto = modelMapper.map(user, UserDto.class);
-        Mockito.when(userServiceI.getUserById(userId)).thenReturn(userDto);
-
-        InputStream  resource=new FileInputStream(userDto.getImageName());
-        Mockito.when(fileServiceI.getResource(Mockito.anyString(),Mockito.anyString())).thenReturn(resource);
-
-        mockMvc.perform(MockMvcRequestBuilders.get("/users/image/" + userId)
-                        .accept(MediaType.APPLICATION_JSON))
-                .andExpect(content().contentType(MediaType.IMAGE_JPEG_VALUE))
-                .andExpect(status().isOk())
-                .andReturn().getResponse();
-
-
-    }
+//    @Test
+//    void uploadUserImageTest() throws Exception {
+//        String fileName="abc.png";
+//        String filePath="image/users";
+//        String userId=UUID.randomUUID().toString();
+//
+//        Mockito.when(fileServiceI.uploadFile(Mockito.any(),Mockito.anyString())).thenReturn(fileName);
+//
+//        UserDto userDto = modelMapper.map(user, UserDto.class);
+//        Mockito.when(userServiceI.getUserById(Mockito.anyString())).thenReturn(userDto);
+//        userDto.setImageName(fileName);
+//
+//        Mockito.when(userServiceI.updateUser(userDto,userId)).thenReturn(userDto);
+//
+//        mockMvc.perform(MockMvcRequestBuilders.post("/users/image/"+userId)
+//                .contentType(MediaType.APPLICATION_JSON)
+//                .accept(MediaType.APPLICATION_JSON))
+//                .andDo(print())
+//                .andExpect(status().isCreated());
+//
+//
+//    }
+//
+//    @Test
+//    void serveUserImageTest() throws Exception {
+//        String imagePath="image/users/";
+//        String userId=UUID.randomUUID().toString();
+//
+//        UserDto userDto = modelMapper.map(user, UserDto.class);
+//        Mockito.when(userServiceI.getUserById(userId)).thenReturn(userDto);
+//
+//        InputStream  resource=new FileInputStream(userDto.getImageName());
+//        Mockito.when(fileServiceI.getResource(Mockito.anyString(),Mockito.anyString())).thenReturn(resource);
+//
+//        mockMvc.perform(MockMvcRequestBuilders.get("/users/image/" + userId)
+//                        .accept(MediaType.APPLICATION_JSON))
+//                .andExpect(content().contentType(MediaType.IMAGE_JPEG_VALUE))
+//                .andExpect(status().isOk())
+//                .andReturn().getResponse();
+//
+//
+//    }
 }

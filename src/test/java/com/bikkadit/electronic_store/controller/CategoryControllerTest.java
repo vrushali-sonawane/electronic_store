@@ -78,10 +78,10 @@ class CategoryControllerTest {
 
     }
 
-    private String convertObjectToJsonString(Object user) {
+    private String convertObjectToJsonString(Object category) {
 
         try {
-            return new ObjectMapper().writeValueAsString(user);
+            return new ObjectMapper().writeValueAsString(category);
         } catch (Exception e) {
             e.printStackTrace();
         }
