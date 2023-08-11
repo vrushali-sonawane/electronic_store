@@ -2,9 +2,11 @@ package com.bikkadit.electronic_store.controller;
 
 import com.bikkadit.electronic_store.dto.ProductDto;
 import com.bikkadit.electronic_store.entity.Product;
+import com.bikkadit.electronic_store.payload.PageableResponse;
 import com.bikkadit.electronic_store.service.ProductServiceI;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.assertj.core.util.Arrays;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
@@ -19,6 +21,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
 import java.util.Date;
+import java.util.List;
 import java.util.UUID;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -112,11 +115,51 @@ class ProductControllerTest {
     }
 
     @Test
-    void getSingleProductTest() {
+    void getSingleProductTest() throws Exception {
+        String productId=UUID.randomUUID().toString();
+
+        ProductDto productDto = modelMapper.map(product, ProductDto.class);
+        Mockito.when(productServiceI.getSingleProduct(Mockito.anyString())).thenReturn(productDto);
+
+        mockMvc.perform(MockMvcRequestBuilders.get("/products/" +productId)
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .accept(MediaType.APPLICATION_JSON))
+                .andDo(print())
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.title").exists());
+
     }
 
     @Test
-    void getAllProducts() {
+    void getAllProducts() throws Exception {
+        ProductDto productDto1=ProductDto.builder().title("Mobiles").stock(true).live(true).price(2000.00)
+                .discountedPrice(3000.00).productImage("abc.png").quantity(100).build();
+
+        ProductDto productDto2=ProductDto.builder().title("Laptops").stock(true).live(true).price(2000.00)
+                .discountedPrice(3000.00).productImage("xyz.png").quantity(100).build();
+
+        ProductDto productDto3=ProductDto.builder().title("Headphones").stock(true).live(true).price(2000.00)
+                .discountedPrice(3000.00).productImage("def.png").quantity(100).build();
+
+        ProductDto productDto4=ProductDto.builder().title("microwaves").stock(true).live(true).price(2000.00)
+                .discountedPrice(3000.00).productImage("dss.png").quantity(100).build();
+
+        PageableResponse<ProductDto> pageableResponse=new PageableResponse<>();
+        pageableResponse.setContent(List.of(productDto1,productDto2,productDto3,productDto4));
+        pageableResponse.setPageNumber(0);
+        pageableResponse.setPageSize(10);
+        pageableResponse.setTotalElements(1000);
+        pageableResponse.setTotalpages(100);
+        pageableResponse.setLastpage(false);
+
+        Mockito.when(productServiceI.getAllProducts(Mockito.anyInt(),Mockito.anyInt(),
+                Mockito.anyString(),Mockito.anyString())).thenReturn(pageableResponse);
+
+        mockMvc.perform(MockMvcRequestBuilders.get("/products/")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .accept(MediaType.APPLICATION_JSON))
+                .andDo(print())
+                .andExpect(status().isOk());
     }
 
     @Test
