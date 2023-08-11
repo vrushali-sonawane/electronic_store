@@ -131,7 +131,7 @@ class ProductControllerTest {
     }
 
     @Test
-    void getAllProducts() throws Exception {
+    void getAllProductsTest() throws Exception {
         ProductDto productDto1=ProductDto.builder().title("Mobiles").stock(true).live(true).price(2000.00)
                 .discountedPrice(3000.00).productImage("abc.png").quantity(100).build();
 
@@ -163,11 +163,69 @@ class ProductControllerTest {
     }
 
     @Test
-    void getAllLive() {
+    void getAllLiveTest() throws Exception {
+        ProductDto productDto1=ProductDto.builder().title("Mobiles").stock(true).live(true).price(2000.00)
+                .discountedPrice(3000.00).productImage("abc.png").quantity(100).build();
+
+        ProductDto productDto2=ProductDto.builder().title("Laptops").stock(true).live(true).price(2000.00)
+                .discountedPrice(3000.00).productImage("xyz.png").quantity(100).build();
+
+        ProductDto productDto3=ProductDto.builder().title("Headphones").stock(true).live(true).price(2000.00)
+                .discountedPrice(3000.00).productImage("def.png").quantity(100).build();
+
+        ProductDto productDto4=ProductDto.builder().title("microwaves").stock(true).live(true).price(2000.00)
+                .discountedPrice(3000.00).productImage("dss.png").quantity(100).build();
+
+        PageableResponse<ProductDto> pageableResponse=new PageableResponse<>();
+        pageableResponse.setContent(List.of(productDto1,productDto2,productDto3,productDto4));
+        pageableResponse.setPageNumber(0);
+        pageableResponse.setPageSize(10);
+        pageableResponse.setTotalElements(1000);
+        pageableResponse.setTotalpages(100);
+        pageableResponse.setLastpage(false);
+
+        Mockito.when(productServiceI.getAllLive(Mockito.anyInt(),Mockito.anyInt(),
+                Mockito.anyString(),Mockito.anyString())).thenReturn(pageableResponse);
+
+        mockMvc.perform(MockMvcRequestBuilders.get("/products/live")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .accept(MediaType.APPLICATION_JSON))
+                .andDo(print())
+                .andExpect(status().isOk());
     }
 
     @Test
-    void searchProducts() {
+    void searchProductsTest() throws Exception {
+        ProductDto productDto1=ProductDto.builder().title("Mobiles").stock(true).live(true).price(2000.00)
+                .discountedPrice(3000.00).productImage("abc.png").quantity(100).build();
+
+        ProductDto productDto2=ProductDto.builder().title("Laptops").stock(true).live(true).price(2000.00)
+                .discountedPrice(3000.00).productImage("xyz.png").quantity(100).build();
+
+        ProductDto productDto3=ProductDto.builder().title("Headphones").stock(true).live(true).price(2000.00)
+                .discountedPrice(3000.00).productImage("def.png").quantity(100).build();
+
+        ProductDto productDto4=ProductDto.builder().title("microwaves").stock(true).live(true).price(2000.00)
+                .discountedPrice(3000.00).productImage("dss.png").quantity(100).build();
+
+        PageableResponse<ProductDto> pageableResponse=new PageableResponse<>();
+        pageableResponse.setContent(List.of(productDto1,productDto2,productDto3,productDto4));
+        pageableResponse.setPageNumber(0);
+        pageableResponse.setPageSize(10);
+        pageableResponse.setTotalElements(1000);
+        pageableResponse.setTotalpages(100);
+        pageableResponse.setLastpage(false);
+
+        String subTitle="e";
+
+        Mockito.when(productServiceI.searchProducts(Mockito.anyString(),Mockito.anyInt(),Mockito.anyInt(),
+                Mockito.anyString(),Mockito.anyString())).thenReturn(pageableResponse);
+
+        mockMvc.perform(MockMvcRequestBuilders.get("/products/search/"+subTitle)
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .accept(MediaType.APPLICATION_JSON))
+                .andDo(print())
+                .andExpect(status().isOk());
     }
 
     @Test
