@@ -102,11 +102,17 @@ class ProductControllerTest {
     }
 
     @Test
-    void deleteProduct() {
+    void deleteProductTest() throws Exception {
+        String productId = UUID.randomUUID().toString();
+
+        mockMvc.perform(MockMvcRequestBuilders.delete("/products/"+productId)
+                        .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk());
+
     }
 
     @Test
-    void getSingleProduct() {
+    void getSingleProductTest() {
     }
 
     @Test
