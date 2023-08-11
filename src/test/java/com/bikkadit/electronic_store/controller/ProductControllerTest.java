@@ -85,7 +85,20 @@ class ProductControllerTest {
     }
 
     @Test
-    void updateProduct() {
+    void updateProductTest() throws Exception {
+        String productId=UUID.randomUUID().toString();
+        ProductDto productDto = modelMapper.map(product, ProductDto.class);
+        Mockito.when(productServiceI.updateProduct(Mockito.any(),Mockito.anyString())).thenReturn(productDto);
+
+        mockMvc.perform(MockMvcRequestBuilders.put("/products/"+productId)
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(convertObjectToJsonString(product))
+                        .accept(MediaType.APPLICATION_JSON))
+                .andDo(print())
+                .andExpect(status().isCreated())
+                .andExpect(jsonPath("$.title").exists());
+
+
     }
 
     @Test
